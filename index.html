@@ -46,6 +46,8 @@
   .chart { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; height:340px; margin-bottom:14px; }
   th.grp select { padding:3px 8px; font-weight:600; color:var(--acc); }
   .grpInfo { color:var(--mut); font-weight:400; font-size:12px; margin-left:6px; }
+  .empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--mut); pointer-events:none; }
+  .empty[hidden] { display:none; }
   h3.sub { font-size:15px; margin:18px 0 10px; color:var(--txt); }
   footer { color:var(--mut); font-size:12px; margin-top:14px; }
 </style>
@@ -98,7 +100,10 @@
   </div>
   <div id="farmNote"></div>
   <div class="cards" id="farmCards"></div>
-  <div class="chart" id="lineBox"><canvas id="farmChart" aria-label="Recursos farmeados acumulados en el período"></canvas></div>
+  <div class="chart" id="lineBox" style="position:relative">
+    <canvas id="farmChart" aria-label="Recursos farmeados acumulados en el período"></canvas>
+    <div id="lineEmpty" class="empty" hidden>Esperando registros de farmeo…</div>
+  </div>
   <h3 class="sub" id="barTitle">Farmeo por jugador</h3>
   <div id="barNote"></div>
   <div class="chart" id="barBox"><canvas id="farmBars" aria-label="Farmeo de cada jugador por recurso"></canvas></div>
@@ -375,10 +380,10 @@ function renderFarmeo(puntos) {
     `<div class="card"><small>${c ? `<span class="sw" style="background:var(${c})"></span>` : ""}${k} · ${esc(nombre)}</small><b>${v}</b></div>`).join("");
 
   // Gráfico de evolución (no aplica a "Todo": la API no entrega el historial de toda la vida)
-  // Se oculta si no hay al menos 2 registros: un gráfico vacío muestra ejes sin sentido
-  const conLinea = !total && hayDatos;
-  document.getElementById("lineBox").style.display = conLinea ? "" : "none";
-  if (conLinea) renderLinea(f);
+  // Siempre visible (salvo en "Todo"); sin datos muestra el rango del período vacío y un aviso
+  document.getElementById("lineBox").style.display = total ? "none" : "";
+  document.getElementById("lineEmpty").hidden = hayDatos;
+  if (!total) renderLinea(f, hayDatos);
 
   // Barras por jugador
   renderBarras(tabla);
@@ -410,10 +415,14 @@ function renderFarmeo(puntos) {
 }
 
 /** Línea: recursos acumulados en el período (una sola escala: unidades de recurso). */
-function renderLinea(f) {
+function renderLinea(f, hayDatos) {
+  // Rango del eje X: desde el inicio del período hasta ahora (evita fechas sin sentido con el gráfico vacío)
+  const ahora = Date.now();
+  const horas = Number(estadoFarm.periodo);
+  const xMin = f.wipe ? f.wipe.t : horas ? ahora - horas * 3600 * 1000 : (f.desde ?? ahora - 3600 * 1000);
   const datasets = RECURSOS.map(r => ({
     label: r.label,
-    data: f.serie.map(p => ({ x: p.t, y: p[r.k] })),
+    data: hayDatos ? f.serie.map(p => ({ x: p.t, y: p[r.k] })) : [],
     borderColor: css(r.color),
     backgroundColor: css(r.color),
     borderWidth: 2,
@@ -423,7 +432,14 @@ function renderLinea(f) {
     pointHoverBorderColor: css("--panel"),
     tension: 0.25,
   }));
-  if (chart) { chart.data.datasets = datasets; chart.update(); return; }
+  if (chart) {
+    chart.data.datasets = datasets;
+    chart.options.scales.x.min = xMin;
+    chart.options.scales.x.max = ahora;
+    chart.options.scales.y.suggestedMax = hayDatos ? undefined : 1000;
+    chart.update();
+    return;
+  }
   chart = new Chart(document.getElementById("farmChart"), {
     type: "line",
     data: { datasets },
@@ -432,9 +448,9 @@ function renderLinea(f) {
       animation: false,
       interaction: { mode: "index", intersect: false },
       scales: {
-        x: { type: "linear", ticks: { color: css("--mut"), maxTicksLimit: 8, callback: v => fecha(v) },
+        x: { type: "linear", min: xMin, max: ahora, ticks: { color: css("--mut"), maxTicksLimit: 8, callback: v => fecha(v) },
              grid: { color: "rgba(255,255,255,.04)" } },
-        y: { beginAtZero: true, ticks: { color: css("--mut"), callback: v => corto(v) },
+        y: { beginAtZero: true, suggestedMax: hayDatos ? undefined : 1000, ticks: { color: css("--mut"), callback: v => corto(v) },
              grid: { color: "rgba(255,255,255,.06)" } },
       },
       plugins: {

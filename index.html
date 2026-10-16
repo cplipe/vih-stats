@@ -25,12 +25,22 @@
     position:relative; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:8px;
     min-height:120px; margin-bottom:16px; padding:14px 18px; border-radius:12px; overflow:hidden;
     border:1px solid #3a1c2a;
-    background:
-      linear-gradient(90deg, rgba(14,15,17,.88) 0%, rgba(14,15,17,.55) 45%, rgba(14,15,17,.15) 100%),
-      linear-gradient(0deg, rgba(14,15,17,.75) 0%, rgba(14,15,17,0) 60%),
-      url("img/header.webp") center 40% / cover no-repeat,
-      url("img/header.jpg") center 40% / cover no-repeat, #2a0f1b;  /* acepta .webp o .jpg */
+    /* fondo con los colores de la imagen */
+    background:linear-gradient(90deg, #121014 0%, #1f0d16 40%, #3b0f22 75%, #580e26 100%);
   }
+  /* La imagen ocupa solo la parte derecha (sin estirarse) y se funde hacia la izquierda */
+  header.hero::before {
+    content:""; position:absolute; top:0; right:0; bottom:0; width:min(560px, 60%);
+    background:url("img/header.webp") center 45% / cover no-repeat,
+               url("img/header.jpg") center 45% / cover no-repeat;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 45%);
+            mask-image:linear-gradient(90deg, transparent 0%, #000 45%);
+    opacity:.9;
+  }
+  header.hero::after {  /* sombra inferior para que la fecha se lea */
+    content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(14,15,17,.6) 0%, rgba(14,15,17,0) 55%);
+  }
+  header.hero > * { position:relative; z-index:1; }
   h1 { margin:0; font-size:32px; line-height:1.05; letter-spacing:.5px; color:#f3e6ec; }
   h1 span {
     background:linear-gradient(100deg, var(--vih-1) 0%, var(--vih-2) 35%, var(--vih-3) 65%, var(--vih-4) 100%);

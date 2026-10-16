@@ -375,8 +375,10 @@ function renderFarmeo(puntos) {
     `<div class="card"><small>${c ? `<span class="sw" style="background:var(${c})"></span>` : ""}${k} · ${esc(nombre)}</small><b>${v}</b></div>`).join("");
 
   // Gráfico de evolución (no aplica a "Todo": la API no entrega el historial de toda la vida)
-  document.getElementById("lineBox").style.display = total ? "none" : "";
-  if (!total) renderLinea(f);
+  // Se oculta si no hay al menos 2 registros: un gráfico vacío muestra ejes sin sentido
+  const conLinea = !total && hayDatos;
+  document.getElementById("lineBox").style.display = conLinea ? "" : "none";
+  if (conLinea) renderLinea(f);
 
   // Barras por jugador
   renderBarras(tabla);

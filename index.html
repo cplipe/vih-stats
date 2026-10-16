@@ -50,8 +50,6 @@
   .chart { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; height:340px; margin-bottom:14px; }
   th.grp select { padding:3px 8px; font-weight:600; color:var(--acc); }
   .grpInfo { color:var(--mut); font-weight:400; font-size:12px; margin-left:6px; }
-  .empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--mut); pointer-events:none; }
-  .empty[hidden] { display:none; }
   h3.sub { font-size:15px; margin:18px 0 10px; color:var(--txt); }
   footer { color:var(--mut); font-size:12px; margin-top:14px; }
 </style>
@@ -104,10 +102,6 @@
   </div>
   <div id="farmNote"></div>
   <div class="cards" id="farmCards"></div>
-  <div class="chart" id="lineBox" style="position:relative">
-    <canvas id="farmChart" aria-label="Recursos farmeados acumulados en el período"></canvas>
-    <div id="lineEmpty" class="empty" hidden>Esperando registros de farmeo…</div>
-  </div>
   <h3 class="sub" id="barTitle">Farmeo por jugador</h3>
   <div id="barNote"></div>
   <div class="chart" id="barBox"><canvas id="farmBars" aria-label="Farmeo de cada jugador por recurso"></canvas></div>
@@ -163,7 +157,7 @@ const RECURSOS = [
 ];
 const RECURSOS_TABLA = RECURSOS.map(r => r.k);
 
-let DATA = null, HIST = null, chart = null, barras = null;
+let DATA = null, HIST = null, barras = null;
 const estadoFarm = { periodo: "0", jugador: "" }; // "0" = Todo (histórico)
 const estadoTabla = { modo: "wipe" };              // tabla de farmeo: "wipe" o "total"
 
@@ -384,10 +378,6 @@ function renderFarmeo(puntos) {
     `<div class="card"><small>${c ? `<span class="sw" style="background:var(${c})"></span>` : ""}${k} · ${esc(nombre)}</small><b>${v}</b></div>`).join("");
 
   // Gráfico de evolución (no aplica a "Todo": la API no entrega el historial de toda la vida)
-  // Siempre visible (salvo en "Todo"); sin datos muestra el rango del período vacío y un aviso
-  document.getElementById("lineBox").style.display = total ? "none" : "";
-  document.getElementById("lineEmpty").hidden = hayDatos;
-  if (!total) renderLinea(f, hayDatos);
 
   // Barras por jugador
   renderBarras(tabla);
@@ -416,59 +406,6 @@ function renderFarmeo(puntos) {
     </tr>`;
   }).join("");
   tablas.tf.reaplicar();
-}
-
-/** Línea: recursos acumulados en el período (una sola escala: unidades de recurso). */
-function renderLinea(f, hayDatos) {
-  // Rango del eje X: desde el inicio del período hasta ahora (evita fechas sin sentido con el gráfico vacío)
-  const ahora = Date.now();
-  const horas = Number(estadoFarm.periodo);
-  // Con datos: parte en el primer registro (sin espacio vacío). Sin datos: muestra el período completo.
-  const xMin = hayDatos ? f.serie[0].t
-    : f.wipe ? f.wipe.t : horas ? ahora - horas * 3600 * 1000 : ahora - 3600 * 1000;
-  const xMax = hayDatos ? f.serie[f.serie.length - 1].t : ahora;
-  const datasets = RECURSOS.map(r => ({
-    label: r.label,
-    data: hayDatos ? f.serie.map(p => ({ x: p.t, y: p[r.k] })) : [],
-    borderColor: css(r.color),
-    backgroundColor: css(r.color),
-    borderWidth: 2,
-    pointRadius: 0,
-    pointHoverRadius: 5,
-    pointHoverBorderWidth: 2,
-    pointHoverBorderColor: css("--panel"),
-    tension: 0.25,
-  }));
-  if (chart) {
-    chart.data.datasets = datasets;
-    chart.options.scales.x.min = xMin;
-    chart.options.scales.x.max = xMax;
-    chart.options.scales.y.suggestedMax = hayDatos ? undefined : 1000;
-    chart.update();
-    return;
-  }
-  chart = new Chart(document.getElementById("farmChart"), {
-    type: "line",
-    data: { datasets },
-    options: {
-      maintainAspectRatio: false,
-      animation: false,
-      interaction: { mode: "index", intersect: false },
-      scales: {
-        x: { type: "linear", min: xMin, max: xMax, ticks: { color: css("--mut"), maxTicksLimit: 8, callback: v => fecha(v) },
-             grid: { color: "rgba(255,255,255,.04)" } },
-        y: { beginAtZero: true, suggestedMax: hayDatos ? undefined : 1000, ticks: { color: css("--mut"), callback: v => corto(v) },
-             grid: { color: "rgba(255,255,255,.06)" } },
-      },
-      plugins: {
-        legend: { labels: { color: css("--txt"), usePointStyle: true, pointStyle: "rectRounded", boxWidth: 10 } },
-        tooltip: { ...opcionesTooltip(), callbacks: {
-          title: items => fecha(items[0].parsed.x),
-          label: i => ` ${i.dataset.label}: ${fmt(i.parsed.y)}`,
-        } },
-      },
-    },
-  });
 }
 
 /** Barras horizontales apiladas: un jugador por fila, un segmento por recurso, de mayor a menor. */

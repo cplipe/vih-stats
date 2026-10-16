@@ -44,6 +44,7 @@
   .seg button.on { background:#2a2e35; color:var(--txt); }
   select { background:var(--panel); color:var(--txt); border:1px solid var(--line); border-radius:6px; padding:6px 10px; font:inherit; }
   .chart { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; height:340px; margin-bottom:14px; }
+  h3.sub { font-size:15px; margin:18px 0 10px; color:var(--txt); }
   footer { color:var(--mut); font-size:12px; margin-top:14px; }
 </style>
 </head>
@@ -95,7 +96,10 @@
   </div>
   <div id="farmNote"></div>
   <div class="cards" id="farmCards"></div>
-  <div class="chart"><canvas id="farmChart" aria-label="Recursos farmeados acumulados en el período"></canvas></div>
+  <div class="chart" id="lineBox"><canvas id="farmChart" aria-label="Recursos farmeados acumulados en el período"></canvas></div>
+  <h3 class="sub" id="barTitle">Farmeo por jugador</h3>
+  <div id="barNote"></div>
+  <div class="chart" id="barBox"><canvas id="farmBars" aria-label="Farmeo de cada jugador por recurso"></canvas></div>
   <div class="tbl">
     <table id="tf">
       <thead>
@@ -141,7 +145,7 @@ const RECURSOS = [
 ];
 const RECURSOS_TABLA = [...RECURSOS.map(r => r.k), "gather_hqm"];
 
-let DATA = null, HIST = null, chart = null;
+let DATA = null, HIST = null, chart = null, barras = null;
 const estadoFarm = { periodo: "wipe", jugador: "" };
 
 /* ---------- Inicio del wipe ---------- */
@@ -317,35 +321,74 @@ function calcularFarmeo(puntos) {
   return { serie, tabla, puntos: enRango.length, desde: enRango[0]?.t, wipe };
 }
 
+/** "Todo": totales de toda la vida de cada jugador (vienen directo de la API). */
+function farmeoHistorico() {
+  const campos = [...RECURSOS_TABLA, "gather_total"];
+  return Object.fromEntries((DATA.members || []).map(m =>
+    [m.steam_id, m.gather_total == null ? null : Object.fromEntries(campos.map(c => [c, n0(m[c])]))]));
+}
+
+const opcionesTooltip = () => ({
+  backgroundColor: "#1d2025", borderColor: css("--line"), borderWidth: 1,
+  titleColor: css("--txt"), bodyColor: css("--txt"),
+});
+
 function renderFarmeo(puntos) {
+  const total = estadoFarm.periodo === "0";
   const f = calcularFarmeo(puntos);
-  const hayDatos = f.puntos >= 2;
+  const tabla = total ? farmeoHistorico() : f.tabla;
+  const hayDatos = total ? Object.values(tabla).some(Boolean) : f.puntos >= 2;
   const nombre = estadoFarm.jugador
     ? (DATA.members.find(m => m.steam_id === estadoFarm.jugador)?.name || "Jugador") : "Todo el clan";
 
   let nota = "";
-  if (!hayDatos) {
-    nota = "El farmeo se calcula comparando los totales que se guardan cada hora. El gráfico aparecerá cuando haya al menos 2 registros con datos de farmeo en este período (≈ 1–2 horas).";
+  if (total) {
+    nota = "";
+  } else if (!hayDatos) {
+    nota = "El farmeo del período se calcula comparando los totales que se guardan cada hora. Aparecerá cuando haya al menos 2 registros con datos de farmeo en este período (≈ 1–2 horas). Mientras tanto, usa «Todo» para ver el histórico.";
   } else if (f.wipe && f.desde - f.wipe.t > 90 * 60 * 1000) {
     nota = `El wipe empezó el ${fecha(f.wipe.t)}, pero el registro de farmeo comenzó el ${fecha(f.desde)}: lo farmeado antes de esa hora no se cuenta. Desde el próximo wipe el cálculo será completo.`;
   }
   document.getElementById("farmNote").innerHTML = nota ? `<div class="note">${esc(nota)}</div>` : "";
-  document.getElementById("tfGrp").textContent = f.wipe
-    ? `Farmeado en el wipe (inicio ${fecha(f.wipe.t)}${f.wipe.detectado ? ", detectado" : ""})`
+  const titulo = total ? "Total histórico (toda la vida)"
+    : f.wipe ? `Farmeado en el wipe (inicio ${fecha(f.wipe.t)}${f.wipe.detectado ? ", detectado" : ""})`
     : hayDatos ? `Farmeado desde ${fecha(f.desde)}` : "Farmeado en el período";
+  document.getElementById("tfGrp").textContent = titulo;
+  document.getElementById("barTitle").textContent = `Farmeo por jugador · ${titulo.charAt(0).toLowerCase()}${titulo.slice(1)}`;
 
-  // Tarjetas
-  const ult = f.serie[f.serie.length - 1] || {};
-  const hqm = estadoFarm.jugador ? f.tabla[estadoFarm.jugador]?.gather_hqm
-    : Object.values(f.tabla).reduce((a, v) => a + n0(v?.gather_hqm), 0);
+  // Tarjetas: suma de la tabla (clan) o el jugador elegido
+  const sel = estadoFarm.jugador ? [tabla[estadoFarm.jugador]] : Object.values(tabla);
+  const suma = k => sel.reduce((a, v) => a + n0(v?.[k]), 0);
   const tarjetas = [
-    ...RECURSOS.map(r => [r.label, hayDatos ? fmt(ult[r.k]) : "–", r.color]),
-    ["HQM", hayDatos ? fmt(hqm) : "–", null],
+    ...RECURSOS.map(r => [r.label, hayDatos ? fmt(suma(r.k)) : "–", r.color]),
+    ["HQM", hayDatos ? fmt(suma("gather_hqm")) : "–", null],
   ];
   document.getElementById("farmCards").innerHTML = tarjetas.map(([k, v, c]) =>
     `<div class="card"><small>${c ? `<span class="sw" style="background:var(${c})"></span>` : ""}${k} · ${esc(nombre)}</small><b>${v}</b></div>`).join("");
 
-  // Gráfico: recursos acumulados en el período (una sola escala: unidades de recurso)
+  // Gráfico de evolución (no aplica a "Todo": la API no entrega el historial de toda la vida)
+  document.getElementById("lineBox").style.display = total ? "none" : "";
+  if (!total) renderLinea(f);
+
+  // Barras por jugador
+  renderBarras(tabla);
+
+  // Tabla por jugador
+  document.querySelector("#tf tbody").innerHTML = (DATA.members || []).map(m => {
+    const p = tabla[m.steam_id];
+    const c = k => p ? `<td data-v="${n0(p[k])}">${fmt(p[k])}</td>` : `<td data-v="-1">–</td>`;
+    return `<tr${estadoFarm.jugador === m.steam_id ? ' style="outline:1px solid var(--acc)"' : ""}>
+      <td data-v="${esc((m.name || "").toLowerCase())}">${celdaJugador(m)}</td>
+      ${c("gather_wood").replace("<td", '<td class="sep"')}${c("gather_stone")}${c("gather_metal")}${c("gather_sulfur")}${c("gather_hqm")}${c("gather_total")}
+      <td class="sep" data-v="${n0(m.gather_total)}">${m.gather_total == null ? "–" : fmt(m.gather_total)}</td>
+      <td data-v="${n0(m.farming_total)}">${m.farming_total == null ? "–" : fmt(m.farming_total)}</td>
+    </tr>`;
+  }).join("");
+  tablas.tf.reaplicar();
+}
+
+/** Línea: recursos acumulados en el período (una sola escala: unidades de recurso). */
+function renderLinea(f) {
   const datasets = RECURSOS.map(r => ({
     label: r.label,
     data: f.serie.map(p => ({ x: p.t, y: p[r.k] })),
@@ -358,56 +401,86 @@ function renderFarmeo(puntos) {
     pointHoverBorderColor: css("--panel"),
     tension: 0.25,
   }));
-  if (chart) {
-    chart.data.datasets = datasets;
-    chart.update();
-  } else {
-    chart = new Chart(document.getElementById("farmChart"), {
-      type: "line",
-      data: { datasets },
-      options: {
-        maintainAspectRatio: false,
-        animation: false,
-        interaction: { mode: "index", intersect: false },
-        scales: {
-          x: {
-            type: "linear",
-            ticks: { color: css("--mut"), maxTicksLimit: 8, callback: v => fecha(v) },
-            grid: { color: "rgba(255,255,255,.04)" },
-          },
-          y: {
-            beginAtZero: true,
-            ticks: { color: css("--mut"), callback: v => corto(v) },
-            grid: { color: "rgba(255,255,255,.06)" },
-          },
-        },
-        plugins: {
-          legend: { labels: { color: css("--txt"), usePointStyle: true, pointStyle: "rectRounded", boxWidth: 10 } },
-          tooltip: {
-            backgroundColor: "#1d2025", borderColor: css("--line"), borderWidth: 1,
-            titleColor: css("--txt"), bodyColor: css("--txt"),
-            callbacks: {
-              title: items => fecha(items[0].parsed.x),
-              label: i => ` ${i.dataset.label}: ${fmt(i.parsed.y)}`,
-            },
-          },
-        },
+  if (chart) { chart.data.datasets = datasets; chart.update(); return; }
+  chart = new Chart(document.getElementById("farmChart"), {
+    type: "line",
+    data: { datasets },
+    options: {
+      maintainAspectRatio: false,
+      animation: false,
+      interaction: { mode: "index", intersect: false },
+      scales: {
+        x: { type: "linear", ticks: { color: css("--mut"), maxTicksLimit: 8, callback: v => fecha(v) },
+             grid: { color: "rgba(255,255,255,.04)" } },
+        y: { beginAtZero: true, ticks: { color: css("--mut"), callback: v => corto(v) },
+             grid: { color: "rgba(255,255,255,.06)" } },
       },
-    });
-  }
+      plugins: {
+        legend: { labels: { color: css("--txt"), usePointStyle: true, pointStyle: "rectRounded", boxWidth: 10 } },
+        tooltip: { ...opcionesTooltip(), callbacks: {
+          title: items => fecha(items[0].parsed.x),
+          label: i => ` ${i.dataset.label}: ${fmt(i.parsed.y)}`,
+        } },
+      },
+    },
+  });
+}
 
-  // Tabla por jugador
-  document.querySelector("#tf tbody").innerHTML = (DATA.members || []).map(m => {
-    const p = f.tabla[m.steam_id];
-    const c = k => p ? `<td data-v="${n0(p[k])}">${fmt(p[k])}</td>` : `<td data-v="-1">–</td>`;
-    return `<tr${estadoFarm.jugador === m.steam_id ? ' style="outline:1px solid var(--acc)"' : ""}>
-      <td data-v="${esc((m.name || "").toLowerCase())}">${celdaJugador(m)}</td>
-      ${c("gather_wood").replace("<td", '<td class="sep"')}${c("gather_stone")}${c("gather_metal")}${c("gather_sulfur")}${c("gather_hqm")}${c("gather_total")}
-      <td class="sep" data-v="${n0(m.gather_total)}">${m.gather_total == null ? "–" : fmt(m.gather_total)}</td>
-      <td data-v="${n0(m.farming_total)}">${m.farming_total == null ? "–" : fmt(m.farming_total)}</td>
-    </tr>`;
-  }).join("");
-  tablas.tf.reaplicar();
+/** Barras horizontales apiladas: un jugador por fila, un segmento por recurso, de mayor a menor. */
+function renderBarras(tabla) {
+  const filas = (DATA.members || [])
+    .filter(m => tabla[m.steam_id])
+    .map(m => ({ m, v: tabla[m.steam_id], tot: RECURSOS.reduce((a, r) => a + n0(tabla[m.steam_id][r.k]), 0) }))
+    .filter(x => x.tot > 0)
+    .sort((a, b) => b.tot - a.tot);
+
+  const box = document.getElementById("barBox");
+  document.getElementById("barNote").innerHTML = filas.length ? "" :
+    `<div class="note">Todavía no hay farmeo registrado en este período.</div>`;
+  box.style.display = filas.length ? "" : "none";
+  box.style.height = `${filas.length * 34 + 70}px`;
+  if (!filas.length) return;
+
+  const labels = filas.map(x => x.m.name || x.m.steam_id);
+  const elegido = filas.findIndex(x => x.m.steam_id === estadoFarm.jugador);
+  const datasets = RECURSOS.map((r, i) => ({
+    label: r.label,
+    data: filas.map(x => n0(x.v[r.k])),
+    backgroundColor: css(r.color),
+    borderColor: css("--panel"),
+    borderWidth: { right: 2 },   // separación de 2px entre segmentos
+    borderSkipped: false,
+    borderRadius: i === RECURSOS.length - 1 ? { topRight: 4, bottomRight: 4 } : 0,
+    barThickness: 18,
+  }));
+  const opciones = {
+    indexAxis: "y",
+    maintainAspectRatio: false,
+    animation: false,
+    interaction: { mode: "index", axis: "y", intersect: false },
+    scales: {
+      x: { stacked: true, beginAtZero: true, ticks: { color: css("--mut"), callback: v => corto(v) },
+           grid: { color: "rgba(255,255,255,.06)" } },
+      y: { stacked: true, grid: { display: false },
+           ticks: { color: ctx => ctx.index === elegido ? css("--acc") : css("--txt") } },
+    },
+    plugins: {
+      legend: { labels: { color: css("--txt"), usePointStyle: true, pointStyle: "rectRounded", boxWidth: 10 } },
+      tooltip: { ...opcionesTooltip(), callbacks: {
+        label: i => ` ${i.dataset.label}: ${fmt(i.parsed.x)}`,
+        footer: items => `Total: ${fmt(items.reduce((a, i) => a + i.parsed.x, 0))}`,
+      } },
+    },
+  };
+  if (barras) {
+    barras.data.labels = labels;
+    barras.data.datasets = datasets;
+    barras.options.scales.y.ticks.color = opciones.scales.y.ticks.color;
+    barras.resize();
+    barras.update();
+    return;
+  }
+  barras = new Chart(document.getElementById("farmBars"), { type: "bar", data: { labels, datasets }, options: opciones });
 }
 
 function llenarSelectorJugadores() {

@@ -291,7 +291,7 @@ function renderPrincipal(puntos) {
   document.getElementById("tag").textContent = DATA.clan?.tag || "VIH";
   document.title = `Clan ${DATA.clan?.tag || "VIH"} · Rust`;
   document.getElementById("meta").innerHTML =
-    `Actualizado: ${esc(fecha(DATA.updated_at))}` + (ref ? ` · Comparando con ${esc(fecha(ref.t))}` : "");
+    `Actualizado: ${esc(fecha(DATA.checked_at || DATA.updated_at))}` + (ref ? ` · Comparando con ${esc(fecha(ref.t))}` : "");
 
   const kdrWipe = n0(s.current_deaths) ? (n0(s.current_kills) / n0(s.current_deaths)) : null;
   const cards = [
@@ -453,7 +453,7 @@ function renderFarmeo(puntos) {
   tablas.tf.reaplicar();
 
   // Hora del último registro descargado (latest.json)
-  const t = Date.parse(DATA.updated_at);
+  const t = Date.parse(DATA.checked_at || DATA.updated_at);
   if (t) {
     const min = Math.max(0, Math.round((Date.now() - t) / 60000));
     const hace = min < 1 ? "hace menos de 1 min" : min < 60 ? `hace ${min} min`

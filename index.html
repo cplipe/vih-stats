@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clan VIH · Rust</title>
+<style>
+  :root { --bg:#0e0f11; --panel:#17191d; --line:#262a30; --txt:#e6e6e6; --mut:#8b929c; --acc:#cd412b; --up:#4caf6a; --down:#e0574a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:14px/1.4 system-ui, "Segoe UI", sans-serif; }
+  .wrap { max-width:1300px; margin:0 auto; padding:20px 16px; }
+  header { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px; margin-bottom:16px; }
+  h1 { margin:0; font-size:24px; } h1 span { color:var(--acc); }
+  .meta { color:var(--mut); font-size:13px; }
+  .err { background:#3a1612; border:1px solid var(--acc); padding:10px 12px; border-radius:6px; margin-bottom:14px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:18px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .card b { display:block; font-size:22px; } .card small { color:var(--mut); }
+  .tbl { overflow-x:auto; background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+  table { width:100%; border-collapse:collapse; white-space:nowrap; }
+  th, td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:right; }
+  th:first-child, td:first-child { text-align:left; }
+  th { background:#1d2025; color:var(--mut); font-weight:600; cursor:pointer; user-select:none; }
+  th.sorted { color:var(--txt); } th.sorted::after { content:" ▾"; } th.sorted.asc::after { content:" ▴"; }
+  th.grp { cursor:default; text-align:center; color:var(--acc); }
+  tr:hover td { background:#1c1f24; }
+  .p { display:flex; align-items:center; gap:8px; } .p img { width:28px; height:28px; border-radius:4px; }
+  .p a { color:var(--txt); text-decoration:none; } .p a:hover { color:var(--acc); }
+  .d { font-size:11px; margin-left:4px; } .up { color:var(--up); } .down { color:var(--down); } .wipe { color:var(--mut); }
+  .sep { border-left:1px solid var(--line); }
+  footer { color:var(--mut); font-size:12px; margin-top:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Clan <span id="tag">VIH</span></h1>
+    <div class="meta" id="meta">Cargando…</div>
+  </header>
+  <div id="err"></div>
+  <div class="cards" id="cards"></div>
+  <div class="tbl">
+    <table id="t">
+      <thead>
+        <tr>
+          <th class="grp"></th><th class="grp"></th>
+          <th class="grp sep" colspan="4">Wipe actual</th>
+          <th class="grp sep" colspan="6">Histórico</th>
+        </tr>
+        <tr>
+          <th data-t="s">Jugador</th>
+          <th data-t="n">ELO</th>
+          <th data-t="n" class="sep sorted">Kills</th>
+          <th data-t="n">Muertes</th>
+          <th data-t="n">KDR</th>
+          <th data-t="n">Horas</th>
+          <th data-t="n" class="sep">Kills</th>
+          <th data-t="n">Muertes</th>
+          <th data-t="n">KDR</th>
+          <th data-t="n">HS %</th>
+          <th data-t="n">Horas</th>
+          <th data-t="n">Kill más lejana</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <footer>Datos públicos de LatamGameServers · se actualizan automáticamente cada ~15 min</footer>
+</div>
+
+<script>
+const TZ = "America/Santiago";
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+const n0 = v => Number(v || 0);
+const horas = s => (n0(s) / 3600).toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+const fmt = (v, d = 0) => n0(v).toLocaleString("es-CL", { minimumFractionDigits: d, maximumFractionDigits: d });
+const fecha = iso => new Date(iso).toLocaleString("es-CL", { timeZone: TZ, day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+
+function delta(antes, ahora, esWipe) {
+  if (antes == null || ahora == null) return "";
+  const d = n0(ahora) - n0(antes);
+  if (d === 0) return "";
+  if (d < 0 && esWipe) return '<span class="d wipe">wipe</span>';
+  return `<span class="d ${d > 0 ? "up" : "down"}">${d > 0 ? "+" : ""}${d}</span>`;
+}
+
+/** Punto de historial de hace ~24 h (o el más antiguo disponible). */
+function referencia(hist) {
+  const pts = hist?.points || [];
+  if (pts.length < 2) return null;
+  const limite = Date.now() - 24 * 3600 * 1000;
+  let ref = pts[0];
+  for (const p of pts) { if (Date.parse(p.t) <= limite) ref = p; else break; }
+  if (ref === pts[pts.length - 1]) return null;
+  const idx = Object.fromEntries((hist.member_fields || []).map((f, i) => [f, i]));
+  const miembros = {};
+  for (const [id, vals] of Object.entries(ref.m || {})) {
+    miembros[id] = Object.fromEntries(Object.entries(idx).map(([f, i]) => [f, vals[i]]));
+  }
+  return { t: ref.t, miembros };
+}
+
+async function cargar(url) {
+  const r = await fetch(`${url}?v=${Date.now()}`, { cache: "no-store" });
+  if (!r.ok) throw new Error(`${url}: HTTP ${r.status}`);
+  return r.json();
+}
+
+async function render() {
+  let data, hist = null;
+  try {
+    data = await cargar("data/latest.json");
+  } catch (e) {
+    document.getElementById("meta").textContent = "";
+    document.getElementById("err").innerHTML =
+      `<div class="err">⚠ Aún no hay datos. Ejecuta el workflow "Actualizar estadísticas" en la pestaña Actions. (${esc(e.message)})</div>`;
+    return;
+  }
+  try { hist = await cargar("data/history.json"); } catch { /* sin historial todavía */ }
+
+  const ref = referencia(hist);
+  const s = data.stats || {};
+  document.getElementById("tag").textContent = data.clan?.tag || "VIH";
+  document.title = `Clan ${data.clan?.tag || "VIH"} · Rust`;
+  document.getElementById("meta").innerHTML =
+    `Actualizado: ${esc(fecha(data.updated_at))}` + (ref ? ` · Comparando con ${esc(fecha(ref.t))}` : "");
+
+  const kdrWipe = n0(s.current_deaths) ? (n0(s.current_kills) / n0(s.current_deaths)) : null;
+  const cards = [
+    ["Miembros", fmt(s.member_count)],
+    ["Kills wipe", fmt(s.current_kills)],
+    ["Muertes wipe", fmt(s.current_deaths)],
+    ["KDR wipe", kdrWipe == null ? "–" : fmt(kdrWipe, 2)],
+    ["Horas wipe", horas(s.current_playtime_seconds)],
+    ["ELO promedio", fmt(s.avg_elo)],
+    ["Kills históricas", fmt(s.kills)],
+  ];
+  document.getElementById("cards").innerHTML =
+    cards.map(([k, v]) => `<div class="card"><small>${k}</small><b>${v}</b></div>`).join("");
+
+  const filas = [...(data.members || [])]
+    .sort((a, b) => n0(b.current_kills) - n0(a.current_kills))
+    .map(m => {
+      const p = ref?.miembros[m.steam_id];
+      const perfil = m.profile || `https://steamcommunity.com/profiles/${m.steam_id}`;
+      const hs = n0(m.kills) ? 100 * n0(m.headshots) / n0(m.kills) : 0;
+      return `<tr>
+        <td data-v="${esc((m.name || "").toLowerCase())}"><div class="p">
+          ${m.avatar ? `<img src="${esc(m.avatar)}" alt="" loading="lazy">` : ""}
+          <a href="${esc(perfil)}" target="_blank" rel="noopener">${esc(m.name)}</a></div></td>
+        <td data-v="${n0(m.elo)}">${fmt(m.elo)}${delta(p?.elo, m.elo)}</td>
+        <td class="sep" data-v="${n0(m.current_kills)}">${fmt(m.current_kills)}${delta(p?.current_kills, m.current_kills, true)}</td>
+        <td data-v="${n0(m.current_deaths)}">${fmt(m.current_deaths)}${delta(p?.current_deaths, m.current_deaths, true)}</td>
+        <td data-v="${n0(m.current_kdr)}">${fmt(m.current_kdr, 2)}</td>
+        <td data-v="${n0(m.current_playtime_seconds)}">${horas(m.current_playtime_seconds)}</td>
+        <td class="sep" data-v="${n0(m.kills)}">${fmt(m.kills)}</td>
+        <td data-v="${n0(m.deaths)}">${fmt(m.deaths)}</td>
+        <td data-v="${n0(m.kdr)}">${fmt(m.kdr, 2)}</td>
+        <td data-v="${hs.toFixed(1)}">${fmt(hs, 1)}</td>
+        <td data-v="${n0(m.playtime_seconds)}">${horas(m.playtime_seconds)}</td>
+        <td data-v="${n0(m.longest_kill)}">${fmt(m.longest_kill, 1)} m</td>
+      </tr>`;
+    });
+  document.querySelector("#t tbody").innerHTML = filas.join("");
+  reaplicarOrden();
+}
+
+// Ordenar al hacer clic en un encabezado
+let orden = { col: 2, asc: false };
+function ordenar(col, asc) {
+  const ths = document.querySelectorAll("#t thead tr:last-child th");
+  document.querySelectorAll("#t th").forEach(x => x.classList.remove("sorted", "asc"));
+  ths[col].classList.add("sorted"); if (asc) ths[col].classList.add("asc");
+  const num = ths[col].dataset.t === "n";
+  const tbody = document.querySelector("#t tbody");
+  [...tbody.rows].sort((a, b) => {
+    let x = a.cells[col].dataset.v, y = b.cells[col].dataset.v;
+    if (num) { x = parseFloat(x); y = parseFloat(y); }
+    const r = x < y ? -1 : x > y ? 1 : 0;
+    return asc ? r : -r;
+  }).forEach(r => tbody.appendChild(r));
+  orden = { col, asc };
+}
+function reaplicarOrden() { ordenar(orden.col, orden.asc); }
+document.querySelectorAll("#t thead tr:last-child th").forEach((th, col) => {
+  th.addEventListener("click", () => ordenar(col, orden.col === col ? !orden.asc : false));
+});
+
+render();
+setInterval(render, 5 * 60 * 1000); // refresca cada 5 min sin recargar la página
+</script>
+</body>
+</html>

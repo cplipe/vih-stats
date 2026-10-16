@@ -87,10 +87,10 @@
   <h2>Farmeo</h2>
   <div class="ctrl">
     <div class="seg" id="periodo">
-      <button data-p="wipe" class="on">Wipe actual</button>
+      <button data-p="wipe">Wipe actual</button>
       <button data-p="24">24 h</button>
       <button data-p="168">7 días</button>
-      <button data-p="0">Todo</button>
+      <button data-p="0" class="on">Todo</button>
     </div>
     <select id="jugador" aria-label="Jugador"><option value="">Todo el clan</option></select>
   </div>
@@ -146,7 +146,7 @@ const RECURSOS = [
 const RECURSOS_TABLA = [...RECURSOS.map(r => r.k), "gather_hqm"];
 
 let DATA = null, HIST = null, chart = null, barras = null;
-const estadoFarm = { periodo: "wipe", jugador: "" };
+const estadoFarm = { periodo: "0", jugador: "" }; // "0" = Todo (histórico)
 
 /* ---------- Inicio del wipe ---------- */
 // Wipe programado: jueves 13:00 hora de Chile (America/Santiago, con cambio de horario incluido)

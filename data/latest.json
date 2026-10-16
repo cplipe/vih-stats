@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T15:37:22Z",
+  "updated_at": "2026-10-16T16:08:09Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,29 +11,29 @@
   "stats": {
     "member_count": 13,
     "active_members": 13,
-    "kills": 10959,
-    "deaths": 18795,
+    "kills": 10964,
+    "deaths": 18798,
     "kdr": 0.58,
-    "headshots": 3374,
-    "playtime_seconds": 20502426,
+    "headshots": 3375,
+    "playtime_seconds": 20509503,
     "longest_kill": 296.9,
     "avg_elo": 1223,
     "peak_elo": 1383,
     "current_kills": 332,
     "current_deaths": 173,
     "current_kdr": 1.92,
-    "current_playtime_seconds": 379131,
+    "current_playtime_seconds": 381332,
     "current_longest_kill": 192.8
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 375622,
+      "playtime_seconds": 377823,
       "playtime_share": 99.1,
       "kills": 306,
       "active_members": 13,
-      "last_seen": "2026-10-16T15:31:35.929Z"
+      "last_seen": "2026-10-16T16:07:35.816Z"
     },
     {
       "server_id": "caramelo",
@@ -70,18 +70,27 @@
       "avatar": "https://avatars.steamstatic.com/545e38fcc061662dd4358756203f32e4f9f43a7d_full.jpg",
       "profile": "https://steamcommunity.com/id/Don_Tulio/",
       "joined_at": "2026-10-14T01:19:54.674Z",
-      "kills": 1607,
-      "deaths": 2509,
+      "kills": 1612,
+      "deaths": 2512,
       "kdr": 0.64,
-      "headshots": 485,
-      "playtime_seconds": 2421647,
+      "headshots": 486,
+      "playtime_seconds": 2428724,
       "longest_kill": 258,
       "current_kills": 32,
       "current_deaths": 11,
       "current_kdr": 2.91,
-      "current_playtime_seconds": 36880,
+      "current_playtime_seconds": 39081,
       "elo": 1239,
-      "elo_games": 1883
+      "elo_games": 1883,
+      "gather_wood": 1635099,
+      "gather_stone": 881275,
+      "gather_metal": 712061,
+      "gather_sulfur": 391529,
+      "gather_hqm": 3625,
+      "gather_total": 3623589,
+      "farming_hemp": 70752,
+      "farming_total": 79212,
+      "berries_total": 6627
     },
     {
       "steam_id": "76561198091739088",
@@ -100,7 +109,16 @@
       "current_kdr": 2.94,
       "current_playtime_seconds": 24563,
       "elo": 1380,
-      "elo_games": 1720
+      "elo_games": 1720,
+      "gather_wood": 1250621,
+      "gather_stone": 876838,
+      "gather_metal": 600733,
+      "gather_sulfur": 343589,
+      "gather_hqm": 2506,
+      "gather_total": 3074287,
+      "farming_hemp": 37510,
+      "farming_total": 39867,
+      "berries_total": 434
     },
     {
       "steam_id": "76561198101067468",
@@ -119,7 +137,16 @@
       "current_kdr": 0.33,
       "current_playtime_seconds": 891,
       "elo": 1068,
-      "elo_games": 2410
+      "elo_games": 2410,
+      "gather_wood": 1306490,
+      "gather_stone": 1219708,
+      "gather_metal": 896394,
+      "gather_sulfur": 366988,
+      "gather_hqm": 3468,
+      "gather_total": 3793048,
+      "farming_hemp": 39976,
+      "farming_total": 40978,
+      "berries_total": 399
     },
     {
       "steam_id": "76561198995492185",
@@ -138,7 +165,16 @@
       "current_kdr": 5.25,
       "current_playtime_seconds": 33370,
       "elo": 1383,
-      "elo_games": 770
+      "elo_games": 770,
+      "gather_wood": 397286,
+      "gather_stone": 331468,
+      "gather_metal": 142282,
+      "gather_sulfur": 98300,
+      "gather_hqm": 575,
+      "gather_total": 969911,
+      "farming_hemp": 8856,
+      "farming_total": 10230,
+      "berries_total": 1200
     },
     {
       "steam_id": "76561199207204724",
@@ -157,7 +193,16 @@
       "current_kdr": 2.64,
       "current_playtime_seconds": 32594,
       "elo": 1349,
-      "elo_games": 1083
+      "elo_games": 1083,
+      "gather_wood": 74335,
+      "gather_stone": 103506,
+      "gather_metal": 96233,
+      "gather_sulfur": 45421,
+      "gather_hqm": 429,
+      "gather_total": 319924,
+      "farming_hemp": 7606,
+      "farming_total": 7765,
+      "berries_total": 56
     },
     {
       "steam_id": "76561199823653915",
@@ -176,7 +221,16 @@
       "current_kdr": 0.57,
       "current_playtime_seconds": 7614,
       "elo": 983,
-      "elo_games": 312
+      "elo_games": 312,
+      "gather_wood": 158586,
+      "gather_stone": 96797,
+      "gather_metal": 55261,
+      "gather_sulfur": 30570,
+      "gather_hqm": 200,
+      "gather_total": 341414,
+      "farming_hemp": 2173,
+      "farming_total": 2283,
+      "berries_total": 12
     },
     {
       "steam_id": "76561199113642347",
@@ -195,7 +249,16 @@
       "current_kdr": 1.11,
       "current_playtime_seconds": 26288,
       "elo": 1179,
-      "elo_games": 801
+      "elo_games": 801,
+      "gather_wood": 936958,
+      "gather_stone": 925783,
+      "gather_metal": 572950,
+      "gather_sulfur": 232797,
+      "gather_hqm": 2214,
+      "gather_total": 2670702,
+      "farming_hemp": 19178,
+      "farming_total": 21701,
+      "berries_total": 772
     },
     {
       "steam_id": "76561199410804568",
@@ -214,7 +277,16 @@
       "current_kdr": 2.67,
       "current_playtime_seconds": 36522,
       "elo": 1241,
-      "elo_games": 1530
+      "elo_games": 1530,
+      "gather_wood": 1449179,
+      "gather_stone": 1028654,
+      "gather_metal": 681122,
+      "gather_sulfur": 319937,
+      "gather_hqm": 2592,
+      "gather_total": 3481484,
+      "farming_hemp": 31832,
+      "farming_total": 33594,
+      "berries_total": 1265
     },
     {
       "steam_id": "76561198884955367",
@@ -233,7 +305,16 @@
       "current_kdr": 3.25,
       "current_playtime_seconds": 32291,
       "elo": 1230,
-      "elo_games": 1947
+      "elo_games": 1947,
+      "gather_wood": 724490,
+      "gather_stone": 931878,
+      "gather_metal": 579610,
+      "gather_sulfur": 277505,
+      "gather_hqm": 2150,
+      "gather_total": 2515633,
+      "farming_hemp": 38669,
+      "farming_total": 42504,
+      "berries_total": 2120
     },
     {
       "steam_id": "76561199222878442",
@@ -252,7 +333,16 @@
       "current_kdr": 0.82,
       "current_playtime_seconds": 22305,
       "elo": 1222,
-      "elo_games": 299
+      "elo_games": 299,
+      "gather_wood": 569965,
+      "gather_stone": 195348,
+      "gather_metal": 111399,
+      "gather_sulfur": 51667,
+      "gather_hqm": 393,
+      "gather_total": 928772,
+      "farming_hemp": 13242,
+      "farming_total": 17939,
+      "berries_total": 3861
     },
     {
       "steam_id": "76561198922812513",
@@ -271,7 +361,16 @@
       "current_kdr": 1.21,
       "current_playtime_seconds": 45507,
       "elo": 1179,
-      "elo_games": 675
+      "elo_games": 675,
+      "gather_wood": 2133507,
+      "gather_stone": 1801125,
+      "gather_metal": 354461,
+      "gather_sulfur": 185516,
+      "gather_hqm": 1604,
+      "gather_total": 4476213,
+      "farming_hemp": 118848,
+      "farming_total": 131238,
+      "berries_total": 8650
     },
     {
       "steam_id": "76561198064554212",
@@ -290,7 +389,16 @@
       "current_kdr": 4.38,
       "current_playtime_seconds": 39802,
       "elo": 1339,
-      "elo_games": 689
+      "elo_games": 689,
+      "gather_wood": 234027,
+      "gather_stone": 457693,
+      "gather_metal": 297722,
+      "gather_sulfur": 141304,
+      "gather_hqm": 1144,
+      "gather_total": 1131890,
+      "farming_hemp": 16818,
+      "farming_total": 16977,
+      "berries_total": 36
     },
     {
       "steam_id": "76561198171052931",
@@ -309,7 +417,16 @@
       "current_kdr": 0.88,
       "current_playtime_seconds": 40504,
       "elo": 1105,
-      "elo_games": 1983
+      "elo_games": 1983,
+      "gather_wood": 926029,
+      "gather_stone": 1352973,
+      "gather_metal": 678142,
+      "gather_sulfur": 276542,
+      "gather_hqm": 2708,
+      "gather_total": 3236394,
+      "farming_hemp": 23357,
+      "farming_total": 23756,
+      "berries_total": 17
     }
   ]
 }

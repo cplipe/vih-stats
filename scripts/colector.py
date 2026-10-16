@@ -15,7 +15,7 @@ API_URL = "https://webstatsapi.latamgs.com/api/clans/vih"
 PLAYER_URL = "https://webstatsapi.latamgs.com/api/player/{steam_id}"
 # Servidores que cuentan para el farmeo. Vacío = todos los servidores (igual que las stats del clan).
 # Ejemplo solo Sudamerica: GATHER_SERVERS = "sudamerica"
-GATHER_SERVERS = ""
+GATHER_SERVERS = "sudamerica"
 DATA = Path(__file__).resolve().parent.parent / "data"
 LATEST = DATA / "latest.json"
 HISTORY = DATA / "history.json"
@@ -188,13 +188,27 @@ def main() -> int:
     hist = leer_json(HISTORY, {"member_fields": HIST_MEMBER, "clan_fields": HIST_CLAN, "points": []})
     puntos = hist.get("points", [])
     wipes = hist.get("wipes", [])
+
+    # Si cambió el filtro de servidores del farmeo, los totales antiguos no son comparables:
+    # se borran del historial y se guarda un punto nuevo ahora como base.
+    fuente = GATHER_SERVERS or "todos"
+    reiniciar_farmeo = hist.get("gather_servers", "todos") != fuente
+    if reiniciar_farmeo:
+        campos = hist.get("member_fields", HIST_MEMBER)
+        idx = [i for i, f in enumerate(campos) if f.startswith(("gather_", "farming_"))]
+        for p in puntos:
+            for vals in p.get("m", {}).values():
+                for i in idx:
+                    if i < len(vals):
+                        vals[i] = None
+        print(f"Farmeo reiniciado: ahora cuenta servidores = {fuente}")
     if hubo_wipe:
         wipes = (wipes + [ahora])[-20:]
     ultimo_t = None
     if puntos:
         ultimo_t = datetime.fromisoformat(puntos[-1]["t"].replace("Z", "+00:00"))
     # Tras un wipe se guarda un punto de inmediato: es la base del farmeo del nuevo wipe
-    if hubo_wipe or ultimo_t is None or ahora_dt - ultimo_t >= HISTORY_STEP:
+    if hubo_wipe or reiniciar_farmeo or ultimo_t is None or ahora_dt - ultimo_t >= HISTORY_STEP:
         puntos.append({
             "t": ahora,
             "c": [nuevo["stats"].get(k) for k in HIST_CLAN],
@@ -204,7 +218,7 @@ def main() -> int:
         puntos = [p for p in puntos
                   if datetime.fromisoformat(p["t"].replace("Z", "+00:00")) >= limite]
         escribir_json(HISTORY, {"member_fields": HIST_MEMBER, "clan_fields": HIST_CLAN,
-                                "wipes": wipes, "points": puntos}, compacto=True)
+                                "gather_servers": fuente, "wipes": wipes, "points": puntos}, compacto=True)
         print(f"history.json: {len(puntos)} puntos")
     return 0
 

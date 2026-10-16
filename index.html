@@ -44,6 +44,8 @@
   .seg button.on { background:#2a2e35; color:var(--txt); }
   select { background:var(--panel); color:var(--txt); border:1px solid var(--line); border-radius:6px; padding:6px 10px; font:inherit; }
   .chart { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; height:340px; margin-bottom:14px; }
+  th.grp select { padding:3px 8px; font-weight:600; color:var(--acc); }
+  .grpInfo { color:var(--mut); font-weight:400; font-size:12px; margin-left:6px; }
   h3.sub { font-size:15px; margin:18px 0 10px; color:var(--txt); }
   footer { color:var(--mut); font-size:12px; margin-top:14px; }
 </style>
@@ -105,7 +107,13 @@
       <thead>
         <tr>
           <th class="grp"></th>
-          <th class="grp sep" colspan="6" id="tfGrp">Farmeado en el período</th>
+          <th class="grp sep" colspan="6">
+            <select id="tfModo" aria-label="Qué mostrar en la tabla de farmeo">
+              <option value="wipe">Farmeado en el wipe actual</option>
+              <option value="total">Total histórico (toda la vida)</option>
+            </select>
+            <span id="tfGrp" class="grpInfo"></span>
+          </th>
           <th class="grp sep" colspan="2">Histórico</th>
         </tr>
         <tr>
@@ -147,6 +155,7 @@ const RECURSOS_TABLA = [...RECURSOS.map(r => r.k), "gather_hqm"];
 
 let DATA = null, HIST = null, chart = null, barras = null;
 const estadoFarm = { periodo: "0", jugador: "" }; // "0" = Todo (histórico)
+const estadoTabla = { modo: "wipe" };              // tabla de farmeo: "wipe" o "total"
 
 /* ---------- Inicio del wipe ---------- */
 // Wipe programado: jueves 13:00 hora de Chile (America/Santiago, con cambio de horario incluido)
@@ -282,9 +291,9 @@ function celdaJugador(m) {
  * Para cada jugador se usa como base su primer valor registrado dentro del período,
  * así los que entran al clan a mitad de camino no distorsionan el total.
  */
-function calcularFarmeo(puntos) {
-  const wipe = estadoFarm.periodo === "wipe" ? inicioWipe() : null;
-  const horas = Number(estadoFarm.periodo);
+function calcularFarmeo(puntos, periodo = estadoFarm.periodo) {
+  const wipe = periodo === "wipe" ? inicioWipe() : null;
+  const horas = Number(periodo);
   // Wipe detectado: el colector guardó un punto exactamente en ese momento y es la base.
   // Wipe por horario: margen de 20 min porque el colector corre cada 15 min.
   const desde = wipe ? (wipe.detectado ? wipe.t : wipe.t - 20 * 60 * 1000)
@@ -353,7 +362,6 @@ function renderFarmeo(puntos) {
   const titulo = total ? "Total histórico (toda la vida)"
     : f.wipe ? `Farmeado en el wipe (inicio ${fecha(f.wipe.t)}${f.wipe.detectado ? ", detectado" : ""})`
     : hayDatos ? `Farmeado desde ${fecha(f.desde)}` : "Farmeado en el período";
-  document.getElementById("tfGrp").textContent = titulo;
   document.getElementById("barTitle").textContent = `Farmeo por jugador · ${titulo.charAt(0).toLowerCase()}${titulo.slice(1)}`;
 
   // Tarjetas: suma de la tabla (clan) o el jugador elegido
@@ -373,9 +381,21 @@ function renderFarmeo(puntos) {
   // Barras por jugador
   renderBarras(tabla);
 
-  // Tabla por jugador
+  // Tabla por jugador: tiene su propio selector (wipe actual / total histórico)
+  let tablaInf, info;
+  if (estadoTabla.modo === "total") {
+    tablaInf = farmeoHistorico();
+    info = "";
+  } else {
+    const fw = calcularFarmeo(puntos, "wipe");
+    tablaInf = fw.puntos >= 2 ? fw.tabla : {};
+    info = fw.puntos >= 2
+      ? `inicio ${fecha(fw.wipe.t)}${fw.wipe.detectado ? " (detectado)" : ""}${fw.desde - fw.wipe.t > 90 * 60 * 1000 ? ` · registro desde ${fecha(fw.desde)}` : ""}`
+      : "aún sin registros suficientes";
+  }
+  document.getElementById("tfGrp").textContent = info;
   document.querySelector("#tf tbody").innerHTML = (DATA.members || []).map(m => {
-    const p = tabla[m.steam_id];
+    const p = tablaInf[m.steam_id];
     const c = k => p ? `<td data-v="${n0(p[k])}">${fmt(p[k])}</td>` : `<td data-v="-1">–</td>`;
     return `<tr${estadoFarm.jugador === m.steam_id ? ' style="outline:1px solid var(--acc)"' : ""}>
       <td data-v="${esc((m.name || "").toLowerCase())}">${celdaJugador(m)}</td>
@@ -537,6 +557,10 @@ document.querySelectorAll("#periodo button").forEach(b => b.addEventListener("cl
   estadoFarm.periodo = b.dataset.p;
   if (DATA) renderFarmeo(conPuntoActual(expandirHistorial(HIST)));
 }));
+document.getElementById("tfModo").addEventListener("change", e => {
+  estadoTabla.modo = e.target.value;
+  if (DATA) renderFarmeo(conPuntoActual(expandirHistorial(HIST)));
+});
 document.getElementById("jugador").addEventListener("change", e => {
   estadoFarm.jugador = e.target.value;
   if (DATA) renderFarmeo(conPuntoActual(expandirHistorial(HIST)));

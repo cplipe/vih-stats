@@ -87,6 +87,7 @@
                    font-size:14px; cursor:pointer; display:grid; place-items:center; }
   .player input[type=range] { width:90px; accent-color:var(--acc); }
   .player small { color:var(--mut); }
+  .upd { color:var(--mut); font-size:12px; text-align:right; margin:0 2px 6px; }
   h3.sub { font-size:15px; margin:18px 0 10px; color:var(--txt); }
   footer { color:var(--mut); font-size:12px; margin-top:14px; }
 </style>
@@ -149,6 +150,7 @@
   <h3 class="sub" id="barTitle">Farmeo por jugador</h3>
   <div id="barNote"></div>
   <div class="chart" id="barBox"><canvas id="farmBars" aria-label="Farmeo de cada jugador por recurso"></canvas></div>
+  <div class="upd" id="tfUpd"></div>
   <div class="tbl">
     <table id="tf">
       <thead>
@@ -406,7 +408,8 @@ function renderFarmeo(puntos) {
   }
   document.getElementById("farmNote").innerHTML = nota ? `<div class="note">${esc(nota)}</div>` : "";
   const titulo = total ? "Total histórico (toda la vida)"
-    : f.wipe ? `Farmeado en el wipe (inicio ${fecha(f.wipe.t)}${f.wipe.detectado ? ", detectado" : ""})`
+    : f.wipe ? `Farmeado en el wipe (inicio ${fecha(f.wipe.t)}${f.wipe.detectado ? ", detectado" : ""}`
+        + (hayDatos && f.desde - f.wipe.t > 90 * 60 * 1000 ? ` · contando desde ${fecha(f.desde)}` : "") + ")"
     : hayDatos ? `Farmeado desde ${fecha(f.desde)}` : "Farmeado en el período";
   document.getElementById("barTitle").textContent = `Farmeo por jugador · ${titulo.charAt(0).toLowerCase()}${titulo.slice(1)}`;
 
@@ -448,6 +451,15 @@ function renderFarmeo(puntos) {
     </tr>`;
   }).join("");
   tablas.tf.reaplicar();
+
+  // Hora del último registro descargado (latest.json)
+  const t = Date.parse(DATA.updated_at);
+  if (t) {
+    const min = Math.max(0, Math.round((Date.now() - t) / 60000));
+    const hace = min < 1 ? "hace menos de 1 min" : min < 60 ? `hace ${min} min`
+      : `hace ${Math.floor(min / 60)} h ${min % 60} min`;
+    document.getElementById("tfUpd").textContent = `Último registro: ${fecha(t)} (${hace})`;
+  }
 }
 
 /** Barras horizontales apiladas: un jugador por fila, un segmento por recurso, de mayor a menor. */

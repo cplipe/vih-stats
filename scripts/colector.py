@@ -147,7 +147,7 @@ def detectar_wipe(anterior: dict, nuevo: dict) -> bool:
 
 
 def sin_fecha(obj: dict) -> dict:
-    return {k: v for k, v in obj.items() if k != "updated_at"}
+    return {k: v for k, v in obj.items() if k not in ("updated_at", "checked_at")}
 
 
 def main() -> int:
@@ -173,16 +173,20 @@ def main() -> int:
             print(f"Aviso: sin farmeo para {m.get('name')}: {e}", file=sys.stderr)
     print(f"Farmeo: {len(nuevo['members']) - fallos}/{len(nuevo['members'])} jugadores")
 
-    # latest.json: solo se reescribe si cambió algo (evita commits innecesarios)
+    # latest.json se escribe en cada ejecución:
+    #   checked_at = hora de esta consulta (siempre cambia)
+    #   updated_at = última vez que cambió algún dato
     anterior = leer_json(LATEST, {})
     hubo_wipe = detectar_wipe(anterior, nuevo)
     if hubo_wipe:
         print("Wipe detectado")
-    if sin_fecha(anterior) != sin_fecha(nuevo):
-        escribir_json(LATEST, nuevo)
-        print(f"latest.json actualizado ({len(nuevo['members'])} miembros)")
+    if anterior and sin_fecha(anterior) == sin_fecha(nuevo):
+        nuevo["updated_at"] = anterior.get("updated_at", ahora)
+        print("latest.json: datos sin cambios (solo se actualiza la hora de consulta)")
     else:
-        print("latest.json sin cambios")
+        print(f"latest.json actualizado ({len(nuevo['members'])} miembros)")
+    nuevo["checked_at"] = ahora
+    escribir_json(LATEST, nuevo)
 
     # history.json: un punto por hora como máximo, últimos 60 días
     hist = leer_json(HISTORY, {"member_fields": HIST_MEMBER, "clan_fields": HIST_CLAN, "points": []})

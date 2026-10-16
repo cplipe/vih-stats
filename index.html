@@ -423,7 +423,10 @@ function renderLinea(f, hayDatos) {
   // Rango del eje X: desde el inicio del período hasta ahora (evita fechas sin sentido con el gráfico vacío)
   const ahora = Date.now();
   const horas = Number(estadoFarm.periodo);
-  const xMin = f.wipe ? f.wipe.t : horas ? ahora - horas * 3600 * 1000 : (f.desde ?? ahora - 3600 * 1000);
+  // Con datos: parte en el primer registro (sin espacio vacío). Sin datos: muestra el período completo.
+  const xMin = hayDatos ? f.serie[0].t
+    : f.wipe ? f.wipe.t : horas ? ahora - horas * 3600 * 1000 : ahora - 3600 * 1000;
+  const xMax = hayDatos ? f.serie[f.serie.length - 1].t : ahora;
   const datasets = RECURSOS.map(r => ({
     label: r.label,
     data: hayDatos ? f.serie.map(p => ({ x: p.t, y: p[r.k] })) : [],
@@ -439,7 +442,7 @@ function renderLinea(f, hayDatos) {
   if (chart) {
     chart.data.datasets = datasets;
     chart.options.scales.x.min = xMin;
-    chart.options.scales.x.max = ahora;
+    chart.options.scales.x.max = xMax;
     chart.options.scales.y.suggestedMax = hayDatos ? undefined : 1000;
     chart.update();
     return;
@@ -452,7 +455,7 @@ function renderLinea(f, hayDatos) {
       animation: false,
       interaction: { mode: "index", intersect: false },
       scales: {
-        x: { type: "linear", min: xMin, max: ahora, ticks: { color: css("--mut"), maxTicksLimit: 8, callback: v => fecha(v) },
+        x: { type: "linear", min: xMin, max: xMax, ticks: { color: css("--mut"), maxTicksLimit: 8, callback: v => fecha(v) },
              grid: { color: "rgba(255,255,255,.04)" } },
         y: { beginAtZero: true, suggestedMax: hayDatos ? undefined : 1000, ticks: { color: css("--mut"), callback: v => corto(v) },
              grid: { color: "rgba(255,255,255,.06)" } },
@@ -470,11 +473,11 @@ function renderLinea(f, hayDatos) {
 
 /** Barras horizontales apiladas: un jugador por fila, un segmento por recurso, de mayor a menor. */
 function renderBarras(tabla) {
-  const filas = (DATA.members || [])
-    .filter(m => tabla[m.steam_id])
-    .map(m => ({ m, v: tabla[m.steam_id], tot: RECURSOS.reduce((a, r) => a + n0(tabla[m.steam_id][r.k]), 0) }))
-    .filter(x => x.tot > 0)
-    .sort((a, b) => b.tot - a.tot);
+  // Todos los miembros aparecen, aunque no hayan farmeado en el período (barra en 0)
+  const hayAlguno = Object.values(tabla).some(Boolean);
+  const filas = hayAlguno ? (DATA.members || [])
+    .map(m => ({ m, v: tabla[m.steam_id] || {}, tot: RECURSOS.reduce((a, r) => a + n0(tabla[m.steam_id]?.[r.k]), 0) }))
+    .sort((a, b) => b.tot - a.tot || (a.m.name || "").localeCompare(b.m.name || "")) : [];
 
   const box = document.getElementById("barBox");
   document.getElementById("barNote").innerHTML = filas.length ? "" :

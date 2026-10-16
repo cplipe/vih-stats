@@ -45,8 +45,16 @@ def descargar() -> dict:
     )
     with urllib.request.urlopen(req, timeout=20) as r:
         data = json.load(r)
-    if not isinstance(data.get("clan"), dict) or not isinstance(data.get("members"), list):
-        raise ValueError("La API devolvió un formato inesperado")
+    clan = data.get("clan")
+    if not isinstance(clan, dict):
+        raise ValueError(f"La API devolvió un formato inesperado (claves: {list(data)[:10]})")
+    # "members" puede venir en el nivel principal o dentro de "clan"
+    miembros = data.get("members")
+    if not isinstance(miembros, list):
+        miembros = clan.get("members")
+    if not isinstance(miembros, list):
+        raise ValueError(f"No se encontró la lista de miembros (claves de clan: {list(clan)[:30]})")
+    data["members"] = miembros
     return data
 
 

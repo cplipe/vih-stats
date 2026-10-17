@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T09:15:17Z",
+  "updated_at": "2026-10-17T09:30:18Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,25 +15,25 @@
     "deaths": 22338,
     "kdr": 0.67,
     "headshots": 4790,
-    "playtime_seconds": 25161248,
+    "playtime_seconds": 25163569,
     "longest_kill": 296.9,
-    "avg_elo": 1236,
+    "avg_elo": 1235,
     "peak_elo": 1397,
-    "current_kills": 646,
-    "current_deaths": 425,
+    "current_kills": 647,
+    "current_deaths": 426,
     "current_kdr": 1.52,
-    "current_playtime_seconds": 943077,
+    "current_playtime_seconds": 944327,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 939568,
+      "playtime_seconds": 940818,
       "playtime_share": 99.6,
-      "kills": 622,
+      "kills": 623,
       "active_members": 16,
-      "last_seen": "2026-10-17T09:14:35.154Z"
+      "last_seen": "2026-10-17T09:22:35.111Z"
     },
     {
       "server_id": "caramelo",
@@ -65,7 +65,7 @@
       "deaths": 2512,
       "kdr": 0.64,
       "headshots": 487,
-      "playtime_seconds": 2451267,
+      "playtime_seconds": 2453588,
       "longest_kill": 258,
       "current_kills": 33,
       "current_deaths": 11,
@@ -98,7 +98,7 @@
       "current_kills": 69,
       "current_deaths": 24,
       "current_kdr": 2.88,
-      "current_playtime_seconds": 58592,
+      "current_playtime_seconds": 59366,
       "elo": 1397,
       "elo_games": 1742,
       "gather_wood": 1063202,
@@ -179,12 +179,12 @@
       "headshots": 304,
       "playtime_seconds": 613999,
       "longest_kill": 222.9,
-      "current_kills": 55,
-      "current_deaths": 28,
-      "current_kdr": 1.96,
-      "current_playtime_seconds": 51622,
-      "elo": 1391,
-      "elo_games": 1106,
+      "current_kills": 56,
+      "current_deaths": 29,
+      "current_kdr": 1.93,
+      "current_playtime_seconds": 52098,
+      "elo": 1384,
+      "elo_games": 1108,
       "gather_wood": 70876,
       "gather_stone": 99131,
       "gather_metal": 96233,
@@ -532,5 +532,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T09:15:17Z"
+  "checked_at": "2026-10-17T09:30:18Z"
 }

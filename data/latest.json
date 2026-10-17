@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T08:45:15Z",
+  "updated_at": "2026-10-17T09:00:19Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,18 +22,18 @@
     "current_kills": 646,
     "current_deaths": 425,
     "current_kdr": 1.52,
-    "current_playtime_seconds": 937495,
+    "current_playtime_seconds": 941476,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 933986,
+      "playtime_seconds": 937967,
       "playtime_share": 99.6,
       "kills": 622,
       "active_members": 16,
-      "last_seen": "2026-10-17T08:42:35.209Z"
+      "last_seen": "2026-10-17T08:58:35.153Z"
     },
     {
       "server_id": "caramelo",
@@ -98,7 +98,7 @@
       "current_kills": 69,
       "current_deaths": 24,
       "current_kdr": 2.88,
-      "current_playtime_seconds": 56870,
+      "current_playtime_seconds": 57999,
       "elo": 1397,
       "elo_games": 1742,
       "gather_wood": 1063202,
@@ -182,7 +182,7 @@
       "current_kills": 55,
       "current_deaths": 28,
       "current_kdr": 1.96,
-      "current_playtime_seconds": 50910,
+      "current_playtime_seconds": 51029,
       "elo": 1391,
       "elo_games": 1106,
       "gather_wood": 70876,
@@ -378,7 +378,7 @@
       "current_kills": 61,
       "current_deaths": 23,
       "current_kdr": 2.65,
-      "current_playtime_seconds": 78955,
+      "current_playtime_seconds": 80084,
       "elo": 1322,
       "elo_games": 729,
       "gather_wood": 188198,
@@ -434,7 +434,7 @@
       "current_kills": 46,
       "current_deaths": 37,
       "current_kdr": 1.24,
-      "current_playtime_seconds": 73712,
+      "current_playtime_seconds": 74484,
       "elo": 1242,
       "elo_games": 1499,
       "gather_wood": 1116434,
@@ -462,7 +462,7 @@
       "current_kills": 54,
       "current_deaths": 27,
       "current_kdr": 2,
-      "current_playtime_seconds": 87271,
+      "current_playtime_seconds": 87984,
       "elo": 1384,
       "elo_games": 926,
       "gather_wood": 81253,
@@ -518,7 +518,7 @@
       "current_kills": 45,
       "current_deaths": 24,
       "current_kdr": 1.88,
-      "current_playtime_seconds": 77162,
+      "current_playtime_seconds": 77281,
       "elo": 1351,
       "elo_games": 1053,
       "gather_wood": 604386,
@@ -532,5 +532,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T08:45:15Z"
+  "checked_at": "2026-10-17T09:00:19Z"
 }

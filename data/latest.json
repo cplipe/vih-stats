@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T09:30:18Z",
+  "updated_at": "2026-10-17T09:45:13Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,11 +11,11 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15043,
-    "deaths": 22338,
+    "kills": 15049,
+    "deaths": 22343,
     "kdr": 0.67,
-    "headshots": 4790,
-    "playtime_seconds": 25163569,
+    "headshots": 4791,
+    "playtime_seconds": 25172017,
     "longest_kill": 296.9,
     "avg_elo": 1235,
     "peak_elo": 1397,
@@ -173,11 +173,11 @@
       "avatar": "https://avatars.steamstatic.com/3c8ea5fb8df85ca12bb10d8b94c4cf96253ac00c_full.jpg",
       "profile": "https://steamcommunity.com/profiles/76561199207204724/",
       "joined_at": "2026-10-14T01:28:52.604Z",
-      "kills": 860,
-      "deaths": 706,
+      "kills": 864,
+      "deaths": 709,
       "kdr": 1.22,
-      "headshots": 304,
-      "playtime_seconds": 613999,
+      "headshots": 305,
+      "playtime_seconds": 618697,
       "longest_kill": 222.9,
       "current_kills": 56,
       "current_deaths": 29,
@@ -509,11 +509,11 @@
       "avatar": "https://avatars.steamstatic.com/b160d5c40b1a0a3d92ffad9f09b745314434aca1_full.jpg",
       "profile": "https://steamcommunity.com/id/xklous/",
       "joined_at": "2026-10-17T05:27:48.156Z",
-      "kills": 895,
-      "deaths": 850,
+      "kills": 897,
+      "deaths": 852,
       "kdr": 1.05,
       "headshots": 310,
-      "playtime_seconds": 1273394,
+      "playtime_seconds": 1277144,
       "longest_kill": 274.9,
       "current_kills": 45,
       "current_deaths": 24,
@@ -532,5 +532,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T09:30:18Z"
+  "checked_at": "2026-10-17T09:45:13Z"
 }

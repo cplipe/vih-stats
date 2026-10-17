@@ -48,7 +48,18 @@ HIST_MEMBER = ["elo", "kills", "deaths", "current_kills", "current_deaths", "cur
 HIST_CLAN = ["kills", "deaths", "current_kills", "current_deaths", "avg_elo", "current_playtime_seconds"]
 
 
-def pedir_json(url: str):
+def pedir_json(url: str, intentos: int = 3):
+    """Pide un JSON; si la API falla momentáneamente, reintenta (espera 5 s, luego 15 s)."""
+    for i in range(intentos):
+        try:
+            return _pedir_json(url)
+        except Exception:  # noqa: BLE001
+            if i == intentos - 1:
+                raise
+            time.sleep(5 if i == 0 else 15)
+
+
+def _pedir_json(url: str):
     req = urllib.request.Request(
         url,
         headers={

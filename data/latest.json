@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T17:30:19Z",
+  "updated_at": "2026-10-17T17:45:14Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,25 +15,25 @@
     "deaths": 22350,
     "kdr": 0.67,
     "headshots": 4792,
-    "playtime_seconds": 25188266,
+    "playtime_seconds": 25188386,
     "longest_kill": 296.9,
     "avg_elo": 1233,
     "peak_elo": 1397,
     "current_kills": 624,
     "current_deaths": 395,
     "current_kdr": 1.58,
-    "current_playtime_seconds": 953973,
+    "current_playtime_seconds": 955759,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 953855,
+      "playtime_seconds": 955641,
       "playtime_share": 100,
       "kills": 624,
       "active_members": 16,
-      "last_seen": "2026-10-17T17:30:01.093Z"
+      "last_seen": "2026-10-17T17:45:01.137Z"
     },
     {
       "server_id": "lunapve",
@@ -112,12 +112,12 @@
       "deaths": 2880,
       "kdr": 0.66,
       "headshots": 524,
-      "playtime_seconds": 3009785,
+      "playtime_seconds": 3009905,
       "longest_kill": 296.9,
       "current_kills": 14,
       "current_deaths": 16,
       "current_kdr": 0.88,
-      "current_playtime_seconds": 18571,
+      "current_playtime_seconds": 18691,
       "elo": 1077,
       "elo_games": 2432,
       "gather_wood": 1153965,
@@ -313,7 +313,7 @@
       "current_kills": 28,
       "current_deaths": 42,
       "current_kdr": 0.67,
-      "current_playtime_seconds": 63184,
+      "current_playtime_seconds": 64017,
       "elo": 1173,
       "elo_games": 343,
       "gather_wood": 490746,
@@ -341,7 +341,7 @@
       "current_kills": 36,
       "current_deaths": 24,
       "current_kdr": 1.5,
-      "current_playtime_seconds": 101250,
+      "current_playtime_seconds": 102083,
       "elo": 1282,
       "elo_games": 705,
       "gather_wood": 862502,
@@ -523,5 +523,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T17:30:19Z"
+  "checked_at": "2026-10-17T17:45:14Z"
 }

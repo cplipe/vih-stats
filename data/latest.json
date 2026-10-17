@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T21:43:20Z",
+  "updated_at": "2026-10-17T21:45:15Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -331,8 +331,8 @@
       "gather_sulfur": 68002,
       "gather_hqm": 416,
       "gather_total": 887933,
-      "farming_hemp": 9692,
-      "farming_total": 13644,
+      "farming_hemp": 9722,
+      "farming_total": 13676,
       "berries_total": 3861
     },
     {
@@ -353,12 +353,12 @@
       "current_playtime_seconds": 116061,
       "elo": 1275,
       "elo_games": 707,
-      "gather_wood": 928594,
+      "gather_wood": 946252,
       "gather_stone": 654531,
       "gather_metal": 380640,
       "gather_sulfur": 216195,
       "gather_hqm": 1497,
-      "gather_total": 2181457,
+      "gather_total": 2199115,
       "farming_hemp": 109972,
       "farming_total": 129087,
       "berries_total": 15443
@@ -532,5 +532,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T21:43:20Z"
+  "checked_at": "2026-10-17T21:45:15Z"
 }

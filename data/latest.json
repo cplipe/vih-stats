@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T19:00:18Z",
+  "updated_at": "2026-10-17T19:15:14Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,25 +15,25 @@
     "deaths": 22353,
     "kdr": 0.67,
     "headshots": 4794,
-    "playtime_seconds": 25200936,
+    "playtime_seconds": 25203974,
     "longest_kill": 296.9,
     "avg_elo": 1229,
     "peak_elo": 1397,
     "current_kills": 626,
     "current_deaths": 401,
     "current_kdr": 1.56,
-    "current_playtime_seconds": 970929,
+    "current_playtime_seconds": 972123,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 970811,
+      "playtime_seconds": 972005,
       "playtime_share": 100,
       "kills": 626,
       "active_members": 16,
-      "last_seen": "2026-10-17T19:00:01.081Z"
+      "last_seen": "2026-10-17T19:14:01.057Z"
     },
     {
       "server_id": "lunapve",
@@ -341,15 +341,15 @@
       "current_kills": 36,
       "current_deaths": 24,
       "current_kdr": 1.5,
-      "current_playtime_seconds": 106544,
+      "current_playtime_seconds": 107141,
       "elo": 1282,
       "elo_games": 705,
       "gather_wood": 862502,
       "gather_stone": 597031,
-      "gather_metal": 345742,
-      "gather_sulfur": 196763,
-      "gather_hqm": 1352,
-      "gather_total": 2003390,
+      "gather_metal": 359390,
+      "gather_sulfur": 205495,
+      "gather_hqm": 1397,
+      "gather_total": 2025815,
       "farming_hemp": 109972,
       "farming_total": 129087,
       "berries_total": 15443
@@ -448,12 +448,12 @@
       "deaths": 577,
       "kdr": 1.53,
       "headshots": 283,
-      "playtime_seconds": 1102302,
+      "playtime_seconds": 1105340,
       "longest_kill": 215.3,
       "current_kills": 54,
       "current_deaths": 27,
       "current_kdr": 2,
-      "current_playtime_seconds": 90128,
+      "current_playtime_seconds": 90725,
       "elo": 1384,
       "elo_games": 926,
       "gather_wood": 81253,
@@ -523,5 +523,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T19:00:18Z"
+  "checked_at": "2026-10-17T19:15:14Z"
 }

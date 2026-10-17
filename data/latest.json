@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T21:15:14Z",
+  "updated_at": "2026-10-17T21:30:17Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,29 +11,29 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15055,
-    "deaths": 22358,
+    "kills": 15061,
+    "deaths": 22366,
     "kdr": 0.67,
-    "headshots": 4795,
-    "playtime_seconds": 25221161,
+    "headshots": 4799,
+    "playtime_seconds": 25227407,
     "longest_kill": 296.9,
     "avg_elo": 1230,
     "peak_elo": 1397,
     "current_kills": 635,
     "current_deaths": 412,
     "current_kdr": 1.54,
-    "current_playtime_seconds": 992574,
+    "current_playtime_seconds": 995910,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 992456,
+      "playtime_seconds": 995792,
       "playtime_share": 100,
       "kills": 635,
       "active_members": 16,
-      "last_seen": "2026-10-17T21:15:01.037Z"
+      "last_seen": "2026-10-17T21:30:00.872Z"
     },
     {
       "server_id": "lunapve",
@@ -313,7 +313,7 @@
       "current_kills": 32,
       "current_deaths": 47,
       "current_kdr": 0.68,
-      "current_playtime_seconds": 73647,
+      "current_playtime_seconds": 74481,
       "elo": 1159,
       "elo_games": 353,
       "gather_wood": 490746,
@@ -341,7 +341,7 @@
       "current_kills": 37,
       "current_deaths": 25,
       "current_kdr": 1.48,
-      "current_playtime_seconds": 114631,
+      "current_playtime_seconds": 115465,
       "elo": 1275,
       "elo_games": 707,
       "gather_wood": 862502,
@@ -425,7 +425,7 @@
       "current_kills": 46,
       "current_deaths": 37,
       "current_kdr": 1.24,
-      "current_playtime_seconds": 75079,
+      "current_playtime_seconds": 75913,
       "elo": 1242,
       "elo_games": 1499,
       "gather_wood": 1116434,
@@ -444,16 +444,16 @@
       "avatar": "https://avatars.steamstatic.com/46577206f1e7c17ceb88fe8be064c6bc7d9cd85a_full.jpg",
       "profile": "https://steamcommunity.com/id/kimaru29/",
       "joined_at": "2026-10-17T05:26:55.887Z",
-      "kills": 883,
-      "deaths": 577,
-      "kdr": 1.53,
-      "headshots": 283,
-      "playtime_seconds": 1105340,
+      "kills": 889,
+      "deaths": 585,
+      "kdr": 1.52,
+      "headshots": 287,
+      "playtime_seconds": 1111586,
       "longest_kill": 215.3,
       "current_kills": 60,
       "current_deaths": 35,
       "current_kdr": 1.71,
-      "current_playtime_seconds": 97028,
+      "current_playtime_seconds": 97862,
       "elo": 1379,
       "elo_games": 935,
       "gather_wood": 81253,
@@ -523,5 +523,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T21:15:14Z"
+  "checked_at": "2026-10-17T21:30:17Z"
 }

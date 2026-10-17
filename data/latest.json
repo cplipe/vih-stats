@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T09:45:13Z",
+  "updated_at": "2026-10-17T10:00:19Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,11 +11,11 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15049,
-    "deaths": 22343,
+    "kills": 15050,
+    "deaths": 22345,
     "kdr": 0.67,
-    "headshots": 4791,
-    "playtime_seconds": 25172017,
+    "headshots": 4792,
+    "playtime_seconds": 25180586,
     "longest_kill": 296.9,
     "avg_elo": 1235,
     "peak_elo": 1397,
@@ -93,7 +93,7 @@
       "deaths": 1502,
       "kdr": 0.77,
       "headshots": 344,
-      "playtime_seconds": 2045968,
+      "playtime_seconds": 2051500,
       "longest_kill": 278.9,
       "current_kills": 69,
       "current_deaths": 24,
@@ -341,11 +341,11 @@
       "avatar": "https://avatars.steamstatic.com/759fbe88a8d7b2ac0d2ad23f6b90fc953d29242f_full.jpg",
       "profile": "https://steamcommunity.com/id/Murrcii/",
       "joined_at": "2026-10-15T16:39:14.236Z",
-      "kills": 409,
-      "deaths": 513,
+      "kills": 410,
+      "deaths": 515,
       "kdr": 0.8,
-      "headshots": 133,
-      "playtime_seconds": 958049,
+      "headshots": 134,
+      "playtime_seconds": 961086,
       "longest_kill": 206.7,
       "current_kills": 38,
       "current_deaths": 28,
@@ -532,5 +532,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T09:45:13Z"
+  "checked_at": "2026-10-17T10:00:19Z"
 }

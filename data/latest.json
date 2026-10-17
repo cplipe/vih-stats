@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T15:00:19Z",
+  "updated_at": "2026-10-17T15:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -17,23 +17,23 @@
     "headshots": 4792,
     "playtime_seconds": 25181061,
     "longest_kill": 296.9,
-    "avg_elo": 1234,
+    "avg_elo": 1233,
     "peak_elo": 1397,
     "current_kills": 647,
-    "current_deaths": 428,
+    "current_deaths": 429,
     "current_kdr": 1.51,
-    "current_playtime_seconds": 945759,
+    "current_playtime_seconds": 946470,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 942250,
+      "playtime_seconds": 942961,
       "playtime_share": 99.6,
       "kills": 623,
       "active_members": 16,
-      "last_seen": "2026-10-17T14:59:01.206Z"
+      "last_seen": "2026-10-17T15:14:01.202Z"
     },
     {
       "server_id": "caramelo",
@@ -208,19 +208,19 @@
       "playtime_seconds": 181212,
       "longest_kill": 225.3,
       "current_kills": 31,
-      "current_deaths": 22,
-      "current_kdr": 1.41,
-      "current_playtime_seconds": 22438,
-      "elo": 1119,
-      "elo_games": 343,
+      "current_deaths": 23,
+      "current_kdr": 1.35,
+      "current_playtime_seconds": 22735,
+      "elo": 1107,
+      "elo_games": 344,
       "gather_wood": 181320,
       "gather_stone": 107797,
       "gather_metal": 61261,
       "gather_sulfur": 33570,
       "gather_hqm": 220,
       "gather_total": 384168,
-      "farming_hemp": 2533,
-      "farming_total": 2643,
+      "farming_hemp": 2543,
+      "farming_total": 2653,
       "berries_total": 12
     },
     {
@@ -322,7 +322,7 @@
       "current_kills": 27,
       "current_deaths": 40,
       "current_kdr": 0.68,
-      "current_playtime_seconds": 54673,
+      "current_playtime_seconds": 55087,
       "elo": 1183,
       "elo_games": 341,
       "gather_wood": 490746,
@@ -532,5 +532,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T15:00:19Z"
+  "checked_at": "2026-10-17T15:15:16Z"
 }

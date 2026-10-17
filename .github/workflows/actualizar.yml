@@ -1,9 +1,11 @@
 name: Actualizar estadísticas
 
 on:
+  # La ejecución periódica la dispara cron-job.org cada 15 minutos (workflow_dispatch).
+  # El horario interno de GitHub queda solo como respaldo, cada 1 hora.
   schedule:
-    - cron: "7,22,37,52 * * * *"
-  workflow_dispatch:
+    - cron: "43 * * * *"
+  workflow_dispatch: # cron-job.org y el botón "Run workflow" usan esto
 
 permissions:
   contents: write
@@ -35,5 +37,12 @@ jobs:
             echo "Sin cambios en las estadísticas"
           else
             git commit -m "Actualizar stats $(date -u +'%Y-%m-%d %H:%M') UTC"
-            git push
+            # Si otro cambio llegó al repo mientras corría, se integra y se reintenta
+            for i in 1 2 3; do
+              git push && exit 0
+              echo "Push rechazado, reintentando ($i/3)..."
+              git pull --rebase -X theirs origin main || git rebase --abort
+              sleep 5
+            done
+            exit 1
           fi

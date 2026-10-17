@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T16:00:20Z",
+  "updated_at": "2026-10-17T16:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -17,23 +17,23 @@
     "headshots": 4792,
     "playtime_seconds": 25182790,
     "longest_kill": 296.9,
-    "avg_elo": 1233,
+    "avg_elo": 1232,
     "peak_elo": 1397,
     "current_kills": 647,
-    "current_deaths": 429,
-    "current_kdr": 1.51,
-    "current_playtime_seconds": 948971,
+    "current_deaths": 431,
+    "current_kdr": 1.5,
+    "current_playtime_seconds": 949805,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 945462,
+      "playtime_seconds": 946296,
       "playtime_share": 99.6,
       "kills": 623,
       "active_members": 16,
-      "last_seen": "2026-10-17T16:00:01.129Z"
+      "last_seen": "2026-10-17T16:14:01.157Z"
     },
     {
       "server_id": "caramelo",
@@ -320,11 +320,11 @@
       "playtime_seconds": 283533,
       "longest_kill": 250.5,
       "current_kills": 27,
-      "current_deaths": 40,
-      "current_kdr": 0.68,
-      "current_playtime_seconds": 57588,
-      "elo": 1183,
-      "elo_games": 341,
+      "current_deaths": 42,
+      "current_kdr": 0.64,
+      "current_playtime_seconds": 58422,
+      "elo": 1155,
+      "elo_games": 342,
       "gather_wood": 490746,
       "gather_stone": 219570,
       "gather_metal": 109199,
@@ -532,5 +532,5 @@
       "berries_total": 1544
     }
   ],
-  "checked_at": "2026-10-17T16:00:20Z"
+  "checked_at": "2026-10-17T16:15:16Z"
 }

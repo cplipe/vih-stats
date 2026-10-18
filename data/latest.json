@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T13:45:16Z",
+  "updated_at": "2026-10-18T14:00:18Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,29 +11,29 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15161,
+    "kills": 15167,
     "deaths": 22466,
-    "kdr": 0.67,
-    "headshots": 4839,
-    "playtime_seconds": 25495154,
+    "kdr": 0.68,
+    "headshots": 4840,
+    "playtime_seconds": 25501043,
     "longest_kill": 296.9,
     "avg_elo": 1217,
     "peak_elo": 1383,
     "current_kills": 740,
     "current_deaths": 514,
     "current_kdr": 1.44,
-    "current_playtime_seconds": 1260621,
+    "current_playtime_seconds": 1261215,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 1257587,
+      "playtime_seconds": 1258181,
       "playtime_share": 99.8,
       "kills": 740,
       "active_members": 16,
-      "last_seen": "2026-10-18T13:44:10.062Z"
+      "last_seen": "2026-10-18T13:59:10.071Z"
     },
     {
       "server_id": "solonoobx2",
@@ -257,24 +257,24 @@
       "avatar": "https://avatars.steamstatic.com/ffc06397744cc94e908766d13978e684f122bcb8_full.jpg",
       "profile": "https://steamcommunity.com/profiles/76561199410804568/",
       "joined_at": "2026-10-14T16:43:59.550Z",
-      "kills": 971,
+      "kills": 977,
       "deaths": 2543,
       "kdr": 0.38,
-      "headshots": 313,
-      "playtime_seconds": 2733152,
+      "headshots": 314,
+      "playtime_seconds": 2739041,
       "longest_kill": 232.3,
       "current_kills": 61,
       "current_deaths": 28,
       "current_kdr": 2.18,
-      "current_playtime_seconds": 76151,
+      "current_playtime_seconds": 76745,
       "elo": 1237,
       "elo_games": 1559,
-      "gather_wood": 1478675,
+      "gather_wood": 1479675,
       "gather_stone": 994638,
       "gather_metal": 668979,
       "gather_sulfur": 323615,
       "gather_hqm": 2400,
-      "gather_total": 3468307,
+      "gather_total": 3469307,
       "farming_hemp": 31089,
       "farming_total": 32844,
       "berries_total": 1266
@@ -532,5 +532,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-18T13:45:16Z"
+  "checked_at": "2026-10-18T14:00:18Z"
 }

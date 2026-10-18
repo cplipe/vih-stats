@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T11:45:14Z",
+  "updated_at": "2026-10-18T12:00:19Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,18 +22,18 @@
     "current_kills": 734,
     "current_deaths": 514,
     "current_kdr": 1.43,
-    "current_playtime_seconds": 1250441,
+    "current_playtime_seconds": 1251398,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 1247407,
+      "playtime_seconds": 1248364,
       "playtime_share": 99.8,
       "kills": 734,
       "active_members": 16,
-      "last_seen": "2026-10-18T11:45:10.134Z"
+      "last_seen": "2026-10-18T11:59:10.112Z"
     },
     {
       "server_id": "solonoobx2",
@@ -98,7 +98,7 @@
       "current_kills": 71,
       "current_deaths": 20,
       "current_kdr": 3.55,
-      "current_playtime_seconds": 88811,
+      "current_playtime_seconds": 89648,
       "elo": 1329,
       "elo_games": 1766,
       "gather_wood": 1114102,
@@ -182,7 +182,7 @@
       "current_kills": 84,
       "current_deaths": 44,
       "current_kdr": 1.91,
-      "current_playtime_seconds": 77561,
+      "current_playtime_seconds": 77681,
       "elo": 1276,
       "elo_games": 1150,
       "gather_wood": 70876,
@@ -532,5 +532,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-18T11:45:14Z"
+  "checked_at": "2026-10-18T12:00:19Z"
 }

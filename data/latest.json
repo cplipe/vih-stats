@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T12:30:18Z",
+  "updated_at": "2026-10-18T12:45:15Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -19,21 +19,21 @@
     "longest_kill": 296.9,
     "avg_elo": 1216,
     "peak_elo": 1383,
-    "current_kills": 736,
+    "current_kills": 737,
     "current_deaths": 514,
     "current_kdr": 1.43,
-    "current_playtime_seconds": 1254552,
+    "current_playtime_seconds": 1255742,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 1251518,
+      "playtime_seconds": 1252708,
       "playtime_share": 99.8,
-      "kills": 736,
+      "kills": 737,
       "active_members": 16,
-      "last_seen": "2026-10-18T12:30:10.068Z"
+      "last_seen": "2026-10-18T12:45:10.112Z"
     },
     {
       "server_id": "solonoobx2",
@@ -98,7 +98,7 @@
       "current_kills": 71,
       "current_deaths": 20,
       "current_kdr": 3.55,
-      "current_playtime_seconds": 91672,
+      "current_playtime_seconds": 92267,
       "elo": 1329,
       "elo_games": 1766,
       "gather_wood": 1114102,
@@ -263,21 +263,21 @@
       "headshots": 313,
       "playtime_seconds": 2733152,
       "longest_kill": 232.3,
-      "current_kills": 57,
+      "current_kills": 58,
       "current_deaths": 28,
-      "current_kdr": 2.04,
-      "current_playtime_seconds": 71689,
-      "elo": 1213,
-      "elo_games": 1555,
-      "gather_wood": 1468884,
+      "current_kdr": 2.07,
+      "current_playtime_seconds": 72284,
+      "elo": 1221,
+      "elo_games": 1556,
+      "gather_wood": 1478528,
       "gather_stone": 994638,
-      "gather_metal": 665379,
-      "gather_sulfur": 322715,
-      "gather_hqm": 2388,
-      "gather_total": 3454004,
-      "farming_hemp": 30666,
-      "farming_total": 32414,
-      "berries_total": 1259
+      "gather_metal": 666579,
+      "gather_sulfur": 323015,
+      "gather_hqm": 2392,
+      "gather_total": 3465152,
+      "farming_hemp": 30886,
+      "farming_total": 32641,
+      "berries_total": 1266
     },
     {
       "steam_id": "76561198884955367",
@@ -532,5 +532,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-18T12:30:18Z"
+  "checked_at": "2026-10-18T12:45:15Z"
 }

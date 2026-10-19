@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T00:45:14Z",
+  "updated_at": "2026-10-19T01:00:20Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -17,23 +17,23 @@
     "headshots": 4853,
     "playtime_seconds": 25581558,
     "longest_kill": 296.9,
-    "avg_elo": 1213,
+    "avg_elo": 1212,
     "peak_elo": 1383,
     "current_kills": 779,
-    "current_deaths": 543,
+    "current_deaths": 544,
     "current_kdr": 1.43,
-    "current_playtime_seconds": 1349767,
+    "current_playtime_seconds": 1352272,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 1346733,
+      "playtime_seconds": 1349238,
       "playtime_share": 99.8,
       "kills": 779,
       "active_members": 16,
-      "last_seen": "2026-10-19T00:44:09.721Z"
+      "last_seen": "2026-10-19T01:00:09.694Z"
     },
     {
       "server_id": "solonoobx2",
@@ -180,11 +180,11 @@
       "playtime_seconds": 644519,
       "longest_kill": 249.8,
       "current_kills": 85,
-      "current_deaths": 48,
-      "current_kdr": 1.77,
-      "current_playtime_seconds": 79467,
-      "elo": 1273,
-      "elo_games": 1153,
+      "current_deaths": 49,
+      "current_kdr": 1.73,
+      "current_playtime_seconds": 80302,
+      "elo": 1258,
+      "elo_games": 1154,
       "gather_wood": 70876,
       "gather_stone": 99131,
       "gather_metal": 96233,
@@ -350,7 +350,7 @@
       "current_kills": 64,
       "current_deaths": 34,
       "current_kdr": 1.88,
-      "current_playtime_seconds": 161939,
+      "current_playtime_seconds": 162774,
       "elo": 1265,
       "elo_games": 744,
       "gather_wood": 1061502,
@@ -434,7 +434,7 @@
       "current_kills": 51,
       "current_deaths": 48,
       "current_kdr": 1.06,
-      "current_playtime_seconds": 121075,
+      "current_playtime_seconds": 121910,
       "elo": 1202,
       "elo_games": 1511,
       "gather_wood": 1116434,
@@ -532,5 +532,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-19T00:45:14Z"
+  "checked_at": "2026-10-19T01:00:20Z"
 }

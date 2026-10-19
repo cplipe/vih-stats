@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T13:45:16Z",
+  "updated_at": "2026-10-19T14:00:20Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -33,7 +33,7 @@
       "playtime_share": 99.8,
       "kills": 810,
       "active_members": 16,
-      "last_seen": "2026-10-19T13:43:20.805Z"
+      "last_seen": "2026-10-19T13:53:20.817Z"
     },
     {
       "server_id": "solonoobx2",
@@ -532,5 +532,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-19T13:45:16Z"
+  "checked_at": "2026-10-19T14:00:20Z"
 }

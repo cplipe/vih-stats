@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T21:15:16Z",
+  "updated_at": "2026-10-20T21:30:17Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -33,7 +33,7 @@
       "playtime_share": 98.1,
       "kills": 962,
       "active_members": 16,
-      "last_seen": "2026-10-20T21:14:25.161Z"
+      "last_seen": "2026-10-20T21:29:25.178Z"
     },
     {
       "server_id": "lunax5",
@@ -293,8 +293,8 @@
       "gather_sulfur": 333515,
       "gather_hqm": 2494,
       "gather_total": 3566959,
-      "farming_hemp": 31709,
-      "farming_total": 33464,
+      "farming_hemp": 31729,
+      "farming_total": 33484,
       "berries_total": 1266
     },
     {
@@ -433,8 +433,8 @@
       "gather_sulfur": 279624,
       "gather_hqm": 2722,
       "gather_total": 2919731,
-      "farming_hemp": 19466,
-      "farming_total": 19803,
+      "farming_hemp": 19506,
+      "farming_total": 19843,
       "berries_total": 17
     },
     {
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-20T21:15:16Z"
+  "checked_at": "2026-10-20T21:30:17Z"
 }

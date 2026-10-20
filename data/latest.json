@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T15:30:19Z",
+  "updated_at": "2026-10-20T15:45:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,29 +11,29 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15400,
+    "kills": 15401,
     "deaths": 22639,
     "kdr": 0.68,
-    "headshots": 4941,
-    "playtime_seconds": 25788360,
+    "headshots": 4942,
+    "playtime_seconds": 25790980,
     "longest_kill": 296.9,
     "avg_elo": 1215,
     "peak_elo": 1347,
     "current_kills": 974,
     "current_deaths": 685,
     "current_kdr": 1.42,
-    "current_playtime_seconds": 1550319,
+    "current_playtime_seconds": 1551152,
     "current_longest_kill": 270.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 1524681,
+      "playtime_seconds": 1525514,
       "playtime_share": 98.3,
       "kills": 955,
       "active_members": 16,
-      "last_seen": "2026-10-20T15:29:25.402Z"
+      "last_seen": "2026-10-20T15:43:25.357Z"
     },
     {
       "server_id": "lunax5",
@@ -79,16 +79,16 @@
       "avatar": "https://avatars.steamstatic.com/545e38fcc061662dd4358756203f32e4f9f43a7d_full.jpg",
       "profile": "https://steamcommunity.com/id/Don_Tulio/",
       "joined_at": "2026-10-14T01:19:54.674Z",
-      "kills": 1630,
+      "kills": 1631,
       "deaths": 2528,
-      "kdr": 0.64,
-      "headshots": 493,
-      "playtime_seconds": 2479643,
+      "kdr": 0.65,
+      "headshots": 494,
+      "playtime_seconds": 2482263,
       "longest_kill": 258,
       "current_kills": 51,
       "current_deaths": 27,
       "current_kdr": 1.89,
-      "current_playtime_seconds": 91074,
+      "current_playtime_seconds": 91907,
       "elo": 1193,
       "elo_games": 1917,
       "gather_wood": 1575816,
@@ -97,8 +97,8 @@
       "gather_sulfur": 312980,
       "gather_hqm": 1892,
       "gather_total": 2986279,
-      "farming_hemp": 65008,
-      "farming_total": 73297,
+      "farming_hemp": 65028,
+      "farming_total": 73317,
       "berries_total": 6575
     },
     {
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-20T15:30:19Z"
+  "checked_at": "2026-10-20T15:45:16Z"
 }

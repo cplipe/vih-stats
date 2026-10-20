@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T07:30:19Z",
+  "updated_at": "2026-10-20T08:00:19Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,11 +11,11 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15396,
-    "deaths": 22635,
+    "kills": 15399,
+    "deaths": 22639,
     "kdr": 0.68,
-    "headshots": 4939,
-    "playtime_seconds": 25784131,
+    "headshots": 4941,
+    "playtime_seconds": 25787703,
     "longest_kill": 296.9,
     "avg_elo": 1214,
     "peak_elo": 1347,
@@ -387,11 +387,11 @@
       "avatar": "https://avatars.steamstatic.com/50520e5314e12c57f8440597ac2c068ca098ab33_full.jpg",
       "profile": "https://steamcommunity.com/id/notHeaven/",
       "joined_at": "2026-10-16T07:26:51.240Z",
-      "kills": 562,
-      "deaths": 354,
-      "kdr": 1.59,
-      "headshots": 190,
-      "playtime_seconds": 599282,
+      "kills": 565,
+      "deaths": 358,
+      "kdr": 1.58,
+      "headshots": 192,
+      "playtime_seconds": 602854,
       "longest_kill": 222.5,
       "current_kills": 83,
       "current_deaths": 36,
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-20T07:45:14Z"
+  "checked_at": "2026-10-20T08:00:19Z"
 }

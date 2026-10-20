@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T22:30:18Z",
+  "updated_at": "2026-10-20T23:15:15Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,11 +11,11 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15409,
-    "deaths": 22662,
+    "kills": 15420,
+    "deaths": 22672,
     "kdr": 0.68,
-    "headshots": 4946,
-    "playtime_seconds": 25825550,
+    "headshots": 4947,
+    "playtime_seconds": 25829175,
     "longest_kill": 296.9,
     "avg_elo": 1200,
     "peak_elo": 1347,
@@ -42,7 +42,7 @@
       "playtime_share": 1.8,
       "kills": 22,
       "active_members": 4,
-      "last_seen": "2026-10-20T21:12:54.489Z"
+      "last_seen": "2026-10-20T23:04:54.441Z"
     },
     {
       "server_id": "solonoobx2",
@@ -359,11 +359,11 @@
       "avatar": "https://avatars.steamstatic.com/759fbe88a8d7b2ac0d2ad23f6b90fc953d29242f_full.jpg",
       "profile": "https://steamcommunity.com/id/Murrcii/",
       "joined_at": "2026-10-15T16:39:14.236Z",
-      "kills": 469,
+      "kills": 471,
       "deaths": 553,
       "kdr": 0.85,
-      "headshots": 155,
-      "playtime_seconds": 1063184,
+      "headshots": 156,
+      "playtime_seconds": 1064784,
       "longest_kill": 206.7,
       "current_kills": 97,
       "current_deaths": 62,
@@ -415,11 +415,11 @@
       "avatar": "https://avatars.steamstatic.com/b587f2d81e20dbdae34334f9ce37a835e2fcc000_full.jpg",
       "profile": "https://steamcommunity.com/profiles/76561198171052931/",
       "joined_at": "2026-10-16T07:26:52.140Z",
-      "kills": 961,
-      "deaths": 2981,
+      "kills": 970,
+      "deaths": 2991,
       "kdr": 0.32,
       "headshots": 295,
-      "playtime_seconds": 2081687,
+      "playtime_seconds": 2083712,
       "longest_kill": 231.9,
       "current_kills": 71,
       "current_deaths": 100,
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-20T23:00:20Z"
+  "checked_at": "2026-10-20T23:15:15Z"
 }

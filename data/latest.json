@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T01:30:18Z",
+  "updated_at": "2026-10-21T01:45:15Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,7 +22,7 @@
     "current_kills": 996,
     "current_deaths": 726,
     "current_kdr": 1.37,
-    "current_playtime_seconds": 1590723,
+    "current_playtime_seconds": 1592273,
     "current_longest_kill": 270.3
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 1559504,
-      "playtime_share": 98,
+      "playtime_share": 97.9,
       "kills": 971,
       "active_members": 16,
       "last_seen": "2026-10-21T00:20:25.028Z"
@@ -45,6 +45,15 @@
       "last_seen": "2026-10-20T23:04:54.441Z"
     },
     {
+      "server_id": "vainillaquad",
+      "server_name": "Vainilla Quad",
+      "playtime_seconds": 2503,
+      "playtime_share": 0.2,
+      "kills": 0,
+      "active_members": 2,
+      "last_seen": "2026-10-21T01:43:44.798Z"
+    },
+    {
       "server_id": "solonoobx2",
       "server_name": "Noob x2",
       "playtime_seconds": 1369,
@@ -52,15 +61,6 @@
       "kills": 3,
       "active_members": 1,
       "last_seen": "2026-10-20T20:20:10.881Z"
-    },
-    {
-      "server_id": "vainillaquad",
-      "server_name": "Vainilla Quad",
-      "playtime_seconds": 953,
-      "playtime_share": 0.1,
-      "kills": 0,
-      "active_members": 2,
-      "last_seen": "2026-10-21T01:29:20.037Z"
     },
     {
       "server_id": "lunapve",
@@ -125,7 +125,7 @@
       "current_kills": 71,
       "current_deaths": 20,
       "current_kdr": 3.55,
-      "current_playtime_seconds": 93696,
+      "current_playtime_seconds": 94471,
       "elo": 1329,
       "elo_games": 1766,
       "gather_wood": 1114102,
@@ -153,7 +153,7 @@
       "current_kills": 15,
       "current_deaths": 37,
       "current_kdr": 0.41,
-      "current_playtime_seconds": 26605,
+      "current_playtime_seconds": 27380,
       "elo": 917,
       "elo_games": 2451,
       "gather_wood": 1154965,
@@ -559,5 +559,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-21T01:30:18Z"
+  "checked_at": "2026-10-21T01:45:15Z"
 }

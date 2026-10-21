@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T12:45:15Z",
+  "updated_at": "2026-10-21T16:45:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,7 +15,7 @@
     "deaths": 22689,
     "kdr": 0.68,
     "headshots": 4951,
-    "playtime_seconds": 25848780,
+    "playtime_seconds": 25848841,
     "longest_kill": 296.9,
     "avg_elo": 1200,
     "peak_elo": 1347,
@@ -51,7 +51,7 @@
       "playtime_share": 1,
       "kills": 8,
       "active_members": 3,
-      "last_seen": "2026-10-21T02:56:20.015Z"
+      "last_seen": "2026-10-21T16:44:19.457Z"
     },
     {
       "server_id": "solonoobx2",
@@ -428,7 +428,7 @@
       "deaths": 2996,
       "kdr": 0.32,
       "headshots": 295,
-      "playtime_seconds": 2088299,
+      "playtime_seconds": 2088360,
       "longest_kill": 231.9,
       "current_kills": 74,
       "current_deaths": 105,
@@ -559,5 +559,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-21T16:30:21Z"
+  "checked_at": "2026-10-21T16:45:16Z"
 }

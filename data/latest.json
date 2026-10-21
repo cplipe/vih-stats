@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21T00:00:23Z",
+  "updated_at": "2026-10-21T00:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,7 +15,7 @@
     "deaths": 22683,
     "kdr": 0.68,
     "headshots": 4949,
-    "playtime_seconds": 25831916,
+    "playtime_seconds": 25832513,
     "longest_kill": 296.9,
     "avg_elo": 1200,
     "peak_elo": 1347,
@@ -279,7 +279,7 @@
       "deaths": 2565,
       "kdr": 0.38,
       "headshots": 314,
-      "playtime_seconds": 2769866,
+      "playtime_seconds": 2770463,
       "longest_kill": 232.3,
       "current_kills": 70,
       "current_deaths": 50,
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-21T00:07:03Z"
+  "checked_at": "2026-10-21T00:15:16Z"
 }

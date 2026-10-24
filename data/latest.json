@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T18:15:16Z",
+  "updated_at": "2026-10-24T18:20:52Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -51,7 +51,7 @@
       "playtime_share": 1,
       "kills": 2,
       "active_members": 1,
-      "last_seen": "2026-10-24T18:15:15.513Z"
+      "last_seen": "2026-10-24T18:19:15.607Z"
     },
     {
       "server_id": "lunapve",
@@ -541,5 +541,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-24T18:15:16Z"
+  "checked_at": "2026-10-24T18:20:52Z"
 }

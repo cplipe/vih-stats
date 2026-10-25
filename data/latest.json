@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T15:15:15Z",
+  "updated_at": "2026-10-25T15:30:20Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,14 +15,14 @@
     "deaths": 22933,
     "kdr": 0.68,
     "headshots": 5055,
-    "playtime_seconds": 26208537,
+    "playtime_seconds": 26209013,
     "longest_kill": 296.9,
     "avg_elo": 1184,
     "peak_elo": 1388,
     "current_kills": 246,
     "current_deaths": 257,
     "current_kdr": 0.96,
-    "current_playtime_seconds": 391008,
+    "current_playtime_seconds": 391484,
     "current_longest_kill": 193.9
   },
   "servers": [
@@ -56,11 +56,11 @@
     {
       "server_id": "caramelo",
       "server_name": "Caramelo x2",
-      "playtime_seconds": 25402,
-      "playtime_share": 6.5,
+      "playtime_seconds": 25878,
+      "playtime_share": 6.6,
       "kills": 6,
-      "active_members": 3,
-      "last_seen": "2026-10-25T15:13:40.562Z"
+      "active_members": 4,
+      "last_seen": "2026-10-25T15:28:40.527Z"
     },
     {
       "server_id": "lunapve",
@@ -279,12 +279,12 @@
       "deaths": 2580,
       "kdr": 0.38,
       "headshots": 316,
-      "playtime_seconds": 2825044,
+      "playtime_seconds": 2825520,
       "longest_kill": 232.3,
       "current_kills": 6,
       "current_deaths": 15,
       "current_kdr": 0.4,
-      "current_playtime_seconds": 54699,
+      "current_playtime_seconds": 55175,
       "elo": 1043,
       "elo_games": 1590,
       "gather_wood": 1503709,
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-25T15:15:15Z"
+  "checked_at": "2026-10-25T15:30:20Z"
 }

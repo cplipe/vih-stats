@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T21:00:22Z",
+  "updated_at": "2026-10-25T21:15:15Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,7 +12,7 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 15654,
-    "deaths": 22946,
+    "deaths": 22947,
     "kdr": 0.68,
     "headshots": 5055,
     "playtime_seconds": 26225306,
@@ -360,7 +360,7 @@
       "profile": "https://steamcommunity.com/id/Murrcii/",
       "joined_at": "2026-10-15T16:39:14.236Z",
       "kills": 497,
-      "deaths": 603,
+      "deaths": 604,
       "kdr": 0.82,
       "headshots": 168,
       "playtime_seconds": 1098050,
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-25T21:00:22Z"
+  "checked_at": "2026-10-25T21:15:15Z"
 }

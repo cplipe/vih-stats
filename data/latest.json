@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T12:00:23Z",
+  "updated_at": "2026-10-25T12:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,14 +15,14 @@
     "deaths": 22928,
     "kdr": 0.68,
     "headshots": 5055,
-    "playtime_seconds": 26196874,
+    "playtime_seconds": 26197767,
     "longest_kill": 296.9,
     "avg_elo": 1183,
     "peak_elo": 1388,
     "current_kills": 244,
     "current_deaths": 252,
     "current_kdr": 0.97,
-    "current_playtime_seconds": 379345,
+    "current_playtime_seconds": 380238,
     "current_longest_kill": 193.9
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
       "playtime_seconds": 283278,
-      "playtime_share": 74.7,
+      "playtime_share": 74.5,
       "kills": 147,
       "active_members": 8,
       "last_seen": "2026-10-22T09:20:16.283Z"
@@ -39,7 +39,7 @@
       "server_id": "lunax5",
       "server_name": "Luna x5",
       "playtime_seconds": 50362,
-      "playtime_share": 13.3,
+      "playtime_share": 13.2,
       "kills": 67,
       "active_members": 3,
       "last_seen": "2026-10-25T08:58:42.229Z"
@@ -56,11 +56,11 @@
     {
       "server_id": "caramelo",
       "server_name": "Caramelo x2",
-      "playtime_seconds": 13739,
-      "playtime_share": 3.6,
+      "playtime_seconds": 14632,
+      "playtime_share": 3.8,
       "kills": 4,
       "active_members": 3,
-      "last_seen": "2026-10-25T11:59:40.292Z"
+      "last_seen": "2026-10-25T12:14:40.138Z"
     },
     {
       "server_id": "lunapve",
@@ -279,12 +279,12 @@
       "deaths": 2575,
       "kdr": 0.38,
       "headshots": 316,
-      "playtime_seconds": 2813381,
+      "playtime_seconds": 2814274,
       "longest_kill": 232.3,
       "current_kills": 4,
       "current_deaths": 10,
       "current_kdr": 0.4,
-      "current_playtime_seconds": 43036,
+      "current_playtime_seconds": 43929,
       "elo": 1030,
       "elo_games": 1585,
       "gather_wood": 1503709,
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-25T12:00:23Z"
+  "checked_at": "2026-10-25T12:15:16Z"
 }

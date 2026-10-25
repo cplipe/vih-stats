@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T09:00:20Z",
+  "updated_at": "2026-10-25T09:15:15Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,18 +11,18 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15643,
+    "kills": 15647,
     "deaths": 22927,
     "kdr": 0.68,
-    "headshots": 5053,
-    "playtime_seconds": 26184495,
+    "headshots": 5055,
+    "playtime_seconds": 26191519,
     "longest_kill": 296.9,
     "avg_elo": 1183,
     "peak_elo": 1388,
     "current_kills": 244,
     "current_deaths": 252,
     "current_kdr": 0.97,
-    "current_playtime_seconds": 378273,
+    "current_playtime_seconds": 378333,
     "current_longest_kill": 193.9
   },
   "servers": [
@@ -38,7 +38,7 @@
     {
       "server_id": "lunax5",
       "server_name": "Luna x5",
-      "playtime_seconds": 50302,
+      "playtime_seconds": 50362,
       "playtime_share": 13.3,
       "kills": 67,
       "active_members": 3,
@@ -443,16 +443,16 @@
       "avatar": "https://avatars.steamstatic.com/9ef2518e2dbc1ee847dfc625116409ef23cd1f12_full.jpg",
       "profile": "https://steamcommunity.com/profiles/76561199524369912/",
       "joined_at": "2026-10-17T05:26:54.016Z",
-      "kills": 854,
+      "kills": 858,
       "deaths": 1131,
       "kdr": 0.76,
-      "headshots": 277,
-      "playtime_seconds": 1135518,
+      "headshots": 279,
+      "playtime_seconds": 1142542,
       "longest_kill": 270.3,
       "current_kills": 13,
       "current_deaths": 8,
       "current_kdr": 1.63,
-      "current_playtime_seconds": 18097,
+      "current_playtime_seconds": 18157,
       "elo": 1253,
       "elo_games": 1567,
       "gather_wood": 1116434,
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-25T09:00:20Z"
+  "checked_at": "2026-10-25T09:15:15Z"
 }

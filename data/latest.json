@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T08:00:23Z",
+  "updated_at": "2026-10-25T08:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,18 +11,18 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15626,
-    "deaths": 22919,
+    "kills": 15641,
+    "deaths": 22925,
     "kdr": 0.68,
-    "headshots": 5041,
-    "playtime_seconds": 26171398,
+    "headshots": 5052,
+    "playtime_seconds": 26178840,
     "longest_kill": 296.9,
-    "avg_elo": 1182,
+    "avg_elo": 1183,
     "peak_elo": 1374,
-    "current_kills": 240,
+    "current_kills": 242,
     "current_deaths": 251,
     "current_kdr": 0.96,
-    "current_playtime_seconds": 370241,
+    "current_playtime_seconds": 373389,
     "current_longest_kill": 193.9
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
       "playtime_seconds": 283278,
-      "playtime_share": 76.5,
+      "playtime_share": 75.9,
       "kills": 147,
       "active_members": 8,
       "last_seen": "2026-10-22T09:20:16.283Z"
@@ -38,17 +38,17 @@
     {
       "server_id": "lunax5",
       "server_name": "Luna x5",
-      "playtime_seconds": 44234,
-      "playtime_share": 11.9,
-      "kills": 63,
+      "playtime_seconds": 46551,
+      "playtime_share": 12.5,
+      "kills": 65,
       "active_members": 3,
-      "last_seen": "2026-10-25T08:00:07.264Z"
+      "last_seen": "2026-10-25T08:15:07.557Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 31848,
-      "playtime_share": 8.6,
+      "playtime_share": 8.5,
       "kills": 26,
       "active_members": 3,
       "last_seen": "2026-10-20T06:13:20.181Z"
@@ -56,11 +56,11 @@
     {
       "server_id": "caramelo",
       "server_name": "Caramelo x2",
-      "playtime_seconds": 10763,
-      "playtime_share": 2.9,
+      "playtime_seconds": 11594,
+      "playtime_share": 3.1,
       "kills": 4,
       "active_members": 3,
-      "last_seen": "2026-10-25T07:59:15.559Z"
+      "last_seen": "2026-10-25T08:15:15.434Z"
     },
     {
       "server_id": "lunapve",
@@ -163,16 +163,16 @@
       "avatar": "https://avatars.steamstatic.com/577b0558a055ef0b0e6368c08f383f10056824f5_full.jpg",
       "profile": "https://steamcommunity.com/profiles/76561198995492185/",
       "joined_at": "2026-10-14T01:28:42.297Z",
-      "kills": 951,
-      "deaths": 604,
-      "kdr": 1.57,
-      "headshots": 316,
-      "playtime_seconds": 1252924,
+      "kills": 966,
+      "deaths": 610,
+      "kdr": 1.58,
+      "headshots": 327,
+      "playtime_seconds": 1260366,
       "longest_kill": 262,
       "current_kills": 38,
       "current_deaths": 14,
       "current_kdr": 2.71,
-      "current_playtime_seconds": 14883,
+      "current_playtime_seconds": 15774,
       "elo": 1374,
       "elo_games": 822,
       "gather_wood": 293346,
@@ -368,7 +368,7 @@
       "current_kills": 26,
       "current_deaths": 48,
       "current_kdr": 0.54,
-      "current_playtime_seconds": 32731,
+      "current_playtime_seconds": 33266,
       "elo": 1158,
       "elo_games": 851,
       "gather_wood": 1061502,
@@ -396,7 +396,7 @@
       "current_kills": 1,
       "current_deaths": 1,
       "current_kdr": 1,
-      "current_playtime_seconds": 4043,
+      "current_playtime_seconds": 4874,
       "elo": 1278,
       "elo_games": 767,
       "gather_wood": 188198,
@@ -449,12 +449,12 @@
       "headshots": 277,
       "playtime_seconds": 1135518,
       "longest_kill": 270.3,
-      "current_kills": 11,
+      "current_kills": 13,
       "current_deaths": 8,
-      "current_kdr": 1.38,
-      "current_playtime_seconds": 14468,
-      "elo": 1244,
-      "elo_games": 1565,
+      "current_kdr": 1.63,
+      "current_playtime_seconds": 15359,
+      "elo": 1253,
+      "elo_games": 1567,
       "gather_wood": 1116434,
       "gather_stone": 674038,
       "gather_metal": 510790,
@@ -550,5 +550,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-25T08:00:23Z"
+  "checked_at": "2026-10-25T08:15:16Z"
 }

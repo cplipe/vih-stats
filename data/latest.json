@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T01:38:30Z",
+  "updated_at": "2026-10-25T01:45:14Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,17 +12,17 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 15581,
-    "deaths": 22884,
+    "deaths": 22885,
     "kdr": 0.68,
     "headshots": 5019,
-    "playtime_seconds": 26139375,
+    "playtime_seconds": 26139493,
     "longest_kill": 296.9,
     "avg_elo": 1179,
     "peak_elo": 1347,
     "current_kills": 176,
-    "current_deaths": 210,
-    "current_kdr": 0.84,
-    "current_playtime_seconds": 321846,
+    "current_deaths": 211,
+    "current_kdr": 0.83,
+    "current_playtime_seconds": 321964,
     "current_longest_kill": 170.7
   },
   "servers": [
@@ -47,11 +47,11 @@
     {
       "server_id": "caramelo",
       "server_name": "Caramelo x2",
-      "playtime_seconds": 6602,
+      "playtime_seconds": 6720,
       "playtime_share": 2.1,
       "kills": 3,
       "active_members": 2,
-      "last_seen": "2026-10-25T01:38:15.836Z"
+      "last_seen": "2026-10-25T01:40:15.695Z"
     },
     {
       "server_id": "lunapve",
@@ -267,15 +267,15 @@
       "profile": "https://steamcommunity.com/profiles/76561199410804568/",
       "joined_at": "2026-10-14T16:43:59.550Z",
       "kills": 990,
-      "deaths": 2573,
+      "deaths": 2574,
       "kdr": 0.38,
       "headshots": 316,
-      "playtime_seconds": 2812251,
+      "playtime_seconds": 2812369,
       "longest_kill": 232.3,
       "current_kills": 4,
-      "current_deaths": 8,
-      "current_kdr": 0.5,
-      "current_playtime_seconds": 41906,
+      "current_deaths": 9,
+      "current_kdr": 0.44,
+      "current_playtime_seconds": 42024,
       "elo": 1050,
       "elo_games": 1584,
       "gather_wood": 1503709,
@@ -541,5 +541,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-25T01:38:30Z"
+  "checked_at": "2026-10-25T01:45:14Z"
 }

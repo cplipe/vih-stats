@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T08:30:23Z",
+  "updated_at": "2026-10-26T08:45:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,35 +11,35 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15797,
+    "kills": 15799,
     "deaths": 23035,
     "kdr": 0.69,
-    "headshots": 5136,
-    "playtime_seconds": 26402935,
+    "headshots": 5137,
+    "playtime_seconds": 26405733,
     "longest_kill": 296.9,
     "avg_elo": 1196,
     "peak_elo": 1420,
     "current_kills": 203,
     "current_deaths": 142,
     "current_kdr": 1.43,
-    "current_playtime_seconds": 259090,
+    "current_playtime_seconds": 259986,
     "current_longest_kill": 193.9
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 164834,
-      "playtime_share": 63.6,
+      "playtime_seconds": 165730,
+      "playtime_share": 63.7,
       "kills": 123,
       "active_members": 11,
-      "last_seen": "2026-10-26T08:29:42.632Z"
+      "last_seen": "2026-10-26T08:44:42.632Z"
     },
     {
       "server_id": "lunax5",
       "server_name": "Luna x5",
       "playtime_seconds": 51967,
-      "playtime_share": 20.1,
+      "playtime_share": 20,
       "kills": 71,
       "active_members": 3,
       "last_seen": "2026-10-25T23:37:29.638Z"
@@ -48,7 +48,7 @@
       "server_id": "caramelo",
       "server_name": "Caramelo x2",
       "playtime_seconds": 42171,
-      "playtime_share": 16.3,
+      "playtime_share": 16.2,
       "kills": 9,
       "active_members": 4,
       "last_seen": "2026-10-25T17:46:44.244Z"
@@ -79,7 +79,7 @@
       "current_kills": 16,
       "current_deaths": 12,
       "current_kdr": 1.33,
-      "current_playtime_seconds": 15310,
+      "current_playtime_seconds": 16206,
       "elo": 1186,
       "elo_games": 1993,
       "gather_wood": 1839647,
@@ -378,11 +378,11 @@
       "avatar": "https://avatars.steamstatic.com/50520e5314e12c57f8440597ac2c068ca098ab33_full.jpg",
       "profile": "https://steamcommunity.com/id/notHeaven/",
       "joined_at": "2026-10-16T07:26:51.240Z",
-      "kills": 588,
+      "kills": 590,
       "deaths": 369,
-      "kdr": 1.59,
-      "headshots": 207,
-      "playtime_seconds": 625847,
+      "kdr": 1.6,
+      "headshots": 208,
+      "playtime_seconds": 628645,
       "longest_kill": 222.5,
       "current_kills": 25,
       "current_deaths": 10,
@@ -541,5 +541,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-26T08:30:23Z"
+  "checked_at": "2026-10-26T08:45:16Z"
 }

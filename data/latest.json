@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T07:45:19Z",
+  "updated_at": "2026-10-26T08:00:21Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,35 +11,35 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 15794,
-    "deaths": 23026,
+    "kills": 15795,
+    "deaths": 23031,
     "kdr": 0.69,
-    "headshots": 5135,
-    "playtime_seconds": 26383821,
+    "headshots": 5136,
+    "playtime_seconds": 26388109,
     "longest_kill": 296.9,
     "avg_elo": 1197,
     "peak_elo": 1433,
     "current_kills": 203,
     "current_deaths": 141,
     "current_kdr": 1.44,
-    "current_playtime_seconds": 255100,
+    "current_playtime_seconds": 256292,
     "current_longest_kill": 193.9
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 160844,
-      "playtime_share": 63.1,
+      "playtime_seconds": 162036,
+      "playtime_share": 63.2,
       "kills": 123,
       "active_members": 11,
-      "last_seen": "2026-10-26T07:43:42.801Z"
+      "last_seen": "2026-10-26T07:59:42.822Z"
     },
     {
       "server_id": "lunax5",
       "server_name": "Luna x5",
       "playtime_seconds": 51967,
-      "playtime_share": 20.4,
+      "playtime_share": 20.3,
       "kills": 71,
       "active_members": 3,
       "last_seen": "2026-10-25T23:37:29.638Z"
@@ -79,7 +79,7 @@
       "current_kills": 16,
       "current_deaths": 12,
       "current_kdr": 1.33,
-      "current_playtime_seconds": 12570,
+      "current_playtime_seconds": 13166,
       "elo": 1186,
       "elo_games": 1993,
       "gather_wood": 1839647,
@@ -107,7 +107,7 @@
       "current_kills": 27,
       "current_deaths": 10,
       "current_kdr": 2.7,
-      "current_playtime_seconds": 29420,
+      "current_playtime_seconds": 30016,
       "elo": 1325,
       "elo_games": 1830,
       "gather_wood": 1120367,
@@ -434,11 +434,11 @@
       "avatar": "https://avatars.steamstatic.com/9ef2518e2dbc1ee847dfc625116409ef23cd1f12_full.jpg",
       "profile": "https://steamcommunity.com/profiles/76561199524369912/",
       "joined_at": "2026-10-17T05:26:54.016Z",
-      "kills": 865,
-      "deaths": 1137,
+      "kills": 866,
+      "deaths": 1142,
       "kdr": 0.76,
-      "headshots": 285,
-      "playtime_seconds": 1159167,
+      "headshots": 286,
+      "playtime_seconds": 1163455,
       "longest_kill": 270.3,
       "current_kills": 21,
       "current_deaths": 19,
@@ -541,5 +541,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-26T07:45:19Z"
+  "checked_at": "2026-10-26T08:00:21Z"
 }

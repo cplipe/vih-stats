@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T11:00:25Z",
+  "updated_at": "2026-10-28T15:00:31Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,7 +15,7 @@
     "deaths": 23191,
     "kdr": 0.69,
     "headshots": 5246,
-    "playtime_seconds": 26942083,
+    "playtime_seconds": 26942202,
     "longest_kill": 296.9,
     "avg_elo": 1225,
     "peak_elo": 1502,
@@ -33,7 +33,7 @@
       "playtime_share": 94,
       "kills": 376,
       "active_members": 15,
-      "last_seen": "2026-10-28T08:59:02.765Z"
+      "last_seen": "2026-10-28T15:00:08.118Z"
     },
     {
       "server_id": "caramelo",
@@ -270,7 +270,7 @@
       "deaths": 2596,
       "kdr": 0.39,
       "headshots": 320,
-      "playtime_seconds": 2856765,
+      "playtime_seconds": 2856884,
       "longest_kill": 232.3,
       "current_kills": 12,
       "current_deaths": 24,
@@ -541,5 +541,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-28T14:45:17Z"
+  "checked_at": "2026-10-28T15:00:31Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T19:13:10Z",
+  "updated_at": "2026-10-29T19:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -396,8 +396,8 @@
       "gather_sulfur": 142292,
       "gather_hqm": 1080,
       "gather_total": 1082061,
-      "farming_hemp": 15362,
-      "farming_total": 15534,
+      "farming_hemp": 15402,
+      "farming_total": 15574,
       "berries_total": 33
     },
     {
@@ -541,5 +541,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-10-29T19:13:10Z"
+  "checked_at": "2026-10-29T19:15:16Z"
 }

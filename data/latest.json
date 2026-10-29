@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T03:30:20Z",
+  "updated_at": "2026-10-29T03:45:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,29 +11,29 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 16105,
-    "deaths": 23219,
+    "kills": 16113,
+    "deaths": 23226,
     "kdr": 0.69,
-    "headshots": 5256,
-    "playtime_seconds": 26987731,
+    "headshots": 5258,
+    "playtime_seconds": 26991900,
     "longest_kill": 296.9,
     "avg_elo": 1232,
     "peak_elo": 1541,
     "current_kills": 429,
     "current_deaths": 260,
     "current_kdr": 1.65,
-    "current_playtime_seconds": 735705,
+    "current_playtime_seconds": 736064,
     "current_longest_kill": 264.1
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 731544,
+      "playtime_seconds": 731903,
       "playtime_share": 99.4,
       "kills": 423,
       "active_members": 15,
-      "last_seen": "2026-10-29T03:30:06.004Z"
+      "last_seen": "2026-10-29T03:31:08.388Z"
     },
     {
       "server_id": "vainillaquad",
@@ -61,11 +61,11 @@
       "avatar": "https://avatars.steamstatic.com/545e38fcc061662dd4358756203f32e4f9f43a7d_full.jpg",
       "profile": "https://steamcommunity.com/id/Don_Tulio/",
       "joined_at": "2026-10-14T01:19:54.674Z",
-      "kills": 1724,
-      "deaths": 2602,
+      "kills": 1732,
+      "deaths": 2609,
       "kdr": 0.66,
-      "headshots": 527,
-      "playtime_seconds": 2668635,
+      "headshots": 529,
+      "playtime_seconds": 2672804,
       "longest_kill": 258,
       "current_kills": 52,
       "current_deaths": 24,
@@ -406,7 +406,7 @@
       "current_kills": 34,
       "current_deaths": 42,
       "current_kdr": 0.81,
-      "current_playtime_seconds": 68089,
+      "current_playtime_seconds": 68448,
       "elo": 1172,
       "elo_games": 2162,
       "gather_wood": 837494,
@@ -532,5 +532,5 @@
       "berries_total": 1904
     }
   ],
-  "checked_at": "2026-10-29T03:30:20Z"
+  "checked_at": "2026-10-29T03:45:16Z"
 }

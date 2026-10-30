@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T08:00:24Z",
+  "updated_at": "2026-10-30T08:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,14 +15,14 @@
     "deaths": 23310,
     "kdr": 0.69,
     "headshots": 5302,
-    "playtime_seconds": 27118512,
+    "playtime_seconds": 27119346,
     "longest_kill": 296.9,
     "avg_elo": 1204,
     "peak_elo": 1467,
     "current_kills": 78,
     "current_deaths": 91,
     "current_kdr": 0.86,
-    "current_playtime_seconds": 126193,
+    "current_playtime_seconds": 127027,
     "current_longest_kill": 101.2
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 79010,
-      "playtime_share": 62.6,
+      "playtime_share": 62.2,
       "kills": 68,
       "active_members": 9,
       "last_seen": "2026-10-30T06:02:19.400Z"
@@ -38,11 +38,11 @@
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 42425,
-      "playtime_share": 33.6,
+      "playtime_seconds": 43259,
+      "playtime_share": 34.1,
       "kills": 4,
       "active_members": 3,
-      "last_seen": "2026-10-30T07:58:36.311Z"
+      "last_seen": "2026-10-30T08:14:36.137Z"
     },
     {
       "server_id": "vainillaquad",
@@ -288,12 +288,12 @@
       "deaths": 2610,
       "kdr": 0.38,
       "headshots": 320,
-      "playtime_seconds": 2873859,
+      "playtime_seconds": 2874693,
       "longest_kill": 232.3,
       "current_kills": 1,
       "current_deaths": 12,
       "current_kdr": 0.08,
-      "current_playtime_seconds": 15426,
+      "current_playtime_seconds": 16260,
       "elo": 1001,
       "elo_games": 1618,
       "gather_wood": 1534854,
@@ -559,5 +559,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-10-30T08:00:24Z"
+  "checked_at": "2026-10-30T08:15:16Z"
 }

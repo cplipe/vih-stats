@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T14:30:21Z",
+  "updated_at": "2026-10-30T14:45:17Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,7 +12,7 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16196,
-    "deaths": 23311,
+    "deaths": 23313,
     "kdr": 0.69,
     "headshots": 5302,
     "playtime_seconds": 27126676,
@@ -20,9 +20,9 @@
     "avg_elo": 1204,
     "peak_elo": 1467,
     "current_kills": 78,
-    "current_deaths": 91,
-    "current_kdr": 0.86,
-    "current_playtime_seconds": 134357,
+    "current_deaths": 93,
+    "current_kdr": 0.84,
+    "current_playtime_seconds": 135193,
     "current_longest_kill": 101.2
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 79010,
-      "playtime_share": 58.8,
+      "playtime_share": 58.4,
       "kills": 68,
       "active_members": 9,
       "last_seen": "2026-10-30T06:02:19.400Z"
@@ -38,11 +38,11 @@
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 50589,
-      "playtime_share": 37.7,
+      "playtime_seconds": 51425,
+      "playtime_share": 38,
       "kills": 4,
       "active_members": 3,
-      "last_seen": "2026-10-30T14:30:03.969Z"
+      "last_seen": "2026-10-30T14:45:04.303Z"
     },
     {
       "server_id": "vainillaquad",
@@ -425,15 +425,15 @@
       "profile": "https://steamcommunity.com/profiles/76561198171052931/",
       "joined_at": "2026-10-16T07:26:52.140Z",
       "kills": 1031,
-      "deaths": 3099,
+      "deaths": 3101,
       "kdr": 0.33,
       "headshots": 322,
       "playtime_seconds": 2252728,
       "longest_kill": 231.9,
       "current_kills": 3,
-      "current_deaths": 20,
-      "current_kdr": 0.15,
-      "current_playtime_seconds": 28071,
+      "current_deaths": 22,
+      "current_kdr": 0.14,
+      "current_playtime_seconds": 28907,
       "elo": 1064,
       "elo_games": 2174,
       "gather_wood": 837494,
@@ -559,5 +559,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-10-30T14:30:21Z"
+  "checked_at": "2026-10-30T14:45:17Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T03:00:26Z",
+  "updated_at": "2026-10-30T03:15:17Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,37 +12,37 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16190,
-    "deaths": 23285,
+    "deaths": 23286,
     "kdr": 0.7,
     "headshots": 5298,
-    "playtime_seconds": 27075814,
+    "playtime_seconds": 27076708,
     "longest_kill": 296.9,
     "avg_elo": 1207,
     "peak_elo": 1467,
     "current_kills": 76,
-    "current_deaths": 80,
-    "current_kdr": 0.95,
-    "current_playtime_seconds": 97609,
+    "current_deaths": 81,
+    "current_kdr": 0.94,
+    "current_playtime_seconds": 99337,
     "current_longest_kill": 101.2
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 68359,
-      "playtime_share": 70,
+      "playtime_seconds": 69193,
+      "playtime_share": 69.7,
       "kills": 67,
       "active_members": 9,
-      "last_seen": "2026-10-30T03:00:19.597Z"
+      "last_seen": "2026-10-30T03:14:19.595Z"
     },
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 24552,
-      "playtime_share": 25.2,
+      "playtime_seconds": 25386,
+      "playtime_share": 25.6,
       "kills": 3,
       "active_members": 3,
-      "last_seen": "2026-10-30T02:59:36.348Z"
+      "last_seen": "2026-10-30T03:13:36.332Z"
     },
     {
       "server_id": "vainillaquad",
@@ -63,6 +63,15 @@
       "last_seen": "2026-10-29T21:59:19.335Z"
     },
     {
+      "server_id": "lunax5",
+      "server_name": "Luna x5",
+      "playtime_seconds": 119,
+      "playtime_share": 0.1,
+      "kills": 0,
+      "active_members": 1,
+      "last_seen": "2026-10-30T03:00:27.159Z"
+    },
+    {
       "server_id": "lunapve",
       "server_name": "Luna PVE",
       "playtime_seconds": 118,
@@ -70,15 +79,6 @@
       "kills": 0,
       "active_members": 1,
       "last_seen": "2026-10-10T13:50:22.918Z"
-    },
-    {
-      "server_id": "lunax5",
-      "server_name": "Luna x5",
-      "playtime_seconds": 59,
-      "playtime_share": 0.1,
-      "kills": 0,
-      "active_members": 1,
-      "last_seen": "2026-10-30T02:58:27.097Z"
     }
   ],
   "members": [
@@ -125,7 +125,7 @@
       "current_kills": 0,
       "current_deaths": 9,
       "current_kdr": 0,
-      "current_playtime_seconds": 8983,
+      "current_playtime_seconds": 9817,
       "elo": 1195,
       "elo_games": 1836,
       "gather_wood": 1156436,
@@ -425,15 +425,15 @@
       "profile": "https://steamcommunity.com/profiles/76561198171052931/",
       "joined_at": "2026-10-16T07:26:52.140Z",
       "kills": 1031,
-      "deaths": 3096,
+      "deaths": 3097,
       "kdr": 0.33,
       "headshots": 322,
-      "playtime_seconds": 2245691,
+      "playtime_seconds": 2246525,
       "longest_kill": 231.9,
       "current_kills": 3,
-      "current_deaths": 17,
-      "current_kdr": 0.18,
-      "current_playtime_seconds": 22109,
+      "current_deaths": 18,
+      "current_kdr": 0.17,
+      "current_playtime_seconds": 22943,
       "elo": 1064,
       "elo_games": 2174,
       "gather_wood": 837494,
@@ -484,12 +484,12 @@
       "deaths": 625,
       "kdr": 1.54,
       "headshots": 317,
-      "playtime_seconds": 1204886,
+      "playtime_seconds": 1204946,
       "longest_kill": 264.1,
       "current_kills": 9,
       "current_deaths": 10,
       "current_kdr": 0.9,
-      "current_playtime_seconds": 10301,
+      "current_playtime_seconds": 10361,
       "elo": 1289,
       "elo_games": 1014,
       "gather_wood": 88629,
@@ -559,5 +559,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-10-30T03:00:26Z"
+  "checked_at": "2026-10-30T03:15:17Z"
 }

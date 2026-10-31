@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T23:45:17Z",
+  "updated_at": "2026-10-31T00:00:34Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,14 +15,14 @@
     "deaths": 23328,
     "kdr": 0.69,
     "headshots": 5305,
-    "playtime_seconds": 27143711,
+    "playtime_seconds": 27144843,
     "longest_kill": 296.9,
     "avg_elo": 1198,
     "peak_elo": 1467,
     "current_kills": 81,
     "current_deaths": 110,
     "current_kdr": 0.74,
-    "current_playtime_seconds": 152344,
+    "current_playtime_seconds": 153476,
     "current_longest_kill": 101.2
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 79010,
-      "playtime_share": 51.9,
+      "playtime_share": 51.5,
       "kills": 68,
       "active_members": 9,
       "last_seen": "2026-10-30T06:02:19.400Z"
@@ -38,17 +38,17 @@
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 68576,
-      "playtime_share": 45,
+      "playtime_seconds": 69708,
+      "playtime_share": 45.4,
       "kills": 7,
       "active_members": 3,
-      "last_seen": "2026-10-30T23:44:04.538Z"
+      "last_seen": "2026-10-31T00:00:04.616Z"
     },
     {
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
       "playtime_seconds": 4043,
-      "playtime_share": 2.7,
+      "playtime_share": 2.6,
       "kills": 6,
       "active_members": 2,
       "last_seen": "2026-10-29T00:26:17.972Z"
@@ -288,12 +288,12 @@
       "deaths": 2613,
       "kdr": 0.38,
       "headshots": 321,
-      "playtime_seconds": 2890774,
+      "playtime_seconds": 2891906,
       "longest_kill": 232.3,
       "current_kills": 2,
       "current_deaths": 14,
       "current_kdr": 0.14,
-      "current_playtime_seconds": 32341,
+      "current_playtime_seconds": 33473,
       "elo": 988,
       "elo_games": 1621,
       "gather_wood": 1534854,
@@ -559,5 +559,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-10-30T23:45:17Z"
+  "checked_at": "2026-10-31T00:00:34Z"
 }

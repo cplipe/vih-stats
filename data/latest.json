@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T23:30:23Z",
+  "updated_at": "2026-11-03T23:39:14Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,7 +22,7 @@
     "current_kills": 97,
     "current_deaths": 108,
     "current_kdr": 0.9,
-    "current_playtime_seconds": 124227,
+    "current_playtime_seconds": 124347,
     "current_longest_kill": 101.2
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 102815,
-      "playtime_share": 82.8,
+      "playtime_share": 82.7,
       "kills": 76,
       "active_members": 12,
       "last_seen": "2026-11-01T23:18:09.167Z"
@@ -63,6 +63,15 @@
       "last_seen": "2026-10-31T21:43:02.747Z"
     },
     {
+      "server_id": "lunax5",
+      "server_name": "Luna x5",
+      "playtime_seconds": 120,
+      "playtime_share": 0.1,
+      "kills": 0,
+      "active_members": 1,
+      "last_seen": "2026-11-03T23:31:35.281Z"
+    },
+    {
       "server_id": "lunapve",
       "server_name": "Luna PVE",
       "playtime_seconds": 118,
@@ -70,15 +79,6 @@
       "kills": 0,
       "active_members": 1,
       "last_seen": "2026-10-10T13:50:22.918Z"
-    },
-    {
-      "server_id": "lunax5",
-      "server_name": "Luna x5",
-      "playtime_seconds": 0,
-      "playtime_share": 0,
-      "kills": 0,
-      "active_members": 1,
-      "last_seen": "2026-11-03T23:29:35.352Z"
     }
   ],
   "members": [
@@ -293,7 +293,7 @@
       "current_kills": 3,
       "current_deaths": 11,
       "current_kdr": 0.27,
-      "current_playtime_seconds": 9876,
+      "current_playtime_seconds": 9996,
       "elo": 964,
       "elo_games": 1634,
       "gather_wood": 1545058,
@@ -559,5 +559,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-03T23:30:23Z"
+  "checked_at": "2026-11-03T23:39:14Z"
 }

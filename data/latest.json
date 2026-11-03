@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T20:00:23Z",
+  "updated_at": "2026-11-03T08:15:17Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -509,7 +509,7 @@
       "current_deaths": 0,
       "current_kdr": 0,
       "current_playtime_seconds": 0,
-      "elo": 1067,
+      "elo": 1066,
       "elo_games": 1309,
       "gather_wood": 215203,
       "gather_stone": 130279,
@@ -550,5 +550,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-03T08:00:27Z"
+  "checked_at": "2026-11-03T08:15:17Z"
 }

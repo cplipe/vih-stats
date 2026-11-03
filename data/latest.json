@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T08:15:17Z",
+  "updated_at": "2026-11-03T23:30:23Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -70,6 +70,15 @@
       "kills": 0,
       "active_members": 1,
       "last_seen": "2026-10-10T13:50:22.918Z"
+    },
+    {
+      "server_id": "lunax5",
+      "server_name": "Luna x5",
+      "playtime_seconds": 0,
+      "playtime_share": 0,
+      "kills": 0,
+      "active_members": 1,
+      "last_seen": "2026-11-03T23:29:35.352Z"
     }
   ],
   "members": [
@@ -550,5 +559,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-03T23:15:25Z"
+  "checked_at": "2026-11-03T23:30:23Z"
 }

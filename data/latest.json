@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T22:14:50Z",
+  "updated_at": "2026-11-05T22:30:22Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -17,29 +17,29 @@
     "headshots": 5337,
     "playtime_seconds": 27234863,
     "longest_kill": 296.9,
-    "avg_elo": 1175,
+    "avg_elo": 1174,
     "peak_elo": 1467,
     "current_kills": 15,
-    "current_deaths": 18,
-    "current_kdr": 0.83,
-    "current_playtime_seconds": 22255,
+    "current_deaths": 19,
+    "current_kdr": 0.79,
+    "current_playtime_seconds": 23502,
     "current_longest_kill": 32.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 20764,
-      "playtime_share": 93.3,
+      "playtime_seconds": 21891,
+      "playtime_share": 93.1,
       "kills": 13,
       "active_members": 3,
-      "last_seen": "2026-11-05T22:09:48.884Z"
+      "last_seen": "2026-11-05T22:30:03.882Z"
     },
     {
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
-      "playtime_seconds": 1491,
-      "playtime_share": 6.7,
+      "playtime_seconds": 1611,
+      "playtime_share": 6.9,
       "kills": 2,
       "active_members": 1,
       "last_seen": "2026-11-05T22:08:11.596Z"
@@ -124,11 +124,11 @@
       "playtime_seconds": 3111750,
       "longest_kill": 296.9,
       "current_kills": 2,
-      "current_deaths": 5,
-      "current_kdr": 0.4,
-      "current_playtime_seconds": 1491,
-      "elo": 1108,
-      "elo_games": 2555,
+      "current_deaths": 6,
+      "current_kdr": 0.33,
+      "current_playtime_seconds": 1611,
+      "elo": 1091,
+      "elo_games": 2556,
       "gather_wood": 1201279,
       "gather_stone": 1243192,
       "gather_metal": 890388,
@@ -518,7 +518,7 @@
       "current_kills": 2,
       "current_deaths": 6,
       "current_kdr": 0.33,
-      "current_playtime_seconds": 11092,
+      "current_playtime_seconds": 12219,
       "elo": 1175,
       "elo_games": 1197,
       "gather_wood": 682915,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-05T22:15:19Z"
+  "checked_at": "2026-11-05T22:30:22Z"
 }

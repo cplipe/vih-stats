@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T20:00:26Z",
+  "updated_at": "2026-11-05T20:15:19Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -17,23 +17,23 @@
     "headshots": 5330,
     "playtime_seconds": 27220062,
     "longest_kill": 296.9,
-    "avg_elo": 1180,
+    "avg_elo": 1179,
     "peak_elo": 1467,
     "current_kills": 2,
-    "current_deaths": 4,
-    "current_kdr": 0.5,
-    "current_playtime_seconds": 6023,
+    "current_deaths": 5,
+    "current_kdr": 0.4,
+    "current_playtime_seconds": 7811,
     "current_longest_kill": 10.9
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 6023,
+      "playtime_seconds": 7811,
       "playtime_share": 100,
       "kills": 2,
       "active_members": 2,
-      "last_seen": "2026-11-05T20:00:03.861Z"
+      "last_seen": "2026-11-05T20:15:03.712Z"
     }
   ],
   "members": [
@@ -442,19 +442,19 @@
       "playtime_seconds": 1207451,
       "longest_kill": 264.1,
       "current_kills": 2,
-      "current_deaths": 3,
-      "current_kdr": 0.67,
-      "current_playtime_seconds": 2743,
-      "elo": 1279,
-      "elo_games": 1018,
+      "current_deaths": 4,
+      "current_kdr": 0.5,
+      "current_playtime_seconds": 3637,
+      "elo": 1258,
+      "elo_games": 1019,
       "gather_wood": 107501,
       "gather_stone": 50831,
       "gather_metal": 44523,
       "gather_sulfur": 12280,
       "gather_hqm": 156,
       "gather_total": 215291,
-      "farming_hemp": 11295,
-      "farming_total": 13274,
+      "farming_hemp": 11347,
+      "farming_total": 13326,
       "berries_total": 1458
     },
     {
@@ -500,7 +500,7 @@
       "current_kills": 0,
       "current_deaths": 1,
       "current_kdr": 0,
-      "current_playtime_seconds": 3280,
+      "current_playtime_seconds": 4174,
       "elo": 1241,
       "elo_games": 1189,
       "gather_wood": 682915,
@@ -514,5 +514,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-05T20:00:26Z"
+  "checked_at": "2026-11-05T20:15:19Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T20:30:25Z",
+  "updated_at": "2026-11-05T20:45:19Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,18 +22,18 @@
     "current_kills": 2,
     "current_deaths": 5,
     "current_kdr": 0.4,
-    "current_playtime_seconds": 9299,
+    "current_playtime_seconds": 11325,
     "current_longest_kill": 10.9
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 9299,
+      "playtime_seconds": 11325,
       "playtime_share": 100,
       "kills": 2,
       "active_members": 2,
-      "last_seen": "2026-11-05T20:30:03.834Z"
+      "last_seen": "2026-11-05T20:45:03.686Z"
     }
   ],
   "members": [
@@ -444,7 +444,7 @@
       "current_kills": 2,
       "current_deaths": 4,
       "current_kdr": 0.5,
-      "current_playtime_seconds": 4291,
+      "current_playtime_seconds": 5304,
       "elo": 1258,
       "elo_games": 1019,
       "gather_wood": 107501,
@@ -453,8 +453,8 @@
       "gather_sulfur": 12280,
       "gather_hqm": 156,
       "gather_total": 215291,
-      "farming_hemp": 11347,
-      "farming_total": 13326,
+      "farming_hemp": 11612,
+      "farming_total": 13591,
       "berries_total": 1458
     },
     {
@@ -500,19 +500,19 @@
       "current_kills": 0,
       "current_deaths": 1,
       "current_kdr": 0,
-      "current_playtime_seconds": 5008,
+      "current_playtime_seconds": 6021,
       "elo": 1241,
       "elo_games": 1189,
       "gather_wood": 682915,
-      "gather_stone": 225348,
-      "gather_metal": 166172,
-      "gather_sulfur": 128890,
-      "gather_hqm": 1072,
-      "gather_total": 1204397,
-      "farming_hemp": 16401,
-      "farming_total": 18790,
+      "gather_stone": 227348,
+      "gather_metal": 169393,
+      "gather_sulfur": 130690,
+      "gather_hqm": 1128,
+      "gather_total": 1211474,
+      "farming_hemp": 16451,
+      "farming_total": 18840,
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-05T20:30:25Z"
+  "checked_at": "2026-11-05T20:45:19Z"
 }

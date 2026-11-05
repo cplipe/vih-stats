@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T19:30:22Z",
+  "updated_at": "2026-11-05T19:45:17Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,18 +22,18 @@
     "current_kills": 0,
     "current_deaths": 2,
     "current_kdr": 0,
-    "current_playtime_seconds": 2684,
+    "current_playtime_seconds": 4474,
     "current_longest_kill": 0
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 2684,
+      "playtime_seconds": 4474,
       "playtime_share": 100,
       "kills": 0,
       "active_members": 2,
-      "last_seen": "2026-11-05T19:30:03.854Z"
+      "last_seen": "2026-11-05T19:45:03.703Z"
     }
   ],
   "members": [
@@ -444,17 +444,17 @@
       "current_kills": 0,
       "current_deaths": 1,
       "current_kdr": 0,
-      "current_playtime_seconds": 1133,
+      "current_playtime_seconds": 2028,
       "elo": 1279,
       "elo_games": 1015,
-      "gather_wood": 96710,
+      "gather_wood": 107501,
       "gather_stone": 50831,
       "gather_metal": 44523,
       "gather_sulfur": 12280,
       "gather_hqm": 156,
-      "gather_total": 204500,
-      "farming_hemp": 11135,
-      "farming_total": 13112,
+      "gather_total": 215291,
+      "farming_hemp": 11245,
+      "farming_total": 13224,
       "berries_total": 1458
     },
     {
@@ -500,19 +500,19 @@
       "current_kills": 0,
       "current_deaths": 1,
       "current_kdr": 0,
-      "current_playtime_seconds": 1551,
+      "current_playtime_seconds": 2446,
       "elo": 1241,
       "elo_games": 1189,
-      "gather_wood": 674935,
-      "gather_stone": 215025,
-      "gather_metal": 163745,
-      "gather_sulfur": 128402,
-      "gather_hqm": 1020,
-      "gather_total": 1183127,
-      "farming_hemp": 16091,
-      "farming_total": 18480,
+      "gather_wood": 677609,
+      "gather_stone": 224554,
+      "gather_metal": 164529,
+      "gather_sulfur": 128646,
+      "gather_hqm": 1039,
+      "gather_total": 1196377,
+      "farming_hemp": 16261,
+      "farming_total": 18650,
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-05T19:30:22Z"
+  "checked_at": "2026-11-05T19:45:17Z"
 }

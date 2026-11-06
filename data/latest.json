@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T21:15:17Z",
+  "updated_at": "2026-11-06T21:30:21Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,7 +22,7 @@
     "current_kills": 37,
     "current_deaths": 32,
     "current_kdr": 1.16,
-    "current_playtime_seconds": 51304,
+    "current_playtime_seconds": 53092,
     "current_longest_kill": 89.8
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
       "playtime_seconds": 27865,
-      "playtime_share": 54.3,
+      "playtime_share": 52.5,
       "kills": 24,
       "active_members": 4,
       "last_seen": "2026-11-06T20:13:41.062Z"
@@ -38,11 +38,11 @@
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 23439,
-      "playtime_share": 45.7,
+      "playtime_seconds": 25227,
+      "playtime_share": 47.5,
       "kills": 13,
       "active_members": 4,
-      "last_seen": "2026-11-06T21:14:45.103Z"
+      "last_seen": "2026-11-06T21:29:44.879Z"
     },
     {
       "server_id": "estrella",
@@ -126,7 +126,7 @@
       "current_kills": 10,
       "current_deaths": 10,
       "current_kdr": 1,
-      "current_playtime_seconds": 10893,
+      "current_playtime_seconds": 11787,
       "elo": 1070,
       "elo_games": 2567,
       "gather_wood": 1204376,
@@ -135,8 +135,8 @@
       "gather_sulfur": 362356,
       "gather_hqm": 3424,
       "gather_total": 3706052,
-      "farming_hemp": 39957,
-      "farming_total": 40913,
+      "farming_hemp": 40120,
+      "farming_total": 41080,
       "berries_total": 407
     },
     {
@@ -266,17 +266,17 @@
       "current_kills": 4,
       "current_deaths": 6,
       "current_kdr": 0.67,
-      "current_playtime_seconds": 10181,
+      "current_playtime_seconds": 11075,
       "elo": 944,
       "elo_games": 1645,
-      "gather_wood": 1545058,
+      "gather_wood": 1546085,
       "gather_stone": 1057829,
       "gather_metal": 691460,
       "gather_sulfur": 335719,
       "gather_hqm": 2532,
-      "gather_total": 3632598,
-      "farming_hemp": 32993,
-      "farming_total": 34768,
+      "gather_total": 3633625,
+      "farming_hemp": 33063,
+      "farming_total": 34838,
       "berries_total": 1275
     },
     {
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-06T21:15:17Z"
+  "checked_at": "2026-11-06T21:30:21Z"
 }

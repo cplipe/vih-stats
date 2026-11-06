@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T08:15:20Z",
+  "updated_at": "2026-11-06T08:30:20Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,16 +12,16 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16293,
-    "deaths": 23477,
+    "deaths": 23478,
     "kdr": 0.69,
     "headshots": 5349,
     "playtime_seconds": 27267849,
     "longest_kill": 296.9,
-    "avg_elo": 1173,
+    "avg_elo": 1172,
     "peak_elo": 1457,
     "current_kills": 37,
-    "current_deaths": 28,
-    "current_kdr": 1.32,
+    "current_deaths": 29,
+    "current_kdr": 1.28,
     "current_playtime_seconds": 50292,
     "current_longest_kill": 89.8
   },
@@ -482,17 +482,17 @@
       "profile": "https://steamcommunity.com/profiles/76561199176366488/",
       "joined_at": "2026-10-17T05:26:56.513Z",
       "kills": 1326,
-      "deaths": 856,
+      "deaths": 857,
       "kdr": 1.55,
       "headshots": 497,
       "playtime_seconds": 919391,
       "longest_kill": 237.6,
       "current_kills": 8,
-      "current_deaths": 1,
-      "current_kdr": 8,
+      "current_deaths": 2,
+      "current_kdr": 4,
       "current_playtime_seconds": 6550,
-      "elo": 1097,
-      "elo_games": 1318,
+      "elo": 1075,
+      "elo_games": 1319,
       "gather_wood": 215203,
       "gather_stone": 130279,
       "gather_metal": 74554,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-06T08:15:20Z"
+  "checked_at": "2026-11-06T08:30:20Z"
 }

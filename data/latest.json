@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T00:00:27Z",
+  "updated_at": "2026-11-06T00:45:17Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -42,7 +42,7 @@
       "playtime_share": 6.7,
       "kills": 2,
       "active_members": 1,
-      "last_seen": "2026-11-05T22:08:11.596Z"
+      "last_seen": "2026-11-06T00:45:02.920Z"
     },
     {
       "server_id": "estrella",
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-06T00:30:21Z"
+  "checked_at": "2026-11-06T00:45:17Z"
 }

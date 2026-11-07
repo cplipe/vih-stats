@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T03:30:22Z",
+  "updated_at": "2026-11-07T04:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,27 +22,27 @@
     "current_kills": 37,
     "current_deaths": 35,
     "current_kdr": 1.06,
-    "current_playtime_seconds": 55712,
+    "current_playtime_seconds": 56306,
     "current_longest_kill": 89.8
   },
   "servers": [
     {
+      "server_id": "sudamerica",
+      "server_name": "Sudamerica",
+      "playtime_seconds": 28441,
+      "playtime_share": 50.5,
+      "kills": 13,
+      "active_members": 5,
+      "last_seen": "2026-11-07T04:14:45.052Z"
+    },
+    {
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
       "playtime_seconds": 27865,
-      "playtime_share": 50,
+      "playtime_share": 49.5,
       "kills": 24,
       "active_members": 4,
       "last_seen": "2026-11-06T20:13:41.062Z"
-    },
-    {
-      "server_id": "sudamerica",
-      "server_name": "Sudamerica",
-      "playtime_seconds": 27847,
-      "playtime_share": 50,
-      "kills": 13,
-      "active_members": 4,
-      "last_seen": "2026-11-07T02:07:45.027Z"
     },
     {
       "server_id": "estrella",
@@ -294,7 +294,7 @@
       "current_kills": 0,
       "current_deaths": 0,
       "current_kdr": 0,
-      "current_playtime_seconds": 0,
+      "current_playtime_seconds": 594,
       "elo": 1037,
       "elo_games": 2134,
       "gather_wood": 754175,
@@ -303,8 +303,8 @@
       "gather_sulfur": 279679,
       "gather_hqm": 2298,
       "gather_total": 2610862,
-      "farming_hemp": 42311,
-      "farming_total": 46210,
+      "farming_hemp": 42361,
+      "farming_total": 46260,
       "berries_total": 2125
     },
     {
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-07T04:00:25Z"
+  "checked_at": "2026-11-07T04:15:16Z"
 }

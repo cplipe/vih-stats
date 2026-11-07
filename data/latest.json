@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T18:30:20Z",
+  "updated_at": "2026-11-07T18:45:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,18 +11,18 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 16293,
-    "deaths": 23482,
+    "kills": 16295,
+    "deaths": 23490,
     "kdr": 0.69,
-    "headshots": 5349,
-    "playtime_seconds": 27269634,
+    "headshots": 5351,
+    "playtime_seconds": 27272616,
     "longest_kill": 296.9,
-    "avg_elo": 1165,
+    "avg_elo": 1163,
     "peak_elo": 1457,
-    "current_kills": 14,
-    "current_deaths": 31,
+    "current_kills": 15,
+    "current_deaths": 33,
     "current_kdr": 0.45,
-    "current_playtime_seconds": 30529,
+    "current_playtime_seconds": 30945,
     "current_longest_kill": 32.3
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30290,
-      "playtime_share": 99.2,
+      "playtime_share": 97.9,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-07T04:44:44.703Z"
@@ -38,11 +38,11 @@
     {
       "server_id": "caramelo",
       "server_name": "Caramelo x2",
-      "playtime_seconds": 239,
-      "playtime_share": 0.8,
-      "kills": 1,
+      "playtime_seconds": 655,
+      "playtime_share": 2.1,
+      "kills": 2,
       "active_members": 1,
-      "last_seen": "2026-11-07T18:28:44.308Z"
+      "last_seen": "2026-11-07T18:34:44.298Z"
     },
     {
       "server_id": "estrella",
@@ -313,18 +313,18 @@
       "avatar": "https://avatars.steamstatic.com/5c849f3b1e51503978664df3daa9dafbb6d9c19d_full.jpg",
       "profile": "https://steamcommunity.com/profiles/76561199222878442/",
       "joined_at": "2026-10-15T16:39:13.404Z",
-      "kills": 233,
-      "deaths": 415,
+      "kills": 235,
+      "deaths": 423,
       "kdr": 0.56,
-      "headshots": 72,
-      "playtime_seconds": 357249,
+      "headshots": 74,
+      "playtime_seconds": 360231,
       "longest_kill": 250.5,
-      "current_kills": 1,
-      "current_deaths": 0,
+      "current_kills": 2,
+      "current_deaths": 2,
       "current_kdr": 1,
-      "current_playtime_seconds": 239,
-      "elo": 1164,
-      "elo_games": 375,
+      "current_playtime_seconds": 655,
+      "elo": 1136,
+      "elo_games": 378,
       "gather_wood": 492873,
       "gather_stone": 253407,
       "gather_metal": 113699,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-07T18:30:20Z"
+  "checked_at": "2026-11-07T18:45:16Z"
 }

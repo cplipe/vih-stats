@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T04:30:21Z",
+  "updated_at": "2026-11-07T04:45:17Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -17,29 +17,29 @@
     "headshots": 5349,
     "playtime_seconds": 27269634,
     "longest_kill": 296.9,
-    "avg_elo": 1167,
+    "avg_elo": 1166,
     "peak_elo": 1457,
     "current_kills": 37,
-    "current_deaths": 42,
-    "current_kdr": 0.88,
-    "current_playtime_seconds": 57142,
+    "current_deaths": 45,
+    "current_kdr": 0.82,
+    "current_playtime_seconds": 57976,
     "current_longest_kill": 89.8
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 29277,
-      "playtime_share": 51.2,
+      "playtime_seconds": 30111,
+      "playtime_share": 51.9,
       "kills": 13,
       "active_members": 5,
-      "last_seen": "2026-11-07T04:29:19.047Z"
+      "last_seen": "2026-11-07T04:44:44.703Z"
     },
     {
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
       "playtime_seconds": 27865,
-      "playtime_share": 48.8,
+      "playtime_share": 48.1,
       "kills": 24,
       "active_members": 4,
       "last_seen": "2026-11-06T20:13:41.062Z"
@@ -292,19 +292,19 @@
       "playtime_seconds": 3045856,
       "longest_kill": 296.9,
       "current_kills": 0,
-      "current_deaths": 7,
+      "current_deaths": 10,
       "current_kdr": 0,
-      "current_playtime_seconds": 1430,
-      "elo": 956,
-      "elo_games": 2141,
+      "current_playtime_seconds": 2264,
+      "elo": 948,
+      "elo_games": 2142,
       "gather_wood": 754175,
       "gather_stone": 973100,
       "gather_metal": 601610,
       "gather_sulfur": 279679,
       "gather_hqm": 2298,
       "gather_total": 2610862,
-      "farming_hemp": 42401,
-      "farming_total": 46300,
+      "farming_hemp": 42471,
+      "farming_total": 46370,
       "berries_total": 2125
     },
     {
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-07T04:30:21Z"
+  "checked_at": "2026-11-07T04:45:17Z"
 }

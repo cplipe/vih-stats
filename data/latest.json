@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T22:30:21Z",
+  "updated_at": "2026-11-09T22:41:22Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,31 +15,31 @@
     "deaths": 23528,
     "kdr": 0.69,
     "headshots": 5358,
-    "playtime_seconds": 27303071,
+    "playtime_seconds": 27303666,
     "longest_kill": 296.9,
     "avg_elo": 1159,
     "peak_elo": 1457,
     "current_kills": 26,
     "current_deaths": 63,
     "current_kdr": 0.41,
-    "current_playtime_seconds": 72308,
+    "current_playtime_seconds": 73976,
     "current_longest_kill": 32.3
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 40886,
-      "playtime_share": 56.5,
+      "playtime_seconds": 42554,
+      "playtime_share": 57.5,
       "kills": 11,
       "active_members": 4,
-      "last_seen": "2026-11-09T22:30:06.902Z"
+      "last_seen": "2026-11-09T22:41:06.835Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30767,
-      "playtime_share": 42.5,
+      "playtime_share": 41.6,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-09T16:39:20.088Z"
@@ -266,7 +266,7 @@
       "current_kills": 0,
       "current_deaths": 4,
       "current_kdr": 0,
-      "current_playtime_seconds": 14242,
+      "current_playtime_seconds": 15076,
       "elo": 929,
       "elo_games": 1646,
       "gather_wood": 1546085,
@@ -289,12 +289,12 @@
       "deaths": 3030,
       "kdr": 0.36,
       "headshots": 381,
-      "playtime_seconds": 3057060,
+      "playtime_seconds": 3057655,
       "longest_kill": 296.9,
       "current_kills": 1,
       "current_deaths": 18,
       "current_kdr": 0.06,
-      "current_playtime_seconds": 11383,
+      "current_playtime_seconds": 12217,
       "elo": 928,
       "elo_games": 2147,
       "gather_wood": 754175,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-09T22:30:21Z"
+  "checked_at": "2026-11-09T22:41:22Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T16:15:21Z",
+  "updated_at": "2026-11-10T16:30:22Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,34 +12,34 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16317,
-    "deaths": 23558,
+    "deaths": 23561,
     "kdr": 0.69,
     "headshots": 5366,
-    "playtime_seconds": 27361557,
+    "playtime_seconds": 27363819,
     "longest_kill": 296.9,
     "avg_elo": 1153,
     "peak_elo": 1457,
     "current_kills": 37,
-    "current_deaths": 94,
+    "current_deaths": 95,
     "current_kdr": 0.39,
-    "current_playtime_seconds": 132399,
+    "current_playtime_seconds": 133233,
     "current_longest_kill": 91.7
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 100977,
-      "playtime_share": 76.3,
+      "playtime_seconds": 101811,
+      "playtime_share": 76.4,
       "kills": 22,
       "active_members": 5,
-      "last_seen": "2026-11-10T16:13:23.676Z"
+      "last_seen": "2026-11-10T16:29:23.720Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30767,
-      "playtime_share": 23.2,
+      "playtime_share": 23.1,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-09T16:39:20.088Z"
@@ -398,15 +398,15 @@
       "profile": "https://steamcommunity.com/profiles/76561198171052931/",
       "joined_at": "2026-10-16T07:26:52.140Z",
       "kills": 1043,
-      "deaths": 3149,
+      "deaths": 3152,
       "kdr": 0.33,
       "headshots": 327,
-      "playtime_seconds": 2289664,
+      "playtime_seconds": 2291926,
       "longest_kill": 231.9,
       "current_kills": 2,
-      "current_deaths": 17,
-      "current_kdr": 0.12,
-      "current_playtime_seconds": 19669,
+      "current_deaths": 18,
+      "current_kdr": 0.11,
+      "current_playtime_seconds": 20503,
       "elo": 952,
       "elo_games": 2205,
       "gather_wood": 837494,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-10T16:15:21Z"
+  "checked_at": "2026-11-10T16:30:22Z"
 }

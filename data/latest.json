@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T02:15:17Z",
+  "updated_at": "2026-11-10T02:30:22Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,31 +15,31 @@
     "deaths": 23536,
     "kdr": 0.69,
     "headshots": 5358,
-    "playtime_seconds": 27321849,
+    "playtime_seconds": 27324059,
     "longest_kill": 296.9,
     "avg_elo": 1153,
     "peak_elo": 1457,
     "current_kills": 26,
     "current_deaths": 71,
     "current_kdr": 0.37,
-    "current_playtime_seconds": 91562,
+    "current_playtime_seconds": 93234,
     "current_longest_kill": 32.3
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 60140,
-      "playtime_share": 65.7,
+      "playtime_seconds": 61812,
+      "playtime_share": 66.3,
       "kills": 11,
       "active_members": 5,
-      "last_seen": "2026-11-10T02:15:06.733Z"
+      "last_seen": "2026-11-10T02:30:06.622Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30767,
-      "playtime_share": 33.6,
+      "playtime_share": 33,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-09T16:39:20.088Z"
@@ -289,12 +289,12 @@
       "deaths": 3033,
       "kdr": 0.36,
       "headshots": 381,
-      "playtime_seconds": 3069279,
+      "playtime_seconds": 3070653,
       "longest_kill": 296.9,
       "current_kills": 1,
       "current_deaths": 21,
       "current_kdr": 0.05,
-      "current_playtime_seconds": 23841,
+      "current_playtime_seconds": 24677,
       "elo": 913,
       "elo_games": 2148,
       "gather_wood": 754175,
@@ -485,12 +485,12 @@
       "deaths": 859,
       "kdr": 1.54,
       "headshots": 497,
-      "playtime_seconds": 921004,
+      "playtime_seconds": 921840,
       "longest_kill": 237.6,
       "current_kills": 0,
       "current_deaths": 3,
       "current_kdr": 0,
-      "current_playtime_seconds": 1613,
+      "current_playtime_seconds": 2449,
       "elo": 1033,
       "elo_games": 1322,
       "gather_wood": 215203,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-10T02:15:17Z"
+  "checked_at": "2026-11-10T02:30:22Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T20:35:42Z",
+  "updated_at": "2026-11-10T20:45:18Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -20,26 +20,26 @@
     "avg_elo": 1150,
     "peak_elo": 1457,
     "current_kills": 39,
-    "current_deaths": 114,
+    "current_deaths": 115,
     "current_kdr": 0.34,
-    "current_playtime_seconds": 164511,
+    "current_playtime_seconds": 165050,
     "current_longest_kill": 97.8
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 133089,
-      "playtime_share": 80.9,
+      "playtime_seconds": 133628,
+      "playtime_share": 81,
       "kills": 24,
       "active_members": 5,
-      "last_seen": "2026-11-10T20:34:23.843Z"
+      "last_seen": "2026-11-10T20:44:23.795Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30767,
-      "playtime_share": 18.7,
+      "playtime_share": 18.6,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-09T16:39:20.088Z"
@@ -264,11 +264,11 @@
       "playtime_seconds": 2940264,
       "longest_kill": 232.3,
       "current_kills": 1,
-      "current_deaths": 10,
-      "current_kdr": 0.1,
-      "current_playtime_seconds": 28421,
-      "elo": 900,
-      "elo_games": 1650,
+      "current_deaths": 11,
+      "current_kdr": 0.09,
+      "current_playtime_seconds": 28960,
+      "elo": 894,
+      "elo_games": 1651,
       "gather_wood": 1546085,
       "gather_stone": 1057829,
       "gather_metal": 691460,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-10T20:35:42Z"
+  "checked_at": "2026-11-10T20:45:18Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T06:30:21Z",
+  "updated_at": "2026-11-10T06:45:18Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,31 +15,31 @@
     "deaths": 23544,
     "kdr": 0.69,
     "headshots": 5363,
-    "playtime_seconds": 27348677,
+    "playtime_seconds": 27349572,
     "longest_kill": 296.9,
     "avg_elo": 1158,
     "peak_elo": 1457,
     "current_kills": 33,
     "current_deaths": 78,
     "current_kdr": 0.42,
-    "current_playtime_seconds": 118988,
+    "current_playtime_seconds": 119823,
     "current_longest_kill": 91.7
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 87566,
-      "playtime_share": 73.6,
+      "playtime_seconds": 88401,
+      "playtime_share": 73.8,
       "kills": 18,
       "active_members": 5,
-      "last_seen": "2026-11-10T06:29:06.695Z"
+      "last_seen": "2026-11-10T06:45:06.560Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30767,
-      "playtime_share": 25.9,
+      "playtime_share": 25.7,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-09T16:39:20.088Z"
@@ -48,7 +48,7 @@
       "server_id": "caramelo",
       "server_name": "Caramelo x2",
       "playtime_seconds": 655,
-      "playtime_share": 0.6,
+      "playtime_share": 0.5,
       "kills": 2,
       "active_members": 1,
       "last_seen": "2026-11-07T18:34:44.298Z"
@@ -289,12 +289,12 @@
       "deaths": 3035,
       "kdr": 0.36,
       "headshots": 385,
-      "playtime_seconds": 3084662,
+      "playtime_seconds": 3085557,
       "longest_kill": 296.9,
       "current_kills": 7,
       "current_deaths": 23,
       "current_kdr": 0.3,
-      "current_playtime_seconds": 39224,
+      "current_playtime_seconds": 40059,
       "elo": 982,
       "elo_games": 2156,
       "gather_wood": 754175,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-10T06:30:21Z"
+  "checked_at": "2026-11-10T06:45:18Z"
 }

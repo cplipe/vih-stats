@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T14:45:18Z",
+  "updated_at": "2026-11-10T15:00:26Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,34 +12,34 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16316,
-    "deaths": 23550,
+    "deaths": 23551,
     "kdr": 0.69,
     "headshots": 5365,
-    "playtime_seconds": 27359115,
+    "playtime_seconds": 27359952,
     "longest_kill": 296.9,
     "avg_elo": 1156,
     "peak_elo": 1457,
     "current_kills": 36,
-    "current_deaths": 84,
-    "current_kdr": 0.43,
-    "current_playtime_seconds": 128410,
+    "current_deaths": 85,
+    "current_kdr": 0.42,
+    "current_playtime_seconds": 129247,
     "current_longest_kill": 91.7
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 96988,
-      "playtime_share": 75.5,
+      "playtime_seconds": 97825,
+      "playtime_share": 75.7,
       "kills": 21,
       "active_members": 5,
-      "last_seen": "2026-11-10T14:44:23.451Z"
+      "last_seen": "2026-11-10T15:00:23.471Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30767,
-      "playtime_share": 24,
+      "playtime_share": 23.8,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-09T16:39:20.088Z"
@@ -62,15 +62,15 @@
       "profile": "https://steamcommunity.com/id/Don_Tulio/",
       "joined_at": "2026-10-14T01:19:54.674Z",
       "kills": 1774,
-      "deaths": 2683,
+      "deaths": 2684,
       "kdr": 0.66,
       "headshots": 549,
-      "playtime_seconds": 2719305,
+      "playtime_seconds": 2720142,
       "longest_kill": 258,
       "current_kills": 11,
-      "current_deaths": 16,
-      "current_kdr": 0.69,
-      "current_playtime_seconds": 17402,
+      "current_deaths": 17,
+      "current_kdr": 0.65,
+      "current_playtime_seconds": 18239,
       "elo": 1098,
       "elo_games": 2102,
       "gather_wood": 1900029,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-10T14:45:18Z"
+  "checked_at": "2026-11-10T15:00:26Z"
 }

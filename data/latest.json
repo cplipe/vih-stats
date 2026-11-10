@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T19:30:23Z",
+  "updated_at": "2026-11-10T19:45:19Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -17,29 +17,29 @@
     "headshots": 5368,
     "playtime_seconds": 27394688,
     "longest_kill": 296.9,
-    "avg_elo": 1151,
+    "avg_elo": 1150,
     "peak_elo": 1457,
     "current_kills": 39,
-    "current_deaths": 109,
-    "current_kdr": 0.36,
-    "current_playtime_seconds": 157781,
+    "current_deaths": 110,
+    "current_kdr": 0.35,
+    "current_playtime_seconds": 159451,
     "current_longest_kill": 97.8
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 126359,
-      "playtime_share": 80.1,
+      "playtime_seconds": 128029,
+      "playtime_share": 80.3,
       "kills": 24,
       "active_members": 5,
-      "last_seen": "2026-11-10T19:30:23.992Z"
+      "last_seen": "2026-11-10T19:43:23.758Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30767,
-      "playtime_share": 19.5,
+      "playtime_share": 19.3,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-09T16:39:20.088Z"
@@ -264,11 +264,11 @@
       "playtime_seconds": 2932817,
       "longest_kill": 232.3,
       "current_kills": 1,
-      "current_deaths": 7,
-      "current_kdr": 0.14,
-      "current_playtime_seconds": 24490,
-      "elo": 910,
-      "elo_games": 1649,
+      "current_deaths": 8,
+      "current_kdr": 0.13,
+      "current_playtime_seconds": 25325,
+      "elo": 900,
+      "elo_games": 1650,
       "gather_wood": 1546085,
       "gather_stone": 1057829,
       "gather_metal": 691460,
@@ -406,7 +406,7 @@
       "current_kills": 2,
       "current_deaths": 27,
       "current_kdr": 0.07,
-      "current_playtime_seconds": 28781,
+      "current_playtime_seconds": 29616,
       "elo": 913,
       "elo_games": 2210,
       "gather_wood": 837494,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-10T19:30:23Z"
+  "checked_at": "2026-11-10T19:45:19Z"
 }

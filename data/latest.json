@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T15:15:19Z",
+  "updated_at": "2026-11-10T15:30:24Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,29 +11,29 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 16316,
-    "deaths": 23554,
+    "kills": 16317,
+    "deaths": 23558,
     "kdr": 0.69,
-    "headshots": 5365,
-    "playtime_seconds": 27361083,
+    "headshots": 5366,
+    "playtime_seconds": 27361557,
     "longest_kill": 296.9,
-    "avg_elo": 1155,
+    "avg_elo": 1153,
     "peak_elo": 1457,
-    "current_kills": 36,
-    "current_deaths": 89,
+    "current_kills": 37,
+    "current_deaths": 93,
     "current_kdr": 0.4,
-    "current_playtime_seconds": 131211,
+    "current_playtime_seconds": 131685,
     "current_longest_kill": 91.7
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 99789,
+      "playtime_seconds": 100263,
       "playtime_share": 76.1,
-      "kills": 21,
+      "kills": 22,
       "active_members": 5,
-      "last_seen": "2026-11-10T15:14:23.473Z"
+      "last_seen": "2026-11-10T15:23:23.676Z"
     },
     {
       "server_id": "sudamerica",
@@ -61,18 +61,18 @@
       "avatar": "https://avatars.steamstatic.com/545e38fcc061662dd4358756203f32e4f9f43a7d_full.jpg",
       "profile": "https://steamcommunity.com/id/Don_Tulio/",
       "joined_at": "2026-10-14T01:19:54.674Z",
-      "kills": 1774,
-      "deaths": 2687,
+      "kills": 1775,
+      "deaths": 2691,
       "kdr": 0.66,
-      "headshots": 549,
-      "playtime_seconds": 2721273,
+      "headshots": 550,
+      "playtime_seconds": 2721747,
       "longest_kill": 258,
-      "current_kills": 11,
-      "current_deaths": 20,
-      "current_kdr": 0.55,
-      "current_playtime_seconds": 19370,
-      "elo": 1087,
-      "elo_games": 2103,
+      "current_kills": 12,
+      "current_deaths": 24,
+      "current_kdr": 0.5,
+      "current_playtime_seconds": 19844,
+      "elo": 1058,
+      "elo_games": 2107,
       "gather_wood": 1900029,
       "gather_stone": 647116,
       "gather_metal": 487339,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-10T15:15:19Z"
+  "checked_at": "2026-11-10T15:30:24Z"
 }

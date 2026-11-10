@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T16:30:22Z",
+  "updated_at": "2026-11-10T16:45:19Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,31 +15,31 @@
     "deaths": 23561,
     "kdr": 0.69,
     "headshots": 5366,
-    "playtime_seconds": 27363819,
+    "playtime_seconds": 27364056,
     "longest_kill": 296.9,
     "avg_elo": 1153,
     "peak_elo": 1457,
     "current_kills": 37,
     "current_deaths": 95,
     "current_kdr": 0.39,
-    "current_playtime_seconds": 133233,
+    "current_playtime_seconds": 135020,
     "current_longest_kill": 91.7
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 101811,
-      "playtime_share": 76.4,
+      "playtime_seconds": 103598,
+      "playtime_share": 76.7,
       "kills": 22,
       "active_members": 5,
-      "last_seen": "2026-11-10T16:29:23.720Z"
+      "last_seen": "2026-11-10T16:44:23.714Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 30767,
-      "playtime_share": 23.1,
+      "playtime_share": 22.8,
       "kills": 13,
       "active_members": 5,
       "last_seen": "2026-11-09T16:39:20.088Z"
@@ -289,12 +289,12 @@
       "deaths": 3036,
       "kdr": 0.36,
       "headshots": 385,
-      "playtime_seconds": 3091342,
+      "playtime_seconds": 3091579,
       "longest_kill": 296.9,
       "current_kills": 7,
       "current_deaths": 24,
       "current_kdr": 0.29,
-      "current_playtime_seconds": 45486,
+      "current_playtime_seconds": 46141,
       "elo": 966,
       "elo_games": 2157,
       "gather_wood": 754175,
@@ -406,7 +406,7 @@
       "current_kills": 2,
       "current_deaths": 18,
       "current_kdr": 0.11,
-      "current_playtime_seconds": 20503,
+      "current_playtime_seconds": 21635,
       "elo": 952,
       "elo_games": 2205,
       "gather_wood": 837494,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-10T16:30:22Z"
+  "checked_at": "2026-11-10T16:45:19Z"
 }

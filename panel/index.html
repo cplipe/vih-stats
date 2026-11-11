@@ -68,6 +68,7 @@
   #puerta.oculta { opacity:0; pointer-events:none; }
   .titulo-puerta { position:absolute; top:14px; left:50%; transform:translateX(-50%); width:max-content; max-width:92vw; padding:5px 12px; background:rgba(15,15,15,.7); border:2px solid #151515; border-radius:6px; text-align:center; color:#b9b2a5; font-size:13px; opacity:.85; z-index:2; }
   .titulo-puerta b { color:var(--vih); }
+  .demo-tag[hidden] { display:none; }
   .demo-tag { display:inline-block; margin-left:8px; padding:1px 6px; background:var(--warn); color:#1a1408; font-size:11px; font-weight:700; }
 
   .marco {
@@ -432,8 +433,8 @@
 <script>
 /* ===================== Configuración ===================== */
 const CONFIG = {
-  api: "",              // ej. "https://api.tudominio.cl"  (vacío = modo demo)
-  largoCodigo: 4,       // dígitos del codelock (Rust usa 4)
+  api: "https://api.chill-e.app",   // vacío = modo demo (código 1234)
+  largoCodigo: 6,       // dígitos del codelock; debe coincidir con PANEL_CODIGO en la VM
   prefijo: "!",         // prefijo de comandos del bot
   rapidos: ["pop", "time", "wipe", "events", "online"],
   refrescoSeg: 10,
@@ -442,6 +443,7 @@ const CONFIG = {
   imagenCodelock: "../img/panel/codelock.png",
 };
 const DEMO = !CONFIG.api || new URLSearchParams(location.search).has("demo");
+if (DEMO) CONFIG.largoCodigo = 4;   // el demo usa 1234
 
 /* ===================== Utilidades ===================== */
 const $ = (s) => document.querySelector(s);
@@ -492,7 +494,9 @@ const sonido = {
 
 /* ===================== API (real y demo) ===================== */
 const TOKEN_KEY = "vih_panel_token";
-let token = almacen.leer(TOKEN_KEY);
+// La sesión vive solo en memoria: al recargar o volver a entrar, siempre se pide el código.
+let token = null;
+almacen.quitar(TOKEN_KEY);   // borra sesiones guardadas por versiones anteriores
 
 class SesionVencida extends Error {}
 
@@ -729,7 +733,7 @@ function mostrarPanel() {
 }
 
 function abrirPuerta(nuevoToken, { inmediato = false } = {}) {
-  token = nuevoToken; almacen.poner(TOKEN_KEY, token);
+  token = nuevoToken;
   led("verde", "Desbloqueado"); salud = 100; pintarSalud();
   if (inmediato) { modal.hidden = true; $("#puerta").classList.add("abierta"); return mostrarPanel(); }
   sonido.exito(); msgLock("Acceso concedido", "ok");
@@ -885,10 +889,6 @@ $("#btnCerrar").addEventListener("click", () => cerrarPuerta());
 
 /* ===================== Inicio ===================== */
 pintarPantalla(); pintarSalud();
-if (token) {
-  // Si ya había una sesión en esta pestaña, se comprueba con la API antes de abrir.
-  api.estado().then(() => abrirPuerta(token, { inmediato: true })).catch(() => { token = null; almacen.quitar(TOKEN_KEY); });
-}
 </script>
 </body>
 </html>

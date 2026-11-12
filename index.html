@@ -13,8 +13,7 @@
   Página estática para GitHub Pages. No guarda ni conoce el código: lo valida la API en la VM.
 
   CONFIGURACIÓN: edita el objeto CONFIG más abajo.
-    - api: URL de la API (ej. "https://api.tudominio.cl"). Vacío = modo demo (código 1234).
-    - Se puede forzar el modo demo con ?demo en la URL.
+    - api: URL de la API que valida el código y controla el bot.
 
   CONTRATO DE LA API (lo implementa el bot en la VM)
     POST /api/login        {codigo}          200 {token}
@@ -68,8 +67,6 @@
   #puerta.oculta { opacity:0; pointer-events:none; }
   .titulo-puerta { position:absolute; top:14px; left:50%; transform:translateX(-50%); width:max-content; max-width:92vw; padding:5px 12px; background:rgba(15,15,15,.7); border:2px solid #151515; border-radius:6px; text-align:center; color:#b9b2a5; font-size:13px; opacity:.85; z-index:2; }
   .titulo-puerta b { color:var(--vih); }
-  .demo-tag[hidden] { display:none; }
-  .demo-tag { display:inline-block; margin-left:8px; padding:1px 6px; background:var(--warn); color:#1a1408; font-size:11px; font-weight:700; }
 
   .marco {
     position:relative; flex:none; height:114vh; aspect-ratio:1/1.9;
@@ -334,7 +331,7 @@
 
 <!-- ======== Puerta con codelock ======== -->
 <section id="puerta" aria-label="Acceso al panel">
-  <div class="titulo-puerta up">Base del clan <b>VIH</b> · acceso restringido<span id="tagDemo" class="demo-tag" hidden>MODO DEMO · código 1234</span></div>
+  <div class="titulo-puerta up">Base del clan <b>VIH</b> · acceso restringido</div>
 
   <div class="marco">
     <div class="vano"></div>
@@ -402,7 +399,6 @@
     </nav>
     <div class="estado"><span class="punto" id="puntoSrv"></span><span id="txtSrv">Conectando…</span></div>
     <div class="der">
-      <span id="tagDemo2" class="demo-tag" hidden>MODO DEMO</span>
       <button class="btn rojo" id="btnCerrar">Bloquear</button>
     </div>
   </header>
@@ -449,7 +445,7 @@
 <script>
 /* ===================== Configuración ===================== */
 const CONFIG = {
-  api: "https://api.chill-e.app",   // vacío = modo demo (código 1234)
+  api: "https://api.chill-e.app",
   largoCodigo: 6,       // dígitos del codelock; debe coincidir con PANEL_CODIGO en la VM
   prefijo: "!",         // prefijo de comandos del bot
   rapidos: ["pop", "time", "wipe", "events", "online"],
@@ -458,8 +454,6 @@ const CONFIG = {
   imagenPuerta: "img/panel/puerta.svg",
   imagenCodelock: "img/panel/codelock.png",
 };
-const DEMO = !CONFIG.api || new URLSearchParams(location.search).has("demo");
-if (DEMO) CONFIG.largoCodigo = 4;   // el demo usa 1234
 
 /* ===================== Utilidades ===================== */
 const $ = (s) => document.querySelector(s);
@@ -508,7 +502,7 @@ const sonido = {
   error: () => tono(220, 0.25, { tipo: "square", vol: 0.04 }),
 };
 
-/* ===================== API (real y demo) ===================== */
+/* ===================== API ===================== */
 const TOKEN_KEY = "vih_panel_token";
 // La sesión vive solo en memoria: al recargar o volver a entrar, siempre se pide el código.
 let token = null;
@@ -545,65 +539,7 @@ const apiReal = {
   },
 };
 
-/* Simulación para probar sin la VM: código 1234, 5 intentos y 30 s de bloqueo. */
-const demo = (() => {
-  let intentos = 5, bloqueoHasta = 0;
-  const hora = (minAtras = 0) => new Date(Date.now() - minAtras * 60000).toLocaleTimeString("es-CL", { hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
-  const switches = [
-    { id: 41023, nombre: "Puerta principal", activo: false },
-    { id: 41024, nombre: "Torretas", activo: true },
-    { id: 41025, nombre: "Luces de la base", activo: false },
-    { id: 41026, nombre: "Hornos eléctricos", activo: true },
-    { id: 41027, nombre: "SAM site", activo: true },
-  ];
-  const eventos = [
-    { hora: hora(2), tipo: "chat", texto: "Nico: alguien tiene azufre?" },
-    { hora: hora(9), tipo: "heli", texto: "El helicóptero de patrulla entró al mapa por F12" },
-    { hora: hora(21), tipo: "cargo", texto: "El Cargo Ship entró al mapa" },
-    { hora: hora(34), tipo: "alarma", texto: "Alarma inteligente: ¡Nos raidean el compound!" },
-    { hora: hora(52), tipo: "ch47", texto: "El Chinook va hacia Launch Site" },
-  ];
-  return {
-    async login(codigo) {
-      await espera(450);
-      if (Date.now() < bloqueoHasta) return { bloqueadoSeg: Math.ceil((bloqueoHasta - Date.now()) / 1000) };
-      if (codigo === "1234") { intentos = 5; return { ok: true, token: "demo" }; }
-      intentos--;
-      if (intentos <= 0) { intentos = 5; bloqueoHasta = Date.now() + 30000; return { bloqueadoSeg: 30 }; }
-      return { intentosRestantes: intentos };
-    },
-    async logout() {},
-    async estado() {
-      await espera(250);
-      return {
-        servidor: { nombre: "[LATAM] Sudamerica United", jugadores: 80 + Math.floor(Math.random() * 40), max: 150, conectado: true },
-        switches: switches.map((s) => ({ ...s })), eventos: eventos.slice(0, 15),
-      };
-    },
-    async switch(id, activo) {
-      await espera(500);
-      const s = switches.find((x) => x.id === id); if (!s) throw new Error("Switch no encontrado");
-      s.activo = activo; return { id, activo };
-    },
-    async comando(texto) {
-      await espera(500);
-      const [cmd, ...resto] = texto.slice(CONFIG.prefijo.length).split(" ");
-      eventos.unshift({ hora: hora(), tipo: "chat", texto: "Panel: " + texto });
-      switch (cmd.toLowerCase()) {
-        case "pop":    return { respuesta: `Población: ${80 + Math.floor(Math.random() * 40)}/150 (3 en cola)` };
-        case "time":   return { respuesta: "Hora en el juego: 14:32 · faltan 31 min para la noche" };
-        case "wipe":   return { respuesta: "Último wipe hace 3 días y 6 horas" };
-        case "events": return { respuesta: "Cargo en el mapa · Heli derribado hace 22 min" };
-        case "online": return { respuesta: "En línea: Felipe, Nico, RedJohn" };
-        case "tts":    return { respuesta: `RedJohn dice en Discord: "${resto.join(" ")}"` };
-        default:       return { respuesta: `Comando enviado: ${texto}` };
-      }
-    },
-  };
-})();
-
-const api = DEMO ? demo : apiReal;
-if (DEMO) { $("#tagDemo").hidden = false; $("#tagDemo2").hidden = false; }
+const api = apiReal;
 
 /* ===================== Escena y codelock ===================== */
 let codigo = "", ocupado = false, bloqueado = false, salud = 100, relojBloqueo;
@@ -843,7 +779,7 @@ function iniciarPanel() {
   refrescar();
   clearInterval(relojEstado);
   relojEstado = setInterval(() => { if (!document.hidden) refrescar(); }, CONFIG.refrescoSeg * 1000);
-  if (!$("#consola").childElementCount) linea("sis", `Conectado al panel${DEMO ? " (modo demo)" : ""}. Escribe un comando, por ejemplo ${CONFIG.prefijo}pop`);
+  if (!$("#consola").childElementCount) linea("sis", `Conectado al panel. Escribe un comando, por ejemplo ${CONFIG.prefijo}pop`);
 }
 function detenerPanel() { clearInterval(relojEstado); }
 

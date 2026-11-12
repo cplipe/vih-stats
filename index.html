@@ -295,6 +295,15 @@
   .lista-vg li.enemigo b { color:#ff8a78; }
   .lista-vg time { color:var(--mut); font:12px ui-monospace, Consolas, monospace; }
   @media (max-width:500px) { .lista-vg { columns:1; } }
+  .grupos { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:10px; }
+  .grupo { padding:10px 12px; background:rgba(0,0,0,.3); border:1px solid var(--line); border-left:4px solid #3a3733; }
+  .grupo.alerta { border-left-color:var(--no-hi); background:rgba(163,59,43,.18); }
+  .grupo .fila-clan { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin-bottom:6px; }
+  .grupo .cnt { font-weight:700; color:var(--mut); } .grupo.alerta .cnt { color:#ff8a78; }
+  .nicks { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:6px; }
+  .nick { padding:2px 7px; font-size:13px; border:1px solid #3a3733; color:var(--mut); }
+  .nick.on { border-color:#6fd04f; color:#d6f0c8; background:rgba(111,208,79,.12); }
+  .grupo small { display:block; color:var(--mut); font-size:12px; line-height:1.5; }
   .juntos { display:flex; flex-wrap:wrap; gap:8px; }
   .par { padding:6px 10px; background:rgba(0,0,0,.3); border:1px solid var(--line); font-size:14px; }
   .par em { font-style:normal; color:var(--mut); font-size:12px; margin-left:6px; }
@@ -489,8 +498,8 @@
         <ul class="lista-vg" id="vgConectados"></ul>
       </section>
       <section class="caja c-vg-juntos">
-        <h2 class="up">Suelen conectarse juntos · últimos 3 días</h2>
-        <div class="juntos" id="vgJuntos"></div>
+        <h2 class="up">Grupos detectados · últimos 7 días</h2>
+        <div class="grupos" id="vgGrupos"></div>
       </section>
     </div>
   </div>
@@ -908,7 +917,10 @@ const hh = (h) => String(h).padStart(2, "0") + ":00";
 const hora = (ts) => new Date(ts * 1000).toLocaleTimeString("es-CL", { hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
 function duracion(desde) {
   const m = Math.max(0, Math.round((Date.now() / 1000 - desde) / 60));
-  return m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, "0")}`;
+  if (m < 60) return `${m} min`;
+  if (m < 1440) return `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, "0")}`;
+  const d = Math.floor(m / 1440);
+  return d === 1 ? "1 día" : `${d} días`;
 }
 
 function graficoSerie(serie) {
@@ -950,11 +962,13 @@ function pintarVigia(d) {
   const vacia = d.horasVacias[0], llena = d.horasLlenas[0];
   const promVacia = vacia != null ? d.porHora[vacia].promedio : null;
   const alertas = d.clanes.filter((c) => c.alerta).length;
+  const gruposAlerta = (d.grupos || []).filter((g) => g.alerta).length;
   $("#vgTarjetas").innerHTML = `
     <div class="tarjeta"><small>Jugadores ahora</small><b>${esc(d.poblacion ?? "?")}</b></div>
     <div class="tarjeta"><small>Hora más vacía</small><b class="vacia">${vacia != null ? hh(vacia) : "—"}</b><span>${promVacia != null ? `~${promVacia} jugadores` : ""}</span></div>
     <div class="tarjeta"><small>Hora más llena</small><b class="llena">${llena != null ? hh(llena) : "—"}</b></div>
     <div class="tarjeta"><small>Clanes en alerta</small><b class="${alertas ? "llena" : ""}">${alertas}</b><span>${d.alertaMin}+ conectados</span></div>
+    <div class="tarjeta"><small>Grupos conectándose</small><b class="${gruposAlerta ? "llena" : ""}">${gruposAlerta}</b><span>de ${(d.grupos || []).length} detectados</span></div>
     <div class="tarjeta"><small>Actualizado</small><b style="font-size:20px">${d.actualizado ? hora(d.actualizado) : "—"}</b></div>`;
   $("#vgSerie").innerHTML = graficoSerie(d.serie);
   $("#vgHoras").innerHTML = graficoHoras(d.porHora, d.horasVacias, d.horasLlenas);
@@ -970,9 +984,16 @@ function pintarVigia(d) {
     <li class="${enemigos.has(c.apodo.toLowerCase()) ? "enemigo" : ""}"><b>${esc(c.apodo)}</b><time>${duracion(c.desde)}</time></li>`).join("")
     : `<li class="vacio">Nadie conectado (o Vigía no ve el servidor).</li>`;
 
-  $("#vgJuntos").innerHTML = d.juntos.length ? d.juntos.map((j) =>
-    `<span class="par">${j.apodos.map(esc).join(" + ")}<em>${j.veces} veces</em></span>`).join("")
-    : `<div class="vacio">Todavía no hay suficientes datos.</div>`;
+  const grupos = d.grupos || [];
+  $("#vgGrupos").innerHTML = grupos.length ? grupos.map((g) => {
+    const on = new Set(g.online.map((x) => x.toLowerCase()));
+    const hace = g.ultimaVez ? duracion(g.ultimaVez) : null;
+    return `<div class="grupo ${g.alerta ? "alerta" : ""}">
+      <div class="fila-clan"><b>${g.alerta ? "👥 " : ""}${esc(g.nombre)}</b><span class="cnt">${g.online.length}/${g.miembros.length} online</span></div>
+      <div class="nicks">${g.miembros.map((m) => `<span class="nick ${on.has(m.toLowerCase()) ? "on" : ""}">${esc(m)}</span>`).join("")}</div>
+      <small>${g.horas.length ? `Suelen entrar: ${g.horas.map(hh).join(", ")}<br>` : ""}Entraron juntos ${g.vecesJuntos} veces${hace ? ` · última vez hace ${hace}` : ""}</small>
+    </div>`;
+  }).join("") : `<div class="vacio">Todavía no hay grupos: se necesitan al menos 3 entradas juntas de los mismos nicks.</div>`;
 }
 
 async function cargarVigia() {

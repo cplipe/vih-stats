@@ -295,15 +295,16 @@
   .lista-vg li.enemigo b { color:#ff8a78; }
   .lista-vg time { color:var(--mut); font:12px ui-monospace, Consolas, monospace; }
   @media (max-width:500px) { .lista-vg { columns:1; } }
-  .grupos { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:10px; }
-  .grupo { padding:10px 12px; background:rgba(0,0,0,.3); border:1px solid var(--line); border-left:4px solid #3a3733; }
-  .grupo.alerta { border-left-color:var(--no-hi); background:rgba(163,59,43,.18); }
-  .grupo .fila-clan { display:flex; justify-content:space-between; align-items:baseline; gap:8px; margin-bottom:6px; }
-  .grupo .cnt { font-weight:700; color:var(--mut); } .grupo.alerta .cnt { color:#ff8a78; }
-  .nicks { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:6px; }
-  .nick { padding:2px 7px; font-size:13px; border:1px solid #3a3733; color:var(--mut); }
-  .nick.on { border-color:#6fd04f; color:#d6f0c8; background:rgba(111,208,79,.12); }
-  .grupo small { display:block; color:var(--mut); font-size:12px; line-height:1.5; }
+  .nota { margin:-4px 0 10px; color:var(--mut); font-size:13px; }
+  .sub { margin:0 0 8px; font-size:12px; color:var(--mut); }
+  .oleadas-wrap { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:16px; }
+  @media (max-width:900px) { .oleadas-wrap { grid-template-columns:1fr; } }
+  .lista-ol { list-style:none; margin:0; padding:0; max-height:260px; overflow-y:auto; }
+  .lista-ol li { display:flex; align-items:center; gap:10px; padding:7px 4px; border-bottom:1px solid var(--line); font-size:14px; }
+  .lista-ol time { color:var(--mut); font:12px ui-monospace, Consolas, monospace; flex:none; width:44px; }
+  .lista-ol .ola { flex:none; width:10px; height:10px; background:#4b86d0; }
+  .lista-ol .ola.grande { background:#c9503c; } .lista-ol .ola.reinicio { background:#7b8290; }
+  .lista-ol em { margin-left:auto; font-style:normal; color:var(--mut); font-size:12px; }
   .juntos { display:flex; flex-wrap:wrap; gap:8px; }
   .par { padding:6px 10px; background:rgba(0,0,0,.3); border:1px solid var(--line); font-size:14px; }
   .par em { font-style:normal; color:var(--mut); font-size:12px; margin-left:6px; }
@@ -498,8 +499,12 @@
         <ul class="lista-vg" id="vgConectados"></ul>
       </section>
       <section class="caja c-vg-juntos">
-        <h2 class="up">Grupos detectados · últimos 7 días</h2>
-        <div class="grupos" id="vgGrupos"></div>
+        <h2 class="up">Oleadas de entrada</h2>
+        <p class="nota" id="vgNotaOleadas"></p>
+        <div class="oleadas-wrap">
+          <div><h3 class="sub up">Últimas 24 horas</h3><ul class="lista-ol" id="vgOleadas"></ul></div>
+          <div><h3 class="sub up">A qué hora ocurren · 7 días</h3><div id="vgHorasOl" class="grafico"></div></div>
+        </div>
       </section>
     </div>
   </div>
@@ -941,10 +946,11 @@ function graficoSerie(serie) {
     <circle cx="${x(ult.ts)}" cy="${y(ult.n)}" r="4.5" fill="#c25d89" stroke="#151515" stroke-width="2"/></svg>`;
 }
 
-function graficoHoras(porHora, vacias, llenas) {
+function graficoHoras(porHora, vacias, llenas, maxMin = 40) {
   const W = 700, H = 200, L = 34, R = 8, T = 10, B = 24;
   const vals = porHora.map((p) => p.promedio || 0);
-  const max = Math.max(40, Math.ceil(Math.max(...vals) / 20) * 20);
+  const paso = maxMin >= 40 ? 20 : 4;
+  const max = Math.max(maxMin, Math.ceil(Math.max(...vals) / paso) * paso);
   const bw = (W - L - R) / 24;
   const y = (n) => T + (H - T - B) * (1 - n / max);
   let g = "";
@@ -962,13 +968,14 @@ function pintarVigia(d) {
   const vacia = d.horasVacias[0], llena = d.horasLlenas[0];
   const promVacia = vacia != null ? d.porHora[vacia].promedio : null;
   const alertas = d.clanes.filter((c) => c.alerta).length;
-  const gruposAlerta = (d.grupos || []).filter((g) => g.alerta).length;
+  const oleadas = d.oleadas || [];
+  const oleadasHoy = oleadas.filter((o) => !o.masiva).length;
   $("#vgTarjetas").innerHTML = `
     <div class="tarjeta"><small>Jugadores ahora</small><b>${esc(d.poblacion ?? "?")}</b></div>
     <div class="tarjeta"><small>Hora más vacía</small><b class="vacia">${vacia != null ? hh(vacia) : "—"}</b><span>${promVacia != null ? `~${promVacia} jugadores` : ""}</span></div>
     <div class="tarjeta"><small>Hora más llena</small><b class="llena">${llena != null ? hh(llena) : "—"}</b></div>
     <div class="tarjeta"><small>Clanes en alerta</small><b class="${alertas ? "llena" : ""}">${alertas}</b><span>${d.alertaMin}+ conectados</span></div>
-    <div class="tarjeta"><small>Grupos conectándose</small><b class="${gruposAlerta ? "llena" : ""}">${gruposAlerta}</b><span>de ${(d.grupos || []).length} detectados</span></div>
+    <div class="tarjeta"><small>Oleadas hoy</small><b class="${oleadasHoy ? "llena" : ""}">${oleadasHoy}</b><span>${d.oleadaMin}+ entrando juntos</span></div>
     <div class="tarjeta"><small>Actualizado</small><b style="font-size:20px">${d.actualizado ? hora(d.actualizado) : "—"}</b></div>`;
   $("#vgSerie").innerHTML = graficoSerie(d.serie);
   $("#vgHoras").innerHTML = graficoHoras(d.porHora, d.horasVacias, d.horasLlenas);
@@ -984,16 +991,16 @@ function pintarVigia(d) {
     <li class="${enemigos.has(c.apodo.toLowerCase()) ? "enemigo" : ""}"><b>${esc(c.apodo)}</b><time>${duracion(c.desde)}</time></li>`).join("")
     : `<li class="vacio">Nadie conectado (o Vigía no ve el servidor).</li>`;
 
-  const grupos = d.grupos || [];
-  $("#vgGrupos").innerHTML = grupos.length ? grupos.map((g) => {
-    const on = new Set(g.online.map((x) => x.toLowerCase()));
-    const hace = g.ultimaVez ? duracion(g.ultimaVez) : null;
-    return `<div class="grupo ${g.alerta ? "alerta" : ""}">
-      <div class="fila-clan"><b>${g.alerta ? "👥 " : ""}${esc(g.nombre)}</b><span class="cnt">${g.online.length}/${g.miembros.length} online</span></div>
-      <div class="nicks">${g.miembros.map((m) => `<span class="nick ${on.has(m.toLowerCase()) ? "on" : ""}">${esc(m)}</span>`).join("")}</div>
-      <small>${g.horas.length ? `Suelen entrar: ${g.horas.map(hh).join(", ")}<br>` : ""}Entraron juntos ${g.vecesJuntos} veces${hace ? ` · última vez hace ${hace}` : ""}</small>
-    </div>`;
-  }).join("") : `<div class="vacio">Todavía no hay grupos: se necesitan al menos 3 entradas juntas de los mismos nicks.</div>`;
+  $("#vgNotaOleadas").textContent = `Cuando ${d.oleadaMin} o más jugadores entran en menos de ${Math.round(d.oleadaSeg / 60)} min. Suele ser un grupo conectándose para raidear o defender.`
+    + (d.horasOleadas && d.horasOleadas.length ? ` Esta semana ocurren más a las ${d.horasOleadas.map(hh).join(", ")}.` : "");
+  $("#vgOleadas").innerHTML = oleadas.length ? oleadas.map((o) => {
+    const seg = Math.max(1, o.fin - o.inicio);
+    const tipo = o.masiva ? "reinicio" : o.n >= d.oleadaMin * 2 ? "grande" : "";
+    return `<li><time>${hora(o.inicio)}</time><span class="ola ${tipo}"></span>
+      <span>${o.masiva ? `${o.n} juntos · posible reinicio` : `<b>${o.n}</b> jugadores en ${seg < 60 ? seg + " s" : Math.round(seg / 60) + " min"}`}</span>
+      <em>hace ${duracion(o.inicio)}</em></li>`;
+  }).join("") : `<li class="vacio">Sin oleadas en las últimas 24 horas.</li>`;
+  $("#vgHorasOl").innerHTML = graficoHoras((d.porHoraOleadas || Array(24).fill(0)).map((n, h) => ({ hora: h, promedio: n || null })), [], d.horasOleadas || [], 4);
 }
 
 async function cargarVigia() {

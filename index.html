@@ -269,6 +269,35 @@
   .vista[hidden] { display:none; }
   #frameStats { display:block; width:100%; height:calc(100vh - 120px); min-height:480px; border:2px solid #151515; background:#0e0f11; }
   @media (max-width:600px) { #frameStats { height:calc(100vh - 170px); } }
+  /* Vigía */
+  .c-vg-resumen { grid-column:span 12; } .c-vg-24 { grid-column:span 7; } .c-vg-clanes { grid-column:span 5; }
+  .c-vg-horas { grid-column:span 7; } .c-vg-conectados { grid-column:span 5; } .c-vg-juntos { grid-column:span 12; }
+  @media (max-width:900px) { .c-vg-24,.c-vg-clanes,.c-vg-horas,.c-vg-conectados { grid-column:span 12; } }
+  .tarjetas { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+  .tarjeta { padding:10px 12px; background:rgba(0,0,0,.3); border:1px solid var(--line); }
+  .tarjeta small { display:block; color:var(--mut); font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+  .tarjeta b { font-size:26px; line-height:1.2; }
+  .tarjeta b.vacia { color:#9fd07f; } .tarjeta b.llena { color:#ff8a78; }
+  .tarjeta span { display:block; color:var(--mut); font-size:12px; }
+  .grafico svg { display:block; width:100%; height:auto; }
+  .grafico text { fill:#9a958b; font:11px var(--font); }
+  .leyenda { display:flex; gap:14px; margin-top:6px; font-size:12px; color:var(--mut); }
+  .leyenda i { display:inline-block; width:10px; height:10px; margin-right:5px; vertical-align:-1px; }
+  .leyenda .lv { background:#7fb04f; } .leyenda .ll { background:#c9503c; }
+  .clan { padding:9px 10px; margin-bottom:8px; background:rgba(0,0,0,.3); border-left:4px solid #3a3733; }
+  .clan.alerta { border-left-color:var(--no-hi); background:rgba(163,59,43,.18); }
+  .clan .fila-clan { display:flex; justify-content:space-between; align-items:baseline; gap:8px; }
+  .clan b { font-size:15px; } .clan .cnt { font-weight:700; color:var(--mut); }
+  .clan.alerta .cnt { color:#ff8a78; }
+  .clan small { display:block; margin-top:3px; color:var(--mut); font-size:12px; word-break:break-word; }
+  .lista-vg { list-style:none; margin:0; padding:0; max-height:300px; overflow-y:auto; columns:2; column-gap:12px; }
+  .lista-vg li { display:flex; justify-content:space-between; gap:8px; padding:5px 2px; border-bottom:1px solid var(--line); font-size:14px; break-inside:avoid; }
+  .lista-vg li.enemigo b { color:#ff8a78; }
+  .lista-vg time { color:var(--mut); font:12px ui-monospace, Consolas, monospace; }
+  @media (max-width:500px) { .lista-vg { columns:1; } }
+  .juntos { display:flex; flex-wrap:wrap; gap:8px; }
+  .par { padding:6px 10px; background:rgba(0,0,0,.3); border:1px solid var(--line); font-size:14px; }
+  .par em { font-style:normal; color:var(--mut); font-size:12px; margin-left:6px; }
   .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:14px; }
   .caja { background:var(--ui); border:1px solid var(--line); padding:14px; min-width:0; }
   .caja h2 { margin:0 0 12px; font-size:14px; color:#cfc9bd; display:flex; align-items:center; gap:8px; }
@@ -395,6 +424,7 @@
     <h1 class="up">Clan <span>VIH</span> · Base</h1>
     <nav class="pestanas" role="tablist" aria-label="Secciones">
       <button class="pestana activa" role="tab" aria-selected="true" data-vista="bot">Bot</button>
+      <button class="pestana" role="tab" aria-selected="false" data-vista="vigia">Vigía</button>
       <button class="pestana" role="tab" aria-selected="false" data-vista="stats">Estadísticas</button>
     </nav>
     <div class="estado"><span class="punto" id="puntoSrv"></span><span id="txtSrv">Conectando…</span></div>
@@ -435,6 +465,34 @@
       <ul class="eventos" id="eventos"><li class="vacio">Cargando…</li></ul>
     </section>
   </div>
+  </div>
+  <div class="vista" id="vista-vigia" hidden>
+    <div class="grid">
+      <section class="caja c-vg-resumen">
+        <div class="tarjetas" id="vgTarjetas"><div class="vacio">Cargando…</div></div>
+      </section>
+      <section class="caja c-vg-24">
+        <h2 class="up">Población · últimas 24 horas</h2>
+        <div id="vgSerie" class="grafico"></div>
+      </section>
+      <section class="caja c-vg-clanes">
+        <h2 class="up">Clanes vigilados</h2>
+        <div id="vgClanes"></div>
+      </section>
+      <section class="caja c-vg-horas">
+        <h2 class="up">Promedio por hora · últimos 7 días</h2>
+        <div id="vgHoras" class="grafico"></div>
+        <div class="leyenda"><span><i class="lv"></i>Más vacías</span><span><i class="ll"></i>Más llenas</span></div>
+      </section>
+      <section class="caja c-vg-conectados">
+        <h2 class="up">Conectados ahora</h2>
+        <ul class="lista-vg" id="vgConectados"></ul>
+      </section>
+      <section class="caja c-vg-juntos">
+        <h2 class="up">Suelen conectarse juntos · últimos 3 días</h2>
+        <div class="juntos" id="vgJuntos"></div>
+      </section>
+    </div>
   </div>
   <div class="vista" id="vista-stats" hidden>
     <iframe id="frameStats" title="Estadísticas del clan"></iframe>
@@ -532,6 +590,10 @@ const apiReal = {
   async switch(id, activo) {
     const { status, datos } = await this.pedir("/api/switches/" + encodeURIComponent(id), { method: "POST", body: JSON.stringify({ activo }) });
     if (status !== 200) throw new Error(datos.error || "No se pudo cambiar el switch"); return datos;
+  },
+  async vigia() {
+    const { status, datos } = await this.pedir("/api/vigia");
+    if (status !== 200) throw new Error(datos.error || "Vigía no está disponible"); return datos;
   },
   async comando(texto) {
     const { status, datos } = await this.pedir("/api/comando", { method: "POST", body: JSON.stringify({ texto }) });
@@ -840,6 +902,87 @@ $("#btnTts").addEventListener("click", async () => {
 
 $("#btnCerrar").addEventListener("click", () => cerrarPuerta());
 
+/* ===================== Vigía ===================== */
+let relojVigia;
+const hh = (h) => String(h).padStart(2, "0") + ":00";
+const hora = (ts) => new Date(ts * 1000).toLocaleTimeString("es-CL", { hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+function duracion(desde) {
+  const m = Math.max(0, Math.round((Date.now() / 1000 - desde) / 60));
+  return m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, "0")}`;
+}
+
+function graficoSerie(serie) {
+  if (!serie.length) return `<div class="vacio">Sin datos en las últimas 24 horas.</div>`;
+  const W = 700, H = 210, L = 34, R = 8, T = 10, B = 24;
+  const t0 = serie[0].ts, t1 = serie[serie.length - 1].ts || t0 + 1;
+  const max = Math.max(40, Math.ceil(Math.max(...serie.map((p) => p.n)) / 20) * 20);
+  const x = (t) => L + (W - L - R) * (t - t0) / Math.max(1, t1 - t0);
+  const y = (n) => T + (H - T - B) * (1 - n / max);
+  const pts = serie.map((p) => `${x(p.ts).toFixed(1)},${y(p.n).toFixed(1)}`).join(" ");
+  let g = "";
+  for (let v = 0; v <= max; v += max / 4) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="rgba(255,255,255,.07)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${Math.round(v)}</text>`;
+  for (let t = Math.ceil(t0 / 14400) * 14400; t <= t1; t += 14400) g += `<text x="${x(t)}" y="${H - 6}" text-anchor="middle">${hora(t)}</text>`;
+  const ult = serie[serie.length - 1];
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Población de las últimas 24 horas">${g}
+    <polygon points="${x(t0)},${y(0)} ${pts} ${x(t1)},${y(0)}" fill="rgba(194,93,137,.18)"/>
+    <polyline points="${pts}" fill="none" stroke="#c25d89" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="${x(ult.ts)}" cy="${y(ult.n)}" r="4.5" fill="#c25d89" stroke="#151515" stroke-width="2"/></svg>`;
+}
+
+function graficoHoras(porHora, vacias, llenas) {
+  const W = 700, H = 200, L = 34, R = 8, T = 10, B = 24;
+  const vals = porHora.map((p) => p.promedio || 0);
+  const max = Math.max(40, Math.ceil(Math.max(...vals) / 20) * 20);
+  const bw = (W - L - R) / 24;
+  const y = (n) => T + (H - T - B) * (1 - n / max);
+  let g = "";
+  for (let v = 0; v <= max; v += max / 4) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="rgba(255,255,255,.07)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${Math.round(v)}</text>`;
+  porHora.forEach((p, h) => {
+    const color = vacias.includes(h) ? "#7fb04f" : llenas.includes(h) ? "#c9503c" : "#5d6a73";
+    const x = L + h * bw + 2;
+    if (p.promedio != null) g += `<rect x="${x}" y="${y(p.promedio)}" width="${bw - 4}" height="${y(0) - y(p.promedio)}" fill="${color}"><title>${hh(h)} · ${p.promedio} jugadores</title></rect>`;
+    if (h % 3 === 0) g += `<text x="${x + (bw - 4) / 2}" y="${H - 6}" text-anchor="middle">${hh(h)}</text>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Promedio de jugadores por hora">${g}</svg>`;
+}
+
+function pintarVigia(d) {
+  const vacia = d.horasVacias[0], llena = d.horasLlenas[0];
+  const promVacia = vacia != null ? d.porHora[vacia].promedio : null;
+  const alertas = d.clanes.filter((c) => c.alerta).length;
+  $("#vgTarjetas").innerHTML = `
+    <div class="tarjeta"><small>Jugadores ahora</small><b>${esc(d.poblacion ?? "?")}</b></div>
+    <div class="tarjeta"><small>Hora más vacía</small><b class="vacia">${vacia != null ? hh(vacia) : "—"}</b><span>${promVacia != null ? `~${promVacia} jugadores` : ""}</span></div>
+    <div class="tarjeta"><small>Hora más llena</small><b class="llena">${llena != null ? hh(llena) : "—"}</b></div>
+    <div class="tarjeta"><small>Clanes en alerta</small><b class="${alertas ? "llena" : ""}">${alertas}</b><span>${d.alertaMin}+ conectados</span></div>
+    <div class="tarjeta"><small>Actualizado</small><b style="font-size:20px">${d.actualizado ? hora(d.actualizado) : "—"}</b></div>`;
+  $("#vgSerie").innerHTML = graficoSerie(d.serie);
+  $("#vgHoras").innerHTML = graficoHoras(d.porHora, d.horasVacias, d.horasLlenas);
+
+  const enemigos = new Set(d.clanes.flatMap((c) => c.conectados));
+  $("#vgClanes").innerHTML = d.clanes.length ? d.clanes.map((c) => `
+    <div class="clan ${c.alerta ? "alerta" : ""}">
+      <div class="fila-clan"><b>${c.alerta ? "🚨 " : ""}${esc(c.nombre)}</b><span class="cnt">${c.conectados.length}/${c.total} online</span></div>
+      ${c.conectados.length ? `<small>${c.conectados.map(esc).join(", ")}</small>` : ""}
+    </div>`).join("") : `<div class="vacio">No hay clanes en clanes.txt.</div>`;
+
+  $("#vgConectados").innerHTML = d.conectados.length ? d.conectados.map((c) => `
+    <li class="${enemigos.has(c.apodo.toLowerCase()) ? "enemigo" : ""}"><b>${esc(c.apodo)}</b><time>${duracion(c.desde)}</time></li>`).join("")
+    : `<li class="vacio">Nadie conectado (o Vigía no ve el servidor).</li>`;
+
+  $("#vgJuntos").innerHTML = d.juntos.length ? d.juntos.map((j) =>
+    `<span class="par">${j.apodos.map(esc).join(" + ")}<em>${j.veces} veces</em></span>`).join("")
+    : `<div class="vacio">Todavía no hay suficientes datos.</div>`;
+}
+
+async function cargarVigia() {
+  try { pintarVigia(await api.vigia()); }
+  catch (err) {
+    if (err instanceof SesionVencida) return manejarError(err);
+    $("#vgTarjetas").innerHTML = `<div class="vacio">${esc(err.message || "Vigía no está disponible")}</div>`;
+  }
+}
+
 /* Pestañas: Bot / Estadísticas (las estadísticas se cargan recién al abrir su pestaña) */
 function mostrarVista(nombre) {
   document.querySelectorAll(".pestana").forEach((b) => {
@@ -847,6 +990,9 @@ function mostrarVista(nombre) {
     b.classList.toggle("activa", activa); b.setAttribute("aria-selected", activa);
   });
   $("#vista-bot").hidden = nombre !== "bot";
+  $("#vista-vigia").hidden = nombre !== "vigia";
+  clearInterval(relojVigia);
+  if (nombre === "vigia") { cargarVigia(); relojVigia = setInterval(() => { if (!document.hidden) cargarVigia(); }, 60000); }
   $("#vista-stats").hidden = nombre !== "stats";
   const f = $("#frameStats");
   if (nombre === "stats" && !f.getAttribute("src")) f.src = "estadisticas/";

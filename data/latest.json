@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T05:15:16Z",
+  "updated_at": "2026-11-13T05:30:22Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -15,25 +15,25 @@
     "deaths": 23701,
     "kdr": 0.69,
     "headshots": 5382,
-    "playtime_seconds": 27562005,
+    "playtime_seconds": 27562124,
     "longest_kill": 296.9,
     "avg_elo": 1137,
     "peak_elo": 1457,
     "current_kills": 31,
     "current_deaths": 78,
     "current_kdr": 0.4,
-    "current_playtime_seconds": 87922,
+    "current_playtime_seconds": 88459,
     "current_longest_kill": 72.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 85717,
+      "playtime_seconds": 86254,
       "playtime_share": 97.5,
       "kills": 23,
       "active_members": 6,
-      "last_seen": "2026-11-13T04:32:24.381Z"
+      "last_seen": "2026-11-13T05:28:26.333Z"
     },
     {
       "server_id": "lunavanilla",
@@ -65,12 +65,12 @@
       "deaths": 2702,
       "kdr": 0.66,
       "headshots": 552,
-      "playtime_seconds": 2735806,
+      "playtime_seconds": 2735925,
       "longest_kill": 258,
       "current_kills": 3,
       "current_deaths": 8,
       "current_kdr": 0.38,
-      "current_playtime_seconds": 11437,
+      "current_playtime_seconds": 11974,
       "elo": 1007,
       "elo_games": 2117,
       "gather_wood": 1914092,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-13T05:15:16Z"
+  "checked_at": "2026-11-13T05:30:22Z"
 }

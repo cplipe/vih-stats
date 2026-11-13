@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T02:30:20Z",
+  "updated_at": "2026-11-13T02:45:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,24 +22,24 @@
     "current_kills": 31,
     "current_deaths": 72,
     "current_kdr": 0.43,
-    "current_playtime_seconds": 82796,
+    "current_playtime_seconds": 85598,
     "current_longest_kill": 72.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 80591,
-      "playtime_share": 97.3,
+      "playtime_seconds": 83393,
+      "playtime_share": 97.4,
       "kills": 23,
       "active_members": 6,
-      "last_seen": "2026-11-13T02:29:26.492Z"
+      "last_seen": "2026-11-13T02:44:26.485Z"
     },
     {
       "server_id": "lunavanilla",
       "server_name": "Luna Vanilla",
       "playtime_seconds": 1669,
-      "playtime_share": 2,
+      "playtime_share": 1.9,
       "kills": 7,
       "active_members": 1,
       "last_seen": "2026-11-10T22:05:21.204Z"
@@ -210,7 +210,7 @@
       "current_kills": 1,
       "current_deaths": 3,
       "current_kdr": 0.33,
-      "current_playtime_seconds": 1905,
+      "current_playtime_seconds": 2918,
       "elo": 1132,
       "elo_games": 391,
       "gather_wood": 209804,
@@ -219,9 +219,9 @@
       "gather_sulfur": 35014,
       "gather_hqm": 243,
       "gather_total": 453658,
-      "farming_hemp": 2888,
-      "farming_total": 3014,
-      "berries_total": 16
+      "farming_hemp": 2991,
+      "farming_total": 3119,
+      "berries_total": 18
     },
     {
       "steam_id": "76561199113642347",
@@ -294,7 +294,7 @@
       "current_kills": 7,
       "current_deaths": 9,
       "current_kdr": 0.78,
-      "current_playtime_seconds": 15426,
+      "current_playtime_seconds": 16142,
       "elo": 1079,
       "elo_games": 2172,
       "gather_wood": 775004,
@@ -406,7 +406,7 @@
       "current_kills": 3,
       "current_deaths": 12,
       "current_kdr": 0.25,
-      "current_playtime_seconds": 19834,
+      "current_playtime_seconds": 20907,
       "elo": 882,
       "elo_games": 2224,
       "gather_wood": 855683,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-13T02:30:20Z"
+  "checked_at": "2026-11-13T02:45:16Z"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T04:45:21Z",
+  "updated_at": "2026-11-13T05:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,10 +12,10 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16354,
-    "deaths": 23698,
+    "deaths": 23701,
     "kdr": 0.69,
     "headshots": 5382,
-    "playtime_seconds": 27560814,
+    "playtime_seconds": 27562005,
     "longest_kill": 296.9,
     "avg_elo": 1137,
     "peak_elo": 1457,
@@ -398,10 +398,10 @@
       "profile": "https://steamcommunity.com/profiles/76561198171052931/",
       "joined_at": "2026-10-16T07:26:52.140Z",
       "kills": 1048,
-      "deaths": 3199,
+      "deaths": 3202,
       "kdr": 0.33,
       "headshots": 327,
-      "playtime_seconds": 2357052,
+      "playtime_seconds": 2358243,
       "longest_kill": 231.9,
       "current_kills": 3,
       "current_deaths": 16,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-13T05:00:27Z"
+  "checked_at": "2026-11-13T05:15:16Z"
 }

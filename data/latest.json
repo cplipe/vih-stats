@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T07:15:16Z",
+  "updated_at": "2026-11-13T07:30:23Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,28 +12,28 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16354,
-    "deaths": 23701,
+    "deaths": 23702,
     "kdr": 0.69,
     "headshots": 5382,
-    "playtime_seconds": 27562124,
+    "playtime_seconds": 27569578,
     "longest_kill": 296.9,
     "avg_elo": 1139,
     "peak_elo": 1457,
     "current_kills": 36,
     "current_deaths": 84,
     "current_kdr": 0.43,
-    "current_playtime_seconds": 97225,
+    "current_playtime_seconds": 97822,
     "current_longest_kill": 72.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 95020,
+      "playtime_seconds": 95617,
       "playtime_share": 97.7,
       "kills": 28,
       "active_members": 6,
-      "last_seen": "2026-11-13T07:13:26.115Z"
+      "last_seen": "2026-11-13T07:29:26.104Z"
     },
     {
       "server_id": "lunavanilla",
@@ -48,7 +48,7 @@
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
       "playtime_seconds": 536,
-      "playtime_share": 0.6,
+      "playtime_share": 0.5,
       "kills": 1,
       "active_members": 1,
       "last_seen": "2026-11-11T19:51:22.135Z"
@@ -62,15 +62,15 @@
       "profile": "https://steamcommunity.com/id/Don_Tulio/",
       "joined_at": "2026-10-14T01:19:54.674Z",
       "kills": 1778,
-      "deaths": 2702,
+      "deaths": 2703,
       "kdr": 0.66,
       "headshots": 552,
-      "playtime_seconds": 2735925,
+      "playtime_seconds": 2743379,
       "longest_kill": 258,
       "current_kills": 3,
       "current_deaths": 9,
       "current_kdr": 0.33,
-      "current_playtime_seconds": 18413,
+      "current_playtime_seconds": 19010,
       "elo": 1007,
       "elo_games": 2117,
       "gather_wood": 1914092,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-13T07:15:16Z"
+  "checked_at": "2026-11-13T07:30:23Z"
 }

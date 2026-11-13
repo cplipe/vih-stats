@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T04:30:20Z",
+  "updated_at": "2026-11-13T04:45:21Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,28 +12,28 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16354,
-    "deaths": 23696,
+    "deaths": 23698,
     "kdr": 0.69,
     "headshots": 5382,
-    "playtime_seconds": 27559979,
+    "playtime_seconds": 27560814,
     "longest_kill": 296.9,
     "avg_elo": 1137,
     "peak_elo": 1457,
     "current_kills": 31,
-    "current_deaths": 77,
+    "current_deaths": 78,
     "current_kdr": 0.4,
-    "current_playtime_seconds": 87802,
+    "current_playtime_seconds": 87922,
     "current_longest_kill": 72.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 85597,
+      "playtime_seconds": 85717,
       "playtime_share": 97.5,
       "kills": 23,
       "active_members": 6,
-      "last_seen": "2026-11-13T04:29:25.990Z"
+      "last_seen": "2026-11-13T04:32:24.381Z"
     },
     {
       "server_id": "lunavanilla",
@@ -258,10 +258,10 @@
       "profile": "https://steamcommunity.com/profiles/76561199410804568/",
       "joined_at": "2026-10-14T16:43:59.550Z",
       "kills": 1015,
-      "deaths": 2661,
+      "deaths": 2663,
       "kdr": 0.38,
       "headshots": 324,
-      "playtime_seconds": 2976261,
+      "playtime_seconds": 2977096,
       "longest_kill": 232.3,
       "current_kills": 1,
       "current_deaths": 14,
@@ -404,11 +404,11 @@
       "playtime_seconds": 2357052,
       "longest_kill": 231.9,
       "current_kills": 3,
-      "current_deaths": 15,
-      "current_kdr": 0.2,
-      "current_playtime_seconds": 22276,
-      "elo": 882,
-      "elo_games": 2224,
+      "current_deaths": 16,
+      "current_kdr": 0.19,
+      "current_playtime_seconds": 22396,
+      "elo": 881,
+      "elo_games": 2225,
       "gather_wood": 855683,
       "gather_stone": 1332028,
       "gather_metal": 716924,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-13T04:30:20Z"
+  "checked_at": "2026-11-13T04:45:21Z"
 }

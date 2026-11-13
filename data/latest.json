@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T04:15:26Z",
+  "updated_at": "2026-11-13T04:30:20Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,18 +22,18 @@
     "current_kills": 31,
     "current_deaths": 77,
     "current_kdr": 0.4,
-    "current_playtime_seconds": 86969,
+    "current_playtime_seconds": 87802,
     "current_longest_kill": 72.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 84764,
+      "playtime_seconds": 85597,
       "playtime_share": 97.5,
       "kills": 23,
       "active_members": 6,
-      "last_seen": "2026-11-13T04:14:26.320Z"
+      "last_seen": "2026-11-13T04:29:25.990Z"
     },
     {
       "server_id": "lunavanilla",
@@ -406,17 +406,17 @@
       "current_kills": 3,
       "current_deaths": 15,
       "current_kdr": 0.2,
-      "current_playtime_seconds": 21443,
+      "current_playtime_seconds": 22276,
       "elo": 882,
       "elo_games": 2224,
       "gather_wood": 855683,
-      "gather_stone": 1330028,
-      "gather_metal": 713924,
-      "gather_sulfur": 301133,
-      "gather_hqm": 3090,
-      "gather_total": 3203858,
-      "farming_hemp": 22326,
-      "farming_total": 22680,
+      "gather_stone": 1332028,
+      "gather_metal": 716924,
+      "gather_sulfur": 301733,
+      "gather_hqm": 3100,
+      "gather_total": 3209468,
+      "farming_hemp": 22356,
+      "farming_total": 22710,
       "berries_total": 17
     },
     {
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-13T04:15:26Z"
+  "checked_at": "2026-11-13T04:30:20Z"
 }

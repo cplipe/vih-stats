@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T17:45:18Z",
+  "updated_at": "2026-11-13T18:00:24Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,25 +11,25 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 16361,
-    "deaths": 23710,
+    "kills": 16362,
+    "deaths": 23713,
     "kdr": 0.69,
     "headshots": 5386,
-    "playtime_seconds": 27584534,
+    "playtime_seconds": 27586620,
     "longest_kill": 296.9,
     "avg_elo": 1141,
     "peak_elo": 1457,
     "current_kills": 33,
     "current_deaths": 87,
     "current_kdr": 0.38,
-    "current_playtime_seconds": 112117,
+    "current_playtime_seconds": 112177,
     "current_longest_kill": 72.3
   },
   "servers": [
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
-      "playtime_seconds": 111581,
+      "playtime_seconds": 111641,
       "playtime_share": 99.5,
       "kills": 32,
       "active_members": 6,
@@ -52,11 +52,11 @@
       "avatar": "https://avatars.steamstatic.com/c13361fe7cf0f59a71cd2f84936ec39c8a12074f_full.jpg",
       "profile": "https://steamcommunity.com/id/Don_Tulio/",
       "joined_at": "2026-10-14T01:19:54.674Z",
-      "kills": 1780,
-      "deaths": 2705,
+      "kills": 1781,
+      "deaths": 2708,
       "kdr": 0.66,
       "headshots": 553,
-      "playtime_seconds": 2756008,
+      "playtime_seconds": 2758094,
       "longest_kill": 258,
       "current_kills": 6,
       "current_deaths": 14,
@@ -285,7 +285,7 @@
       "current_kills": 8,
       "current_deaths": 9,
       "current_kdr": 0.89,
-      "current_playtime_seconds": 17391,
+      "current_playtime_seconds": 17451,
       "elo": 1094,
       "elo_games": 2173,
       "gather_wood": 775004,
@@ -523,5 +523,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-13T17:45:18Z"
+  "checked_at": "2026-11-13T18:00:24Z"
 }

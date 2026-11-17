@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T17:45:19Z",
+  "updated_at": "2026-11-17T18:00:27Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,18 +11,18 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 16398,
-    "deaths": 23793,
+    "kills": 16399,
+    "deaths": 23794,
     "kdr": 0.69,
     "headshots": 5404,
-    "playtime_seconds": 27694295,
+    "playtime_seconds": 27698167,
     "longest_kill": 296.9,
     "avg_elo": 1136,
     "peak_elo": 1448,
     "current_kills": 55,
     "current_deaths": 140,
     "current_kdr": 0.39,
-    "current_playtime_seconds": 162498,
+    "current_playtime_seconds": 163214,
     "current_longest_kill": 72.3
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 111641,
-      "playtime_share": 68.7,
+      "playtime_share": 68.4,
       "kills": 32,
       "active_members": 6,
       "last_seen": "2026-11-13T17:43:26.198Z"
@@ -38,11 +38,11 @@
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 32291,
-      "playtime_share": 19.9,
+      "playtime_seconds": 33007,
+      "playtime_share": 20.2,
       "kills": 10,
       "active_members": 2,
-      "last_seen": "2026-11-17T17:45:16.513Z"
+      "last_seen": "2026-11-17T18:00:16.482Z"
     },
     {
       "server_id": "caramelo",
@@ -397,16 +397,16 @@
       "avatar": "https://avatars.steamstatic.com/b587f2d81e20dbdae34334f9ce37a835e2fcc000_full.jpg",
       "profile": "https://steamcommunity.com/profiles/76561198171052931/",
       "joined_at": "2026-10-16T07:26:52.140Z",
-      "kills": 1065,
-      "deaths": 3233,
+      "kills": 1066,
+      "deaths": 3234,
       "kdr": 0.33,
       "headshots": 335,
-      "playtime_seconds": 2436806,
+      "playtime_seconds": 2440678,
       "longest_kill": 231.9,
       "current_kills": 8,
       "current_deaths": 28,
       "current_kdr": 0.29,
-      "current_playtime_seconds": 45450,
+      "current_playtime_seconds": 46166,
       "elo": 1027,
       "elo_games": 2253,
       "gather_wood": 855683,
@@ -532,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-17T17:45:19Z"
+  "checked_at": "2026-11-17T18:00:27Z"
 }

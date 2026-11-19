@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T18:00:25Z",
+  "updated_at": "2026-11-19T19:15:16Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -22,18 +22,18 @@
     "current_kills": 11,
     "current_deaths": 21,
     "current_kdr": 0.52,
-    "current_playtime_seconds": 17205,
+    "current_playtime_seconds": 17384,
     "current_longest_kill": 58.5
   },
   "servers": [
     {
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
-      "playtime_seconds": 16848,
+      "playtime_seconds": 17027,
       "playtime_share": 97.9,
       "kills": 11,
       "active_members": 1,
-      "last_seen": "2026-11-19T06:20:45.571Z"
+      "last_seen": "2026-11-19T19:13:25.152Z"
     },
     {
       "server_id": "sudamerica",
@@ -425,7 +425,7 @@
       "current_kills": 11,
       "current_deaths": 20,
       "current_kdr": 0.55,
-      "current_playtime_seconds": 16848,
+      "current_playtime_seconds": 17027,
       "elo": 1063,
       "elo_games": 1658,
       "gather_wood": 1116834,
@@ -523,5 +523,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-19T19:00:30Z"
+  "checked_at": "2026-11-19T19:15:16Z"
 }

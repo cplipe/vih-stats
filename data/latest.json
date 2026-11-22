@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T17:45:16Z",
+  "updated_at": "2026-11-22T18:00:24Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -12,34 +12,34 @@
     "member_count": 17,
     "active_members": 17,
     "kills": 16416,
-    "deaths": 23825,
+    "deaths": 23827,
     "kdr": 0.69,
     "headshots": 5412,
-    "playtime_seconds": 27802545,
+    "playtime_seconds": 27809992,
     "longest_kill": 296.9,
     "avg_elo": 1137,
     "peak_elo": 1439,
     "current_kills": 1,
-    "current_deaths": 5,
-    "current_kdr": 0.2,
-    "current_playtime_seconds": 18525,
+    "current_deaths": 7,
+    "current_kdr": 0.14,
+    "current_playtime_seconds": 19537,
     "current_longest_kill": 0
   },
   "servers": [
     {
       "server_id": "estrella",
       "server_name": "Estrella x2",
-      "playtime_seconds": 18168,
-      "playtime_share": 98.1,
+      "playtime_seconds": 19180,
+      "playtime_share": 98.2,
       "kills": 1,
       "active_members": 2,
-      "last_seen": "2026-11-22T17:44:20.284Z"
+      "last_seen": "2026-11-22T18:00:20.307Z"
     },
     {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 357,
-      "playtime_share": 1.9,
+      "playtime_share": 1.8,
       "kills": 0,
       "active_members": 1,
       "last_seen": "2026-11-19T17:56:28.427Z"
@@ -389,15 +389,15 @@
       "profile": "https://steamcommunity.com/profiles/76561198171052931/",
       "joined_at": "2026-10-16T07:26:52.140Z",
       "kills": 1071,
-      "deaths": 3243,
+      "deaths": 3245,
       "kdr": 0.33,
       "headshots": 335,
-      "playtime_seconds": 2519746,
+      "playtime_seconds": 2527193,
       "longest_kill": 231.9,
       "current_kills": 1,
-      "current_deaths": 4,
-      "current_kdr": 0.25,
-      "current_playtime_seconds": 18049,
+      "current_deaths": 6,
+      "current_kdr": 0.17,
+      "current_playtime_seconds": 19061,
       "elo": 1067,
       "elo_games": 2259,
       "gather_wood": 855683,
@@ -523,5 +523,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-22T17:45:16Z"
+  "checked_at": "2026-11-22T18:00:24Z"
 }

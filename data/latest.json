@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T05:45:16Z",
+  "updated_at": "2026-11-26T16:00:25Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -20,9 +20,9 @@
     "avg_elo": 1128,
     "peak_elo": 1439,
     "current_kills": 8,
-    "current_deaths": 36,
-    "current_kdr": 0.22,
-    "current_playtime_seconds": 17567,
+    "current_deaths": 29,
+    "current_kdr": 0.28,
+    "current_playtime_seconds": 16435,
     "current_longest_kill": 4.2
   },
   "servers": [
@@ -30,7 +30,7 @@
       "server_id": "vainillaquad",
       "server_name": "Vainilla Quad",
       "playtime_seconds": 13878,
-      "playtime_share": 79,
+      "playtime_share": 84.4,
       "kills": 7,
       "active_members": 2,
       "last_seen": "2026-11-26T03:31:59.939Z"
@@ -39,25 +39,16 @@
       "server_id": "estrella",
       "server_name": "Estrella x2",
       "playtime_seconds": 2200,
-      "playtime_share": 12.5,
+      "playtime_share": 13.4,
       "kills": 1,
       "active_members": 1,
       "last_seen": "2026-11-24T00:51:53.673Z"
     },
     {
-      "server_id": "lunax1000",
-      "server_name": "Luna x1000",
-      "playtime_seconds": 1132,
-      "playtime_share": 6.4,
-      "kills": 0,
-      "active_members": 1,
-      "last_seen": "2026-11-26T01:20:45.220Z"
-    },
-    {
       "server_id": "sudamerica",
       "server_name": "Sudamerica",
       "playtime_seconds": 357,
-      "playtime_share": 2,
+      "playtime_share": 2.2,
       "kills": 0,
       "active_members": 1,
       "last_seen": "2026-11-19T17:56:28.427Z"
@@ -301,9 +292,9 @@
       "playtime_seconds": 3134066,
       "longest_kill": 296.9,
       "current_kills": 4,
-      "current_deaths": 26,
-      "current_kdr": 0.15,
-      "current_playtime_seconds": 8517,
+      "current_deaths": 19,
+      "current_kdr": 0.21,
+      "current_playtime_seconds": 7385,
       "elo": 946,
       "elo_games": 2192,
       "gather_wood": 775004,
@@ -541,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-26T15:45:16Z"
+  "checked_at": "2026-11-26T16:00:25Z"
 }

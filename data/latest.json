@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T04:00:24Z",
+  "updated_at": "2026-11-27T04:15:24Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -11,11 +11,11 @@
   "stats": {
     "member_count": 17,
     "active_members": 17,
-    "kills": 16433,
-    "deaths": 23883,
+    "kills": 16435,
+    "deaths": 23889,
     "kdr": 0.69,
-    "headshots": 5421,
-    "playtime_seconds": 27851440,
+    "headshots": 5424,
+    "playtime_seconds": 27853165,
     "longest_kill": 296.9,
     "avg_elo": 1125,
     "peak_elo": 1439,
@@ -52,11 +52,11 @@
       "avatar": "https://avatars.steamstatic.com/c13361fe7cf0f59a71cd2f84936ec39c8a12074f_full.jpg",
       "profile": "https://steamcommunity.com/id/Don_Tulio/",
       "joined_at": "2026-10-14T01:19:54.674Z",
-      "kills": 1788,
-      "deaths": 2723,
+      "kills": 1790,
+      "deaths": 2729,
       "kdr": 0.66,
-      "headshots": 557,
-      "playtime_seconds": 2769472,
+      "headshots": 560,
+      "playtime_seconds": 2771197,
       "longest_kill": 258,
       "current_kills": 4,
       "current_deaths": 7,
@@ -523,5 +523,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-27T04:00:24Z"
+  "checked_at": "2026-11-27T04:15:24Z"
 }

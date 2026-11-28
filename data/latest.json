@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-28T01:15:17Z",
+  "updated_at": "2026-11-28T01:30:20Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -17,8 +17,8 @@
     "headshots": 5424,
     "playtime_seconds": 27860605,
     "longest_kill": 296.9,
-    "avg_elo": 1125,
-    "peak_elo": 1439,
+    "avg_elo": 1123,
+    "peak_elo": 1430,
     "current_kills": 17,
     "current_deaths": 51,
     "current_kdr": 0.33,
@@ -42,7 +42,7 @@
       "playtime_share": 38.6,
       "kills": 10,
       "active_members": 4,
-      "last_seen": "2026-11-27T02:38:37.403Z"
+      "last_seen": "2026-11-28T01:15:34.018Z"
     },
     {
       "server_id": "estrella",
@@ -164,7 +164,7 @@
       "current_deaths": 0,
       "current_kdr": 0,
       "current_playtime_seconds": 0,
-      "elo": 1439,
+      "elo": 1430,
       "elo_games": 920,
       "gather_wood": 294880,
       "gather_stone": 224458,
@@ -220,7 +220,7 @@
       "current_deaths": 0,
       "current_kdr": 0,
       "current_playtime_seconds": 0,
-      "elo": 1129,
+      "elo": 1127,
       "elo_games": 391,
       "gather_wood": 209804,
       "gather_stone": 141063,
@@ -248,7 +248,7 @@
       "current_deaths": 0,
       "current_kdr": 0,
       "current_playtime_seconds": 0,
-      "elo": 1139,
+      "elo": 1136,
       "elo_games": 817,
       "gather_wood": 753947,
       "gather_stone": 818076,
@@ -388,7 +388,7 @@
       "current_deaths": 0,
       "current_kdr": 0,
       "current_playtime_seconds": 0,
-      "elo": 1380,
+      "elo": 1373,
       "elo_games": 834,
       "gather_wood": 225821,
       "gather_stone": 455131,
@@ -472,7 +472,7 @@
       "current_deaths": 0,
       "current_kdr": 0,
       "current_playtime_seconds": 0,
-      "elo": 1276,
+      "elo": 1271,
       "elo_games": 1030,
       "gather_wood": 107501,
       "gather_stone": 50831,
@@ -528,7 +528,7 @@
       "current_deaths": 0,
       "current_kdr": 0,
       "current_playtime_seconds": 0,
-      "elo": 1172,
+      "elo": 1168,
       "elo_games": 1205,
       "gather_wood": 682915,
       "gather_stone": 227348,
@@ -541,5 +541,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-28T01:15:17Z"
+  "checked_at": "2026-11-28T01:30:20Z"
 }

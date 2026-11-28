@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-28T02:45:22Z",
+  "updated_at": "2026-11-28T17:00:23Z",
   "clan": {
     "id": 212,
     "slug": "vih",
@@ -19,27 +19,18 @@
     "longest_kill": 296.9,
     "avg_elo": 1123,
     "peak_elo": 1430,
-    "current_kills": 17,
-    "current_deaths": 51,
-    "current_kdr": 0.33,
-    "current_playtime_seconds": 31905,
+    "current_kills": 10,
+    "current_deaths": 22,
+    "current_kdr": 0.45,
+    "current_playtime_seconds": 17968,
     "current_longest_kill": 30.2
   },
   "servers": [
     {
-      "server_id": "vainillaquad",
-      "server_name": "Vainilla Quad",
-      "playtime_seconds": 13937,
-      "playtime_share": 43.7,
-      "kills": 7,
-      "active_members": 3,
-      "last_seen": "2026-11-27T22:09:30.996Z"
-    },
-    {
       "server_id": "lunax5",
       "server_name": "Luna x5",
       "playtime_seconds": 12310,
-      "playtime_share": 38.6,
+      "playtime_share": 68.5,
       "kills": 10,
       "active_members": 4,
       "last_seen": "2026-11-28T01:15:34.018Z"
@@ -48,7 +39,7 @@
       "server_id": "estrella",
       "server_name": "Estrella x2",
       "playtime_seconds": 4884,
-      "playtime_share": 15.3,
+      "playtime_share": 27.2,
       "kills": 0,
       "active_members": 1,
       "last_seen": "2026-11-27T22:07:30.281Z"
@@ -57,7 +48,7 @@
       "server_id": "lunavanilla",
       "server_name": "Luna Vanilla",
       "playtime_seconds": 774,
-      "playtime_share": 2.4,
+      "playtime_share": 4.3,
       "kills": 0,
       "active_members": 2,
       "last_seen": "2026-11-27T22:27:40.189Z"
@@ -133,9 +124,9 @@
       "playtime_seconds": 3134428,
       "longest_kill": 296.9,
       "current_kills": 5,
-      "current_deaths": 5,
-      "current_kdr": 1,
-      "current_playtime_seconds": 9166,
+      "current_deaths": 4,
+      "current_kdr": 1.25,
+      "current_playtime_seconds": 9107,
       "elo": 1094,
       "elo_games": 2576,
       "gather_wood": 1204376,
@@ -300,10 +291,10 @@
       "headshots": 393,
       "playtime_seconds": 3135076,
       "longest_kill": 296.9,
-      "current_kills": 4,
-      "current_deaths": 21,
-      "current_kdr": 0.19,
-      "current_playtime_seconds": 8395,
+      "current_kills": 0,
+      "current_deaths": 2,
+      "current_kdr": 0,
+      "current_playtime_seconds": 1010,
       "elo": 944,
       "elo_games": 2193,
       "gather_wood": 775004,
@@ -496,10 +487,10 @@
       "headshots": 499,
       "playtime_seconds": 931373,
       "longest_kill": 237.6,
-      "current_kills": 3,
-      "current_deaths": 9,
-      "current_kdr": 0.33,
-      "current_playtime_seconds": 6493,
+      "current_kills": 0,
+      "current_deaths": 0,
+      "current_kdr": 0,
+      "current_playtime_seconds": 0,
       "elo": 996,
       "elo_games": 1333,
       "gather_wood": 215203,
@@ -541,5 +532,5 @@
       "berries_total": 1906
     }
   ],
-  "checked_at": "2026-11-28T16:45:18Z"
+  "checked_at": "2026-11-28T17:00:23Z"
 }
